@@ -1,0 +1,60 @@
+### BUILD INSTRUCTIONS FOR GOOGLE COMPUTE ENGINE GENOMICS SERVER
+
+# Set up a 16-core Ubuntu 18.04 VM with 500 Gb of SSD
+
+# Logged in via terminal (supplied my ssh public key to the gcloud meta ssh keys page in the console)
+
+# install xfce desktop
+  sudo apt-get update
+  sudo apt install xubuntu-desktop
+
+# install additional bioinformatics software
+  sudo apt install fastqc velvet abyss fasttree
+
+# install x2go
+  sudo apt-get install software-properties-common
+  sudo add-apt-repository ppa:x2go/stable
+  sudo apt-get update
+  sudo apt-get install x2goserver x2goserver-xsession
+
+# comment out following line (/etc/java-X-openjdk/accessibility.properties) to prevent Java issues
+# assistive_technologies=org.GNOME.Accessibility.AtkWrapper
+
+# install fastx toolkit
+  wget http://hannonlab.cshl.edu/fastx_toolkit/fastx_toolkit_0.0.13_binaries_Linux_2.6_amd64.tar.bz2
+  tar xvjf fastx_toolkit_0.0.13_binaries_Linux_2.6_amd64.tar.bz2
+  cd bin
+  sudo mv * /usr/bin/.
+  
+# install artemis
+  wget ftp://ftp.sanger.ac.uk/pub/resources/software/artemis/artemis.tar.gz
+  tar zxf artemis.tar.gz
+
+# add following to path
+# export PATH="$PATH:/usr/bin/artemis/"
+
+# install prokka
+  sudo apt-get install libdatetime-perl libxml-simple-perl libdigest-md5-perl git default-jre bioperl
+  sudo cpan Bio::Perl
+  git clone https://github.com/tseemann/prokka.git $HOME/prokka
+  $HOME/prokka/bin/prokka --setupdb
+
+# then cp prokka folder to usr/bin
+
+# add following to path
+# export PATH="$PATH:/usr/bin/prokka/bin/"
+
+# install tablet
+  wget https://ics.hutton.ac.uk/resources/tablet/installers/tablet_linux_x64_1_17_08_17.sh
+  sh tablet_linux_x64_1_17_08_17.sh
+ 
+#add following to path
+# export PATH="$PATH:/usr/bin/Tablet/"
+
+
+
+
+
+
+
+
