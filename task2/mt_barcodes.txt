@@ -1,0 +1,3 @@
+#The barcode assignments in the fastq file: mt_reads.fastq
+mt1	ATCTACCA
+mt2	AACCATAA
