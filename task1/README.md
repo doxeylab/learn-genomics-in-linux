@@ -19,7 +19,7 @@ If you have been given access to a remote VM, you can access it either through t
 ssh -i /path/to/your/.ssh/publickey yourUserName@remoteIP
 ```
 
-### Once you are logged on | Learning Unix
+## Once you are logged on | Learning Unix
 
 If you have logged in correctly, you should see a welcome screen.
 
@@ -28,6 +28,8 @@ You are now in a unix command-line environment. For more information and instruc
 * [CodeAcademy](https://www.codecademy.com/learn/learn-the-command-line) - Learn the command line
 * [TeachingUnix](http://www.ee.surrey.ac.uk/Teaching/Unix/) - Another Unix Tutorial
 * [BasicCommands](http://mally.stanford.edu/~sr/computing/basic-unix.html) - List of common commands
+
+## A mini-primer
 
 To make the folder "task1", type
 
