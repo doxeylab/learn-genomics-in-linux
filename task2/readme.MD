@@ -56,13 +56,16 @@ wc -l mt_reads.fastq.gz
 
 
 
-## Quality filtering
+## Data preprocessing
 
 Before we can assemble a genome, we need to:
 
 * Assess the quality of the sequencing data
+* Demultiplex the data
+* Trim barcodes
 * Filter out low-quality reads (this is called quality filtering)
 
+### Quality assessment
 For a quick quality report, you can use the program `fastqc`.
 The command below will analyze the mt_reads.fastq file and place the results in the 'qcresults' folder.
 
@@ -76,7 +79,7 @@ Now open the HTML file that was generated in firefox. The ampersand (&) will run
 firefox qcresults/mt_reads_fastqc/fastqc_report.html &
 ```
 
-### Splitting the barcodes
+### Splitting the barcodes (demultiplexing)
 
 Sequencing data may be barcoded. In this case, the data contains two different samples, each with a unique barcode.
 This allows us to split the data by sample. Sometimes, sequencing data can have tens or hundreds of barcodes. See [multiplexing](https://www.illumina.com/science/technology/next-generation-sequencing/multiplex-sequencing.html)
@@ -93,9 +96,30 @@ fastx_barcode_splitter.pl <mt_reads.fastq --bcfile mt_barcodes.txt --bol --suffi
 
 There are now two .fastq files in the results directory; one for each barcode.  There is also an unmatched.fasta file which should be empty.  We will be focusing on the first sample, ie. the one now in results/mt1.fastq.
 
+### Barcode trimming
+
+Barcode trimming is needed to remove the barcode sequences from the beginning of each read. The Q33 is required due to differences in sanger and illumina encoding.
+
+```
+cd results
+fastx_trimmer -i mt1.fastq -f 8 -o trimmed_mt1.fastq -Q33
+```
+
+
+### Quality filtering
+
+Next, we need to remove low quality sequences. This will increase the accuracy of the assembly.
+
+```
+fastq_quality_filter -i trimmed_mt1.fastq -q 25 -p 80 -o qual_trim_mt1.fastq -Q33 -v
+```
+
+
 ## Genome Assembly
 
-...
+Now we are ready to assemble a genome. 
+
+
 
 ## Genome Annotation
 
