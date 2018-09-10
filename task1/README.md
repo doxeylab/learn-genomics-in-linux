@@ -35,6 +35,28 @@ You are now in a unix command-line environment. For more information and instruc
 
 ### Navigating files/folders
 
+When you log in, by default you start in your home directory.
+
+Type...
+
+```
+pwd
+```
+
+And this will print the current location (e.g., /home/username)
+
+You can always get back to your home folder by typing
+
+```
+cd
+```
+
+To view the contents of your current folder type
+
+```
+ls
+```
+
 To make the folder "task1", type
 
 ```
@@ -53,7 +75,7 @@ And now create a file called file.txt
 >file.txt
 ```
 
-Open the file with `nano`
+Open the file with `nano`. This is one built-in text editor. There are others.
 
 ```
 nano file.txt
@@ -77,6 +99,8 @@ wc -l file.txt #lines
 To copy the file to a new file
 
 ```cp file.txt newfile.txt```
+
+You can also 'move' a file to a new location or rename it using `mv`.
 
 To combine both files together into a third file
 
@@ -102,6 +126,56 @@ And delete the folder 'task1'
 
 ```
 rmdir task1
+```
+
+### Getting help on linux commands and program usage
+
+For most commands, you can get more information on their usage by typing `man` 'command'.
+
+e.g., try
+
+```
+man ls
+#type 'q' to quit
+```
+
+`man` will work with some bioinformatics tools. However, not always.
+
+e.g., for help on the `blastp` tool, type
+
+```
+blastp -h # or
+blastp --help
+```
+
+### Advanced operations
+
+#### Pattern finding with grep
+
+```
+grep "word" file.txt  # prints lines in file.txt containing "word"
+```
+
+We can also chain together multiple commands like this using the `|` (pipe) operator.
+
+```
+grep "word" file.txt | wc -l  # will count the number of lines containing the word "word"
+
+# or alternatively
+
+cat file.txt | grep "word" | wc -l  # does the same thing as above
+```
+
+#### copying a file to and from a remote server
+
+To
+```
+scp /path/to/file.txt username@remoteserver.com:/path/to/location/.
+```
+
+From
+```
+scp username@remoteserver.com:/path/to/file.txt /path/to/location/.
 ```
 
 
