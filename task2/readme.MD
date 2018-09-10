@@ -81,7 +81,17 @@ firefox qcresults/mt_reads_fastqc/fastqc_report.html &
 Sequencing data may be barcoded. In this case, the data contains two different samples, each with a unique barcode.
 This allows us to split the data by sample. Sometimes, sequencing data can have tens or hundreds of barcodes. See [multiplexing](https://www.illumina.com/science/technology/next-generation-sequencing/multiplex-sequencing.html)
 
+We will use a standard script from the `fastx toolkit` to split the data by its known barcodes (defined already for you in the file downloaded below)
 
+```
+#first download the barcodes file
+wget https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task2/mt_barcodes.txt
+
+#now split
+fastx_barcode_splitter.pl <mt_reads.fastq --bcfile mt_barcodes.txt --bol --suffix .fastq --prefix results/
+```
+
+There are now two .fastq files in the results directory; one for each barcode.  There is also an unmatched.fasta file which should be empty.  We will be focusing on the first sample, ie. the one now in results/mt1.fastq.
 
 ## Genome Assembly
 
