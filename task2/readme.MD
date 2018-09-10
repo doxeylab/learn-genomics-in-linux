@@ -76,7 +76,10 @@ Now open the HTML file that was generated in firefox. The ampersand (&) will run
 firefox qcresults/mt_reads_fastqc/fastqc_report.html &
 ```
 
-###Splitting the barcodes
+### Splitting the barcodes
+
+Sequencing data may be barcoded. In this case, the data contains two different samples, each with a unique barcode.
+This allows us to split the data by sample. Sometimes, sequencing data can have tens or hundreds of barcodes. See [multiplexing](https://www.illumina.com/science/technology/next-generation-sequencing/multiplex-sequencing.html)
 
 
 
