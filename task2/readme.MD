@@ -117,7 +117,15 @@ fastq_quality_filter -i trimmed_mt1.fastq -q 25 -p 80 -o qual_trim_mt1.fastq -Q3
 
 ## Genome Assembly
 
-Now we are ready to assemble a genome. 
+Now we are ready to assemble a genome. To start we are going to try using the popular `velvet` assembler: https://en.wikipedia.org/wiki/Velvet_assembler
+Like many assemblers, `velvet` performs genome assembly using de bruijn graphs. This means that we must choose a value of <b>k</b> to define the k-mers (sequence fragments of length k) to be used in constructing the graph.
+
+https://en.wikipedia.org/wiki/De_Bruijn_graph
+https://en.wikipedia.org/wiki/De_novo_sequence_assemblers
+
+
+
+
 
 
 
