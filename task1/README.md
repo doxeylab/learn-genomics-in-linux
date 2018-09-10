@@ -98,7 +98,9 @@ wc -l file.txt #lines
 
 To copy the file to a new file
 
-```cp file.txt newfile.txt```
+```
+cp file.txt newfile.txt
+```
 
 You can also 'move' a file to a new location or rename it using `mv`.
 
@@ -177,6 +179,25 @@ From
 ```
 scp username@remoteserver.com:/path/to/file.txt /path/to/location/.
 ```
+
+#### downloading a file from the internet
+
+```
+wget <url>
+```
+
+#### uncompressing a file
+
+This is done using programs such as `tar`, and `gzip` and `gunzip`.
+e.g.,
+```
+gzip file.txt # to compress it
+gunzip file.txt.gz # to uncompress it
+```
+
+
+
+
 
 
 Congratulations, you're done. You are now ready for task2.
