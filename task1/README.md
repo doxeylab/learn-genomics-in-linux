@@ -1,10 +1,6 @@
-# Welcome to BIOL 469, Genomics
+# Task1 - accessing and navigating the Linux command-line
 
-This github repository contains a series of tasks designed to teach students:
-
-  * Command-line linux
-  * Genomics & bioinformatics data analysis
-
+This task will introduce students to the Linux command-line.
 
 ## Getting Started
 
