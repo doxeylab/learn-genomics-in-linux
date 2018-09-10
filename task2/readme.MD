@@ -48,7 +48,7 @@ And...
 tail mt_reads.fastq.gz
 ```
 
-How many lines are in the file?
+:large_blue_circle: How many lines are in the file? :grey_question:
 
 ```
 wc -l mt_reads.fastq.gz
