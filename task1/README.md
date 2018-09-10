@@ -15,6 +15,12 @@ If you have been given access to a remote VM, you can access it either through t
 ssh -i /path/to/your/.ssh/publickey yourUserName@remoteIP
 ```
 
+When you are done, you can leave your session by typing...
+
+```
+exit
+```
+
 ## Once you are logged on | Learning Unix
 
 If you have logged in correctly, you should see a welcome screen.
