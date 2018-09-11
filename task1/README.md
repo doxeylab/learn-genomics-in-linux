@@ -94,10 +94,28 @@ nano file.txt
 
 Now enter a few lines of text, type 'ctrl-o' and then 'ctrl-x' to save and exit
 
-To print the contents of your file type
+To print the contents of your file
 
 ```
 cat file.txt
+```
+
+Other ways of viewing your file
+
+```
+less file.txt  #type q to exit
+more file.txt
+head file.txt
+head -n 10 file.txt # first 10 lines of your file
+tail file.txt
+tail -n 10 file.txt # last 10 lines of your file
+```
+
+Size of your file
+
+```
+du file.txt
+du -h file.txt # in mb
 ```
 
 To count the number of words and lines in your file
@@ -105,6 +123,7 @@ To count the number of words and lines in your file
 ```
 wc file.txt #words
 wc -l file.txt #lines
+wc -m file.txt #characters
 ```
 
 To copy the file to a new file
@@ -167,6 +186,8 @@ blastp --help
 
 ```
 grep "word" file.txt  # prints lines in file.txt containing "word"
+
+grep -c "word" file.txt # prints the number of occurrences of "word" in file.txt
 ```
 
 We can also chain together multiple commands like this using the `|` (pipe) operator.
@@ -213,15 +234,22 @@ Your assignment will be to write a series of shell commands to answer the follow
 
 Hint: remember to use `man` if you want to explore added functionality of commands.
 
-* Download this file and extract its contents https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task1/e-coli-k12-genome.fasta.gz
+* Download this file containing the genome sequence of E. coli K12 and extract its contents https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task1/e-coli-k12-genome.fasta.gz
+
+* Print the first 3 lines of the file?
 
 * How many characters are in this file?
 
+* How many lines are in the file?
+
 * How large is the file in megabytes?
 
-* 
+* How many occurrences of "ATATATAT" are there in the file?
+
+* Print the last 10 lines of the file to a new file called tail.txt
 
 
-* Download
+
+
 
 
