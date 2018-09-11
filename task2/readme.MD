@@ -117,7 +117,10 @@ fastq_quality_filter -i trimmed_mt1.fastq -q 25 -p 80 -o qual_trim_mt1.fastq -Q3
 
 ## Genome Assembly
 
-Now we are ready to assemble a genome. To start we are going to try using the popular `velvet` assembler: https://en.wikipedia.org/wiki/Velvet_assembler
+Now we are ready to assemble a genome. 
+
+### Assembly with Velvet
+To start we are going to try using the popular `velvet` assembler: https://en.wikipedia.org/wiki/Velvet_assembler
 Like many assemblers, `velvet` performs genome assembly using de bruijn graphs. This means that we must choose a value of <b>k</b> to define the k-mers (sequence fragments of length k) to be used in constructing the graph.
 
 https://en.wikipedia.org/wiki/De_Bruijn_graph
@@ -125,8 +128,35 @@ https://en.wikipedia.org/wiki/De_novo_sequence_assemblers
 
 
 
+### Assembly with ABYSS
+
+Inspect your contigs.fa file (should be in your velvet_k12 directory). There should be 139 separate contigs within this file. You can verify this by running:
+
+```
+grep -c ">" contigs.fa
+```
+
+But 139 separate contigs is not ideal. To improve the assembly, try assembling with the popular abyss assembler (with a kmer length of 21) using the following command:
+
+```
+abyss-pe k=21 in='qual_trim_mt1.fastq' name=abyss-contigs
+```
+
+:large_blue_circle: How many contigs are produced now?
 
 
+Examine the dinucleotide content of your assembled mitochondrial genome using the tool compseq. 
+
+:large_blue_circle: What dinucleotide is most underrepresented in the genome? :grey_question:
+
+
+## Visualization using Artemis
+
+```
+art abyss_contigs.fa
+```
+
+:large_blue_circle: Produce a gc plot (& increase sliding window length to maximum) covering the whole mitochondrial genome and paste a screenshot.
 
 
 ## Genome Annotation
