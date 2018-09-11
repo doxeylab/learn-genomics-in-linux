@@ -1,6 +1,17 @@
-# Task1 - accessing and navigating the Linux command-line
+# Task1 - Learning the Linux shell
 
-This task will introduce students to the Linux command-line.
+This task will introduce students to the Linux command-line (shell environment).
+
+## What is the Linux Shell?
+
+The <i>shell</i> is a command-line programming language for interacting with the UNIX operating system.  https://en.wikipedia.org/wiki/Unix_shell
+
+There are several different shell languages. What we will be using in this course is a popular shell flavor called <b>BASH</b>
+
+https://en.wikipedia.org/wiki/Bash_(Unix_shell)
+
+We will be learning basic commands, but BASH is actually a language that can perform complex programming tasks.
+
 
 ## Getting Started
 
@@ -186,7 +197,7 @@ scp username@remoteserver.com:/path/to/file.txt /path/to/location/.
 wget <url>
 ```
 
-#### uncompressing a file
+#### file compression/uncompression
 
 This is done using programs such as `tar`, and `gzip` and `gunzip`.
 e.g.,
@@ -194,6 +205,11 @@ e.g.,
 gzip file.txt # to compress it
 gunzip file.txt.gz # to uncompress it
 ```
+
+
+### BASH
+
+It turns out that the commands you have been learning are a 
 
 
 
