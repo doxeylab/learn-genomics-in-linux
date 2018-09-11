@@ -2,6 +2,18 @@
 
 In this task, you will download raw sequencing data, perform genome assembly, genome annotation, and then compare your assembly to the database using BLAST.
 
+### Requirements
+
+* Access to a linux-based OS running BASH
+* [fastqc](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
+* [fastx toolkit](http://hannonlab.cshl.edu/fastx_toolkit/)
+* [velvet](https://www.ebi.ac.uk/~zerbino/velvet/)
+* [abyss](https://github.com/bcgsc/abyss)
+* [tablet](https://ics.hutton.ac.uk/tablet/)
+* [artemis](http://sanger-pathogens.github.io/Artemis/Artemis/)
+
+---
+
 ## Getting Started
 
 Login to your linux environment as you did in task1. e.g.,
