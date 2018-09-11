@@ -5,12 +5,13 @@ In this task, you will download raw sequencing data, perform genome assembly, ge
 ### Requirements
 
 * Access to a linux-based OS running BASH
-* [fastqc](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
+* Access to an OS with a GUI for running the graphical software indicated below (*)
+* [fastqc](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) *
 * [fastx toolkit](http://hannonlab.cshl.edu/fastx_toolkit/)
 * [velvet](https://www.ebi.ac.uk/~zerbino/velvet/)
 * [abyss](https://github.com/bcgsc/abyss)
-* [tablet](https://ics.hutton.ac.uk/tablet/)
-* [artemis](http://sanger-pathogens.github.io/Artemis/Artemis/)
+* [tablet](https://ics.hutton.ac.uk/tablet/) *
+* [artemis](http://sanger-pathogens.github.io/Artemis/Artemis/) *
 
 ---
 
