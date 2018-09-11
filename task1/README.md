@@ -54,7 +54,7 @@ Type...
 pwd
 ```
 
-And this will print the current location (e.g., /home/username)
+And this will print to the screen your current location (e.g., /home/username)
 
 You can always get back to your home folder by typing
 
@@ -94,7 +94,7 @@ nano file.txt
 
 Now enter a few lines of text, type 'ctrl-o' and then 'ctrl-x' to save and exit
 
-To print the contents of your file
+To print to the screen the contents of your file
 
 ```
 cat file.txt
@@ -115,7 +115,7 @@ Size of your file
 
 ```
 du file.txt
-du -h file.txt # in mb
+du -h file.txt # in human-readable output (byte, kb, mb, etc.)
 ```
 
 To count the number of words and lines in your file
@@ -142,7 +142,7 @@ cat file.txt newfile.txt > thirdfile.txt
 
 The '>' redirects the output of the commands on the left of it to a file specified on the right.
 
-Delete the file
+Delete the file (note: be careful since there is no Trash Bin)
 
 ```
 rm file.txt
@@ -273,5 +273,5 @@ Hint: remember to use `man` if you want to explore added functionality of comman
 * What character (A, C, G, or T) is most common?
 
 
-DONE.
+#### Congratulations. You are now finished Task 1.
 
