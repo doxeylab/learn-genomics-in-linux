@@ -70,3 +70,26 @@ makeblastdb -in <proteome.fna. -dbtype 'prot'
 ```
 
 
+# ASSIGNMENT QUESTIONS
+
+Your assignment will be to write a series of shell commands to answer the following questions. Please submit the code you used as well as the answers to the questions. Submit your assignment to a dropbox on LEARN as a .docx, .txt, or .pdf file.
+
+* Pick a protein of interest (POI) (from any organism)
+
+* Now pick a genome from a different organism (these can be found in the the NCBI ftp directory) where you suspect to find a homolog of your protein
+
+* Download the genome (.fna) and predicted proteome (.faa) for the organism above
+
+* Search the genome for your POI using `tblastn` and the proteome for your POI using `blastp`
+
+* Paste your top result for each.
+
+* Have you a identified true homolog of your POI? Justify your answer using the E-value and sequence identity.
+
+* How many homologs did you detect? Again, justify your answer by pasting the relevant output from your BLAST result.
+
+
+
+
+#### Congratulations. You are now finished Task 1b.
+
