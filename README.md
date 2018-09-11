@@ -12,6 +12,8 @@ It is divided into a series of tasks
   * Task 5 - Comparative genomics: gene set comparison between two genomes
   * Task 6 - Metagenomics: taxonomic and functional profiling
   * Task 7 - Resequencing: variant calling from NGS data
+  * TBD - Task 8 - ChIP-seq data analysis
+  * TBD - Task 9 - GWAS
   
 # Requirements & Software Installation
 
