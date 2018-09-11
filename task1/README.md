@@ -218,7 +218,7 @@ grep "word" file.txt | wc -l  # will count the number of lines containing the wo
 cat file.txt | grep "word" | wc -l  # does the same thing as above
 ```
 
-#### copying a file to and from a remote server
+#### Copying a file to and from a remote server
 
 To
 ```
@@ -230,7 +230,7 @@ From
 scp username@remoteserver.com:/path/to/file.txt /path/to/location/.
 ```
 
-#### downloading a file from the internet
+#### Downloading a file off the internet
 
 ```
 wget <url>
