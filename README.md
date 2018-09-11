@@ -13,13 +13,20 @@ It is divided into a series of tasks
   * Task 6 - Metagenomics: taxonomic and functional profiling
   * Task 7 - Resequencing: variant calling from NGS data
   
-# Requirements
+# Requirements & Software Installation
 
 The main requirement is that you have access to a Linux-based OS such as Ubuntu.
-Most of the programs are text-based and can be run directly in the shell; however, some graphical programs (e.g., Tablet, Artemis, fastqc) are used which require GUI access.
+Most of the programs we will use are text-based and can be run directly in the shell; however, some graphical programs (e.g., Tablet, Artemis, fastqc) will be used as well. You can install these on your own local machine.
 
-Detailed software requirements are listed at the beginning of each Task.
+Detailed software requirements will be listed at the beginning of each Task. Alternatively, if you wish to install all the programs for the course beforehand, please install the software listed below:
+
+* [tablet](https://ics.hutton.ac.uk/tablet/) *
+* [artemis and act](http://sanger-pathogens.github.io/Artemis/Artemis/) *
+* [R](https://www.r-project.org/)
+
 We have also documented installation instructions for building a bioinformatics system (Ubuntu 18.04) [here](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/VMbuild.README).
+
+
  
 # Development & Contact
 
