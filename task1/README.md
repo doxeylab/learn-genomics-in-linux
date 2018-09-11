@@ -161,7 +161,7 @@ blastp -h # or
 blastp --help
 ```
 
-### Advanced operations
+### Additional operations
 
 #### Pattern finding with grep
 
@@ -207,15 +207,21 @@ gunzip file.txt.gz # to uncompress it
 ```
 
 
-### BASH
+# ASSIGNMENT QUESTIONS
 
-It turns out that the commands you have been learning are a 
+Your assignment will be to write a series of shell commands to answer the following questions. Please submit the code you used as well as the answers to the questions. Submit your assignment to a dropbox on LEARN as a .docx, .txt, or .pdf file.
+
+Hint: remember to use `man` if you want to explore added functionality of commands.
+
+* Download this file and extract its contents https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task1/e-coli-k12-genome.fasta.gz
+
+* How many characters are in this file?
+
+* How large is the file in megabytes?
+
+* 
 
 
-
-
-
-
-Congratulations, you're done. You are now ready for task2.
+* Download
 
 
