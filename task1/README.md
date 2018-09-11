@@ -148,7 +148,7 @@ Delete the file
 rm file.txt
 ```
 
-Print contents of all .txt files in current folder. '*' acts as a wildcard
+Print contents of all .txt files in current folder. * acts as a wildcard
 
 ```
 cat *.txt
