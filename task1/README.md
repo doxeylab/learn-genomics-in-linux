@@ -234,22 +234,26 @@ Your assignment will be to write a series of shell commands to answer the follow
 
 Hint: remember to use `man` if you want to explore added functionality of commands.
 
-* Download this file containing the genome sequence of E. coli K12 and extract its contents https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task1/e-coli-k12-genome.fasta.gz
+* Download this file containing the genome sequence of E. coli K12 https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task1/e-coli-k12-genome.fasta.gz
 
-* Print the first 3 lines of the file?
+* What is the size of this compressed file in megabytes?
+
+* Uncompress the file. What is the size now in megabytes?
+
+* Print out the first 3 lines of the file.
 
 * How many characters are in this file?
 
 * How many lines are in the file?
 
-* How large is the file in megabytes?
+* How many lines in the file contain the word "ATATATAT"?
 
-* How many occurrences of "ATATATAT" are there in the file?
+* How many times does the word "ATATATAT" occur in the file? Hint: -o
 
-* Print the last 10 lines of the file to a new file called tail.txt
+* Print out the last 50 lines of the file to a new file called tail.txt
+
+* What character (A, C, G, or T) is most common?
 
 
-
-
-
+DONE.
 
