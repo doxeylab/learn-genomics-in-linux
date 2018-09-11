@@ -2,7 +2,7 @@
 
 This task will introduce students to the Linux command-line (shell environment).
 
-## Requirements
+### Requirements
 
 * Access to a linux-based OS running BASH
 
