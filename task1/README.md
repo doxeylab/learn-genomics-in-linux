@@ -6,6 +6,8 @@ This task will introduce students to the Linux command-line (shell environment).
 
 * Access to a linux-based OS running BASH
 
+---
+
 
 ## What is the Linux Shell?
 
