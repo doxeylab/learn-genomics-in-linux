@@ -30,30 +30,16 @@ gunzip mt_reads.fastq.gz
 
 ```
 
-Now explore the first few lines of the file using `head`
-
-```
-head mt_reads.fastq.gz
-```
-
-Now try...
+Now explore the structure of the fastq file
 
 ```
 less mt_reads.fastq.gz
 ```
 
-And...
+<b>Q1</b>:large_blue_circle: Paste the lines corresponding to the first 3 reads.
 
-```
-tail mt_reads.fastq.gz
-```
 
-:large_blue_circle: How many lines are in the file? :grey_question:
-
-```
-wc -l mt_reads.fastq.gz
-```
-
+<b>Q2</b>:large_blue_circle: How many lines are in the file? Hint: you can use `grep` or `wc` to answer this
 
 
 ## Data preprocessing
