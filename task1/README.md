@@ -1,10 +1,11 @@
-### Requirements
-
-* Access to a linux-based OS running BASH
-
 # Task1 - Learning the Linux shell
 
 This task will introduce students to the Linux command-line (shell environment).
+
+## Requirements
+
+* Access to a linux-based OS running BASH
+
 
 ## What is the Linux Shell?
 
