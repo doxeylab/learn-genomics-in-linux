@@ -148,6 +148,24 @@ Delete the file
 rm file.txt
 ```
 
+Print contents of all .txt files in current folder. '*' acts as a wildcard
+
+```
+cat *.txt
+```
+
+Delete all .txt files in the current folder
+
+```
+rm *.txt
+```
+
+Delete all files in the current folder
+
+```
+rm *
+```
+
 Move back to the previous folder
 
 ```
