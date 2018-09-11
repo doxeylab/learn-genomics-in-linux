@@ -22,8 +22,8 @@ Most of the programs we will use are text-based and can be run directly in the s
 
 Detailed software requirements will be listed at the beginning of each Task. Alternatively, if you wish to install all the programs for the course beforehand, please install the software listed below:
 
-* [tablet](https://ics.hutton.ac.uk/tablet/) *
-* [artemis and act](http://sanger-pathogens.github.io/Artemis/Artemis/) *
+* [tablet](https://ics.hutton.ac.uk/tablet/)
+* [artemis and act](http://sanger-pathogens.github.io/Artemis/Artemis/)
 * [R](https://www.r-project.org/)
 
 We have also documented installation instructions for building a bioinformatics system (Ubuntu 18.04) [here](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/VMbuild.README).
