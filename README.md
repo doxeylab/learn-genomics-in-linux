@@ -15,7 +15,9 @@ It is divided into a series of tasks
   
 # Requirements & Software Installation
 
-The main requirement is that you have access to a Linux-based OS such as Ubuntu.
+The main requirement is that you have access to a Linux-based OS such as Ubuntu. If you have access through a remote server that has been supplied to you, then you are set. If not, then one option is to install a Linux VM as a Virtual Machine on your local system, or use the Google Compute Engine (e.g., [free credits](https://cloud.google.com/free/))
+).
+
 Most of the programs we will use are text-based and can be run directly in the shell; however, some graphical programs (e.g., Tablet, Artemis, fastqc) will be used as well. You can install these on your own local machine.
 
 Detailed software requirements will be listed at the beginning of each Task. Alternatively, if you wish to install all the programs for the course beforehand, please install the software listed below:
