@@ -36,10 +36,10 @@ Now explore the structure of the fastq file
 less mt_reads.fastq.gz
 ```
 
-<b>Q1</b>:large_blue_circle: Paste the lines corresponding to the first 3 reads.
+:large_blue_circle: <b>Q1</b> Paste the lines corresponding to the first 3 reads.
 
 
-<b>Q2</b>:large_blue_circle: How many lines are in the file? Hint: you can use `grep` or `wc` to answer this
+:large_blue_circle: <b>Q2</b> How many lines are in the file? Hint: you can use `grep` or `wc` to answer this
 
 
 ## Data preprocessing
