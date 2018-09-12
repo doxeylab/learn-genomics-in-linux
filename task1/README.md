@@ -213,6 +213,8 @@ grep "word" file.txt  # prints lines in file.txt containing "word"
 grep -c "word" file.txt # prints the number of occurrences of "word" in file.txt
 ```
 
+#### Piping commands
+
 We can also chain together multiple commands like this using the `|` (pipe) operator.
 
 ```
