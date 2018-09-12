@@ -243,7 +243,7 @@ scp username@remoteserver.com:/path/to/file.txt /path/to/location/.
 wget <url>
 ```
 
-#### file compression/uncompression
+#### File compression/uncompression
 
 This is done using programs such as `tar`, and `gzip` and `gunzip`.
 e.g.,
