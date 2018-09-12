@@ -1,5 +1,7 @@
 # learn-genomics-in-unix
 
+[home](https://doxeylab.github.io/learn-genomics-in-unix)
+
 This repository contains a tutorial on how to use command-line genomics/bioinformatics tools in Linux.
 It has been designed for BIOL 469 (Genomics) @ the University of Waterloo.
 
