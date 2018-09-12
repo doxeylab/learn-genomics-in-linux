@@ -1,4 +1,6 @@
-[home](../)/task1/
+./[home](../)/task1/
+
+---
 
 # Task1 - Learning the Linux shell
 
