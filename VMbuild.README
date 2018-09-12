@@ -4,18 +4,8 @@
 
 # Logged in via terminal (supplied my ssh public key to the gcloud meta ssh keys page in the console)
 
-# install xfce desktop
-  sudo apt-get update
-  sudo apt install xubuntu-desktop
-
-# install additional bioinformatics software
+# install  bioinformatics software
   sudo apt install fastqc velvet abyss fasttree
-
-# install x2go
-  sudo apt-get install software-properties-common
-  sudo add-apt-repository ppa:x2go/stable
-  sudo apt-get update
-  sudo apt-get install x2goserver x2goserver-xsession
 
 # comment out following line (/etc/java-X-openjdk/accessibility.properties) to prevent Java issues
 # assistive_technologies=org.GNOME.Accessibility.AtkWrapper
