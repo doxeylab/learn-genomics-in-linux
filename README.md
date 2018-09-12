@@ -5,7 +5,7 @@ It has been designed for BIOL 469 (Genomics) @ the University of Waterloo.
 
 It is divided into a series of tasks
 
-  * Task 1 - Learning the linux command line
+  * [Task 1](task1/) - Learning the linux command line
   * Task 1b - Command-line BLAST
   * Task 2 - Genome Assembly
   * Task 3 - Genome Annotation
