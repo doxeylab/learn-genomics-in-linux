@@ -1,7 +1,3 @@
-./[home](../)/task1/
-
----
-
 # Task1 - Learning the Linux shell
 
 This task will introduce students to the Linux command-line (shell environment).
