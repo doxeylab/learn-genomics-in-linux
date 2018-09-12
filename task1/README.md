@@ -1,5 +1,3 @@
-[home](../readme.MD)
-
 # Task1 - Learning the Linux shell
 
 This task will introduce students to the Linux command-line (shell environment).
@@ -13,11 +11,9 @@ This task will introduce students to the Linux command-line (shell environment).
 
 ## What is the Linux Shell?
 
-The <i>shell</i> is a command-line programming language for interacting with the UNIX operating system.  https://en.wikipedia.org/wiki/Unix_shell
+The <i>shell</i> is a command-line programming language for interacting with the [UNIX](https://en.wikipedia.org/wiki/Unix_shell) operating system. 
 
-There are several different shell languages. What we will be using in this course is a popular shell flavor called <b>BASH</b>
-
-https://en.wikipedia.org/wiki/Bash_(Unix_shell)
+There are several different shell languages. What we will be using in this course is a popular shell flavor called [<b>BASH</b>](https://en.wikipedia.org/wiki/Bash_(Unix_shell))
 
 We will be learning basic commands, but BASH is actually a language that can perform complex programming tasks.
 
