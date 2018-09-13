@@ -39,49 +39,84 @@ Within this folder, there are a number of files including a:
 * ...genomic.fna.gz file -> this will uncompress into a .fna (fasta nucleic acid) file
 * ...protein.faa.gz -> this will uncompress into a .faa (fasta amino acid) file
 
-It should be clear what these files contain.
+It should be clear what these two files contain.
+
+There is also another file called:
+
+* ...genomic.gbk.gz -> this will uncompress into a .gbk file (genbank file)
+
 
 Download these files, uncompress them, and explore them (with `less` for example).
 
 ```
+wget ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/bacteria/Prochlorococcus_marinus/reference/GCA_000007925.1_ASM792v1/GCA_000007925.1_ASM792v1_genomic.fna.gz
+
 wget ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/bacteria/Prochlorococcus_marinus/reference/GCA_000007925.1_ASM792v1/GCA_000007925.1_ASM792v1_genomic.gff.gz
 
 wget ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/bacteria/Prochlorococcus_marinus/reference/GCA_000007925.1_ASM792v1/GCA_000007925.1_ASM792v1_protein.faa.gz
 
 ```
 
+<b>Q1) Look at the .gbk file. What information does this contain? </b>
+
+
 ## Formatting the genome and proteome for BLAST
 
-BLAST requires that the genome and proteome be formatted. What BLAST is doing here is 'indexing' the sequence data, which chops sequences into their constitutent k-mer fragments and stores this data to facilitate rapid database searching.
+Next, we are going to do a BLAST search against the genome (.fna) and proteome (.faa) that you have downloaded.
 
-To format the data, it must be in FASTA format, which looks like this:
+In this case, the genome and proteome will be the <b>DATABASE</b> you are searching against.
+The <b>QUERY</b> sequences (a gene and a protein) can be anything you like, but here are some suggestions:
+
+* e.g. query gene sequence: E. coli 16S ribosomal RNA - copy and paste this into a new text file
+``
+>J01859.1 Escherichia coli 16S ribosomal RNA, complete sequence
+AAATTGAAGAGTTTGATCATGGCTCAGATTGAACGCTGGCGGCAGGCCTAACACATGCAAGTCGAACGGT
+AACAGGAAGAAGCTTGCTCTTTGCTGACGAGTGGCGGACGGGTGAGTAATGTCTGGGAAACTGCCTGATG
+GAGGGGGATAACTACTGGAAACGGTAGCTAATACCGCATAACGTCGCAAGACCAAAGAGGGGGACCTTCG
+GGCCTCTTGCCATCGGATGTGCCCAGATGGGATTAGCTAGTAGGTGGGGTAACGGCTCACCTAGGCGACG
+ATCCCTAGCTGGTCTGAGAGGATGACCAGCCACACTGGAACTGAGACACGGTCCAGACTCCTACGGGAGG
+CAGCAGTGGGGAATATTGCACAATGGGCGCAAGCCTGATGCAGCCATGCCGCGTGTATGAAGAAGGCCTT
+CGGGTTGTAAAGTACTTTCAGCGGGGAGGAAGGGAGTAAAGTTAATACCTTTGCTCATTGACGTTACCCG
+CAGAAGAAGCACCGGCTAACTCCGTGCCAGCAGCCGCGGTAATACGGAGGGTGCAAGCGTTAATCGGAAT
+TACTGGGCGTAAAGCGCACGCAGGCGGTTTGTTAAGTCAGATGTGAAATCCCCGGGCTCAACCTGGGAAC
+TGCATCTGATACTGGCAAGCTTGAGTCTCGTAGAGGGGGGTAGAATTCCAGGTGTAGCGGTGAAATGCGT
+AGAGATCTGGAGGAATACCGGTGGCGAAGGCGGCCCCCTGGACGAAGACTGACGCTCAGGTGCGAAAGCG
+TGGGGAGCAAACAGGATTAGATACCCTGGTAGTCCACGCCGTAAACGATGTCGACTTGGAGGTTGTGCCC
+TTGAGGCGTGGCTTCCGGAGCTAACGCGTTAAGTCGACCGCCTGGGGAGTACGGCCGCAAGGTTAAAACT
+CAAATGAATTGACGGGGGCCCGCACAAGCGGTGGAGCATGTGGTTTAATTCGATGCAACGCGAAGAACCT
+TACCTGGTCTTGACATCCACGGAAGTTTTCAGAGATGAGAATGTGCCTTCGGGAACCGTGAGACAGGTGC
+TGCATGGCTGTCGTCAGCTCGTGTTGTGAAATGTTGGGTTAAGTCCCGCAACGAGCGCAACCCTTATCCT
+TTGTTGCCAGCGGTCCGGCCGGGAACTCAAAGGAGACTGCCAGTGATAAACTGGAGGAAGGTGGGGATGA
+CGTCAAGTCATCATGGCCCTTACGACCAGGGCTACACACGTGCTACAATGGCGCATACAAAGAGAAGCGA
+CCTCGCGAGAGCAAGCGGACCTCATAAAGTGCGTCGTAGTCCGGATTGGAGTCTGCAACTCGACTCCATG
+AAGTCGGAATCGCTAGTAATCGTGGATCAGAATGCCACGGTGAATACGTTCCCGGGCCTTGTACACACCG
+CCCGTCACACCATGGGAGTGGGTTGCAAAAGAAGTAGGTAGCTTAACCTTCGGGAGGGCGCTTACCACTT
+TGTGATTCATGACTGGGGTGAAGTCGTAACAAGGTAACCGTAGGGGAACCTGCGGTTGGATCACCTCCTT
+A
+``
+
+* e.g. query protein sequence: 
+
+``curl https://www.uniprot.org/uniprot/B7LA79.fasta > e.coli.l7.faa``
+
+
+When doing a BLAST, the query can be in FASTA format, but the database needs to be <b>formatted</b> for BLAST. This is done with the `makeblastdb` command. This tool sets up an 'indexed' database for BLAST, which chops sequences into their constitutent k-mer fragments and stores this data to facilitate rapid database searching.
+
+Let's set up a BLAST database for the proteome
 
 ```
->sequenceName
-ATCATCGTACGATCGATCATCG
-ATCATCTAGCTATGCATCGTAC
-AATGCACGTACGTATCGACTCT
-```
-or for protein
-```
->sequenceName
-MARSTLEDQIIAAIDL
-etc. etc.
+makeblastdb -in GCA_000007925.1_ASM792v1_protein.faa -dbtype 'prot'
 ```
 
-Take a look at your input files to ensure that they adhere to this format using `head` or `less`
-
-To format the genome for BLAST, do the following
+... and now the genome as well
 
 ```
-makeblastdb -in <genome.fna> -dbtype 'nucl'
+makeblastdb -in GCA_000007925.1_ASM792v1_genomic.faa -dbtype 'nucl'
 ```
 
-To format the proteome for BLAST, do the same thing but change the 'dbtype'
 
-```
-makeblastdb -in <proteome.fna. -dbtype 'prot'
-```
+You can see that the `-dbtype` parameter defines whether the input FASTA file is for protein or nucleotide sequences.
+
 
 
 # ASSIGNMENT QUESTIONS
