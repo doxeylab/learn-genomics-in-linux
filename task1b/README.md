@@ -17,7 +17,7 @@ Login to your linux environment as you did in task1. e.g.,
 ssh -i /path/to/your/.ssh/publickey yourUserName@remoteIP
 ```
 
-Create a new folder for this task
+Create a new project folder for this task
 
 ```
 mkdir blastTask  #creates folder
@@ -29,10 +29,24 @@ cd blastTask #enters into folder
 There are several ways to download data. Two common tools are `curl` and `wget`.
 
 The following command will download a genome (DNA sequence data) and proteome (translated AA sequence data) from the NCBI.
+The NCBI houses its genomic data within an FTP directory - [here](ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank)
+It is further subdivided - e.g., bacterial genomes can be found [here](ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/bacteria)
+
+We will be working with the genome of Prochlorococcus marinus, which is an abundant marine microbe and possibly the most abundant genus on earth. First, explore its FTP directory [here](ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/bacteria/Prochlorococcus_marinus/reference/GCA_000007925.1_ASM792v1)
+
+Within this folder, there are a number of files including a:
+
+* ...genomic.fna.gz file -> this will uncompress into a .fna (fasta nucleic acid) file
+* ...protein.faa.gz -> this will uncompress into a .faa (fasta amino acid) file
+
+It should be clear what these files contain.
+
+Download these files, uncompress them, and explore them (with `less` for example).
 
 ```
-wget ...
-wget ...
+wget ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/bacteria/Prochlorococcus_marinus/reference/GCA_000007925.1_ASM792v1/GCA_000007925.1_ASM792v1_genomic.gff.gz
+
+wget ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/bacteria/Prochlorococcus_marinus/reference/GCA_000007925.1_ASM792v1/GCA_000007925.1_ASM792v1_protein.faa.gz
 
 ```
 
