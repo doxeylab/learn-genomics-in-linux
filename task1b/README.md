@@ -118,7 +118,7 @@ Let's explore some more.
 makeblastdb -help
 ```
 
-### Advanced: retrieving specific entries and regions from your BLAST database
+#### Advanced: retrieving specific entries and regions from your BLAST database
 
 One of the useful parameters here is the `-parse_seq_ids` flag. If this option is set, this makes it very easy to retrieve specific sequences from the database using their name or id. e.g.,
 
@@ -150,9 +150,32 @@ This will output:
 MKLVCSQIEL
 
 
+### Performing a BLAST search
+
+There are several different flavors of BLAST. Each is run as a separate command:
+
+* `blastp` - protein query vs protein database
+* `blastn` - nucleotide query vs nucleotide database
+* `blastx` - nucleotide query (translated) vs protein database
+* `tblastn` - protein query vs nucleotide (translated) database
+* `tblastx` - nucleotide query (translated) vs nucleotide database (translated)
+
+To run a `blastp` search using the protein query (defined by `-query` parameter) and protein database (defined by `-db` parameter) you have set up, do the following:
+
+```
+blastp -query e.coli.l7.faa -db GCA_000007925.1_ASM792v1_protein.faa
+```
+
+<b>Q2) How many significant (E < 0.001) hits did you get?</b>
+
+<b>Q3) Copy and paste the alignment for the top hit.</b>
+
+<b>Q4) Search this protein against the genomic sequence. Do you get the same result? Describe your answer.</b>
+
+
 # ASSIGNMENT QUESTIONS
 
-Your assignment will be to write a series of shell commands to answer the following questions. Please submit the code you used as well as the answers to the questions. Submit your assignment to a dropbox on LEARN as a .docx, .txt, or .pdf file.
+* Answer questions 1 - 4 above
 
 * Pick a protein of interest (POI) (from any organism)
 
@@ -169,6 +192,7 @@ Your assignment will be to write a series of shell commands to answer the follow
 * How many homologs did you detect? Again, justify your answer by pasting the relevant output from your BLAST result.
 
 
+Submit your assignment to a dropbox on LEARN as a .docx, .txt, or .pdf file.
 
 
 #### Congratulations. You are now finished Task 1b.
