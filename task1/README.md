@@ -259,25 +259,25 @@ Your assignment will be to write a series of shell commands to answer the follow
 
 Hint: remember to use `man` if you want to explore added functionality of commands.
 
-* Download this file containing the genome sequence of E. coli K12 https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task1/e-coli-k12-genome.fasta.gz
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q1 - Download this file containing the genome sequence of E. coli K12 https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task1/e-coli-k12-genome.fasta.gz
 
-* What is the size of this compressed file in megabytes?
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q2 - What is the size of this compressed file in megabytes?
 
-* Uncompress the file. What is the size now in megabytes?
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q3 - Uncompress the file. What is the size now in megabytes?
 
-* Print out the first 3 lines of the file.
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q4 - Output (to the shell) the first 3 lines of the file. Copy and paste the result into your assignment.
 
-* How many characters are in this file?
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q5 - How many characters are in this file?
 
-* How many lines are in the file?
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q6 - How many lines are in the file?
 
-* How many lines in the file contain the word "ATATATAT"?
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q7 - How many lines in the file contain the word "ATATATAT"?
 
-* How many times does the word "ATATATAT" occur in the file? Hint: -o
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q8 - How many times does the word "ATATATAT" occur in the file? Hint: -o
 
-* Print out the last 50 lines of the file to a new file called tail.txt
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q9 - Print out the last 50 lines of the file to a new file called tail.txt. Do not paste the result into your assignment.
 
-* What character (A, C, G, or T) is most common?
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q10 - What character (A, C, G, or T) is most common in tail.txt?
 
 
 #### Congratulations. You are now finished Task 1.
