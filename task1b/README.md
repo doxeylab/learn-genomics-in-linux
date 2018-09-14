@@ -11,11 +11,7 @@ In this task, you will learn how to run BLAST in the command-line. You will down
 
 ## Getting Started
 
-Login to your linux environment as you did in task1. e.g.,
-
-```
-ssh -i /path/to/your/.ssh/publickey yourUserName@remoteIP
-```
+Login to your linux environment as you did in task1, either through the browser or via `ssh`.
 
 Create a new project folder for this task
 
