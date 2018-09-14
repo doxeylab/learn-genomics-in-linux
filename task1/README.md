@@ -268,6 +268,9 @@ If you need to interrupt a command or process that you have started, press Ctrl-
 [Linux Tips](https://www.howtogeek.com/110150/become-a-linux-terminal-power-user-with-these-8-tricks/)
 
 
+---
+
+
 # ASSIGNMENT QUESTIONS
 
 Your assignment will be to write a series of shell commands to answer the following questions. Please submit the code you used as well as the answers to the questions. Submit your assignment to a dropbox on LEARN as a .docx, .txt, or .pdf file.
