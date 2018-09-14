@@ -41,7 +41,7 @@ It should be clear what these two files contain.
 
 There is also another file called:
 
-* ...genomic.gbk.gz -> .gbk file (genbank file)
+* ...genomic.gff.gz -> .gff file (generic feature format)
 
 
 Download these files, uncompress them, and explore them (with `less` for example).
