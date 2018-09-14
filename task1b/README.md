@@ -55,7 +55,7 @@ wget ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/bacteria/Prochlorococcus_marinus
 
 ```
 
-<b>Q1) Look at the .gbk file. What information does this contain? </b>
+:large_blue_circle: <b>Q1) Look at the .gbk file. What information does this contain? </b>
 
 
 ## Command-line BLAST
