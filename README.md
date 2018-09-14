@@ -35,7 +35,7 @@ We have also documented installation instructions for building a bioinformatics 
  
 # Development & Contact
 
-This tutorial was developed by Dr. Andrew Doxey and other members of the Doxey Lab (http://doxey.uwaterloo.ca/).
+This tutorial was developed by Dr. Andrew Doxey and other members of the [Doxey Lab](http://doxey.uwaterloo.ca/).
 If you have any questions, please contact acdoxey at uwaterloo dot ca.
 
 Enjoy
