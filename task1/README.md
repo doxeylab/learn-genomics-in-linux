@@ -252,6 +252,21 @@ gzip file.txt # to compress it
 gunzip file.txt.gz # to uncompress it
 ```
 
+### More tips
+
+#### Use tab to autocomplete
+
+Use tab for autocompletion! This will speed up your command-line work dramatically.
+More here: [tab-autocomplete](https://www.howtogeek.com/195207/use-tab-completion-to-type-commands-faster-on-any-operating-system/)
+
+#### Use Ctrl-C to interrupt or end a process
+
+If you need to interrupt a command or process that you have started, press Ctrl-C.
+
+#### Other tips for becoming a linux power user
+
+[Linux Tips](https://www.howtogeek.com/110150/become-a-linux-terminal-power-user-with-these-8-tricks/)
+
 
 # ASSIGNMENT QUESTIONS
 
