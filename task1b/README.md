@@ -162,30 +162,30 @@ To run a `blastp` search using the protein query (defined by `-query` parameter)
 blastp -query e.coli.l7.faa -db GCA_000007925.1_ASM792v1_protein.faa
 ```
 
-<b>Q2) How many significant (E < 0.001) hits did you get?</b>
+:large_blue_circle: <b>Q2) How many significant (E < 0.001) hits did you get?</b>
 
-<b>Q3) Copy and paste the alignment for the top hit.</b>
+:large_blue_circle: <b>Q3) Copy and paste the alignment for the top hit.</b>
 
-<b>Q4) Search this protein against the genomic sequence. Do you get the same result? Describe your answer.</b>
+:large_blue_circle: <b>Q4) Search this protein against the genomic sequence. Do you get the same result? Describe your answer.</b>
 
 
 # ASSIGNMENT QUESTIONS
 
-* Answer questions 1 - 4 above
+:large_blue_circle: * Answer questions 1 - 4 above
 
-* Pick a protein of interest (POI) (from any organism)
+:large_blue_circle: * Pick a protein of interest (POI) (from any organism)
 
-* Now pick a genome from a different organism (these can be found in the the NCBI ftp directory) where you suspect to find a homolog of your protein
+:large_blue_circle: * Now pick a genome from a different organism (these can be found in the the NCBI ftp directory) where you suspect to find a homolog of your protein
 
-* Download the genome (.fna) and predicted proteome (.faa) for the organism above
+:large_blue_circle: * Download the genome (.fna) and predicted proteome (.faa) for the organism above
 
-* Search the genome for your POI using `tblastn` and the proteome for your POI using `blastp`
+:large_blue_circle: * Search the genome for your POI using `tblastn` and the proteome for your POI using `blastp`
 
-* Paste your top result for each.
+:large_blue_circle: * Paste your top result for each.
 
-* Have you a identified true homolog of your POI? Justify your answer using the E-value and sequence identity.
+:large_blue_circle: * Have you a identified true homolog of your POI? Justify your answer using the E-value and sequence identity.
 
-* How many homologs did you detect? Again, justify your answer by pasting the relevant output from your BLAST result.
+:large_blue_circle: * How many homologs did you detect? Again, justify your answer by pasting the relevant output from your BLAST result.
 
 
 Submit your assignment to a dropbox on LEARN as a .docx, .txt, or .pdf file.
