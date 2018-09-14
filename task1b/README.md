@@ -25,7 +25,7 @@ cd blastTask #enters into folder
 There are several ways to download data. Two common tools are `curl` and `wget`.
 You can also simply copy and paste sequence data into a file using `nano` or `pico` or other unix text-editors. More advanced ones are `vim` and `emacs`.
 
-The following command will download a genome (DNA sequence data) and proteome (translated AA sequence data) from the NCBI.
+The following exercise will download a genome (DNA sequence data) and proteome (translated AA sequence data) from the NCBI.
 The NCBI houses its genomic data within an FTP directory - [here](ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank)
 It is further subdivided - e.g., bacterial genomes can be found [here](ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/bacteria)
 
@@ -164,7 +164,7 @@ blastp -query e.coli.l7.faa -db GCA_000007925.1_ASM792v1_protein.faa
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q2 - How many significant (E < 0.001) hits did you get?
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q3 - - Copy and paste the alignment for the top hit.
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q3 - Copy and paste the alignment for the top hit.
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q4 - Search this protein against the genomic sequence. Do you get the same result? Describe your answer.
 
@@ -173,19 +173,21 @@ blastp -query e.coli.l7.faa -db GCA_000007925.1_ASM792v1_protein.faa
 
 <i>* Answer questions 1 - 4 above</i>
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q5 - Pick a protein of interest (POI) (from any organism)
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) - Pick a protein of interest (POI) (from any organism)
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q6 - Now pick a genome from a different organism (these can be found in the the NCBI ftp directory) where you suspect to find a homolog of your protein
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) - Now pick a genome of interest (GOI) from a different organism (these can be found in the the NCBI ftp directory) where you suspect to find a homolog of your protein
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q7 - Download the genome (.fna) and predicted proteome (.faa) for the organism above
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) - Q5 - List your POI and your GOI.
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q8 - Search the genome for your POI using `tblastn` and the proteome for your POI using `blastp`
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) - Download the genome (.fna) and predicted proteome (.faa) for the organism above
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q9 - Paste your top result for each.
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) - Search the genome for your POI using `tblastn` and the proteome for your POI using `blastp`
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q10 - Have you a identified true homolog of your POI? Justify your answer using the E-value and sequence identity.
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q6 - Paste your top result for each.
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q11 - How many homologs did you detect? Again, justify your answer by pasting the relevant output from your BLAST result.
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q7 - Have you a identified true homolog of your POI? Justify your answer using the E-value and sequence identity.
+
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q8 - How many homologs did you detect? Again, justify your answer by pasting the relevant output from your BLAST result.
 
 
 Submit your assignment to a dropbox on LEARN as a .docx, .txt, or .pdf file.
