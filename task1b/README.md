@@ -171,7 +171,7 @@ blastp -query e.coli.l7.faa -db GCA_000007925.1_ASM792v1_protein.faa
 
 # ASSIGNMENT QUESTIONS
 
-:large_blue_circle: * Answer questions 1 - 4 above
+<i>* Answer questions 1 - 4 above</i>
 
 :large_blue_circle: 5 - Pick a protein of interest (POI) (from any organism)
 
