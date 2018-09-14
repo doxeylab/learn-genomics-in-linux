@@ -243,7 +243,7 @@ If you are using ssh in a browser window, you can easily upload and download fil
 Look in the rop right corner for the options window, click `Download file` and then enter in the path to your file.
 Remember, your current path can be found using `pwd`.
 
-![See Here](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/task1/gcloud-download.png)
+![](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/task1/gcloud-download.png)
 
 #### Downloading a file off the internet
 
