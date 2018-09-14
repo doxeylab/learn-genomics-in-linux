@@ -265,7 +265,7 @@ Hint: remember to use `man` if you want to explore added functionality of comman
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q3 - Uncompress the file. What is the size now in megabytes?
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q4 - Output (to the shell) the first 3 lines of the file. Copy and paste the result into your assignment.
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q4 - Print out (within the shell) the first 3 lines of the file. Copy and paste the result into your assignment.
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q5 - How many characters are in this file?
 
