@@ -173,15 +173,15 @@ blastp -query e.coli.l7.faa -db GCA_000007925.1_ASM792v1_protein.faa
 
 <i>* Answer questions 1 - 4 above</i>
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) - Pick a protein of interest (POI) (from any organism)
+* Pick a protein of interest (POI) (from any organism)
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) - Now pick a genome of interest (GOI) from a different organism (these can be found in the the NCBI ftp directory) where you suspect to find a homolog of your protein
+* Now pick a genome of interest (GOI) from a different organism (these can be found in the the NCBI ftp directory) where you suspect to find a homolog of your protein
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) - Q5 - List your POI and your GOI.
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q5 - List your POI and your GOI.
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) - Download the genome (.fna) and predicted proteome (.faa) for the organism above
+* Download the genome (.fna) and predicted proteome (.faa) for the organism above
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) - Search the genome for your POI using `tblastn` and the proteome for your POI using `blastp`
+* Search the genome for your POI using `tblastn` and the proteome for your POI using `blastp`
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q6 - Paste your top result for each.
 
