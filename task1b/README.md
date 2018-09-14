@@ -24,7 +24,7 @@ mkdir blastTask  #creates folder
 cd blastTask #enters into folder
 ```
 
-## Retrieving the raw data
+## Retrieving genomic data from the NCBI
 
 There are several ways to download data. Two common tools are `curl` and `wget`.
 You can also simply copy and paste sequence data into a file using `nano` or `pico` or other unix text-editors. More advanced ones are `vim` and `emacs`.
@@ -62,7 +62,9 @@ wget ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/bacteria/Prochlorococcus_marinus
 <b>Q1) Look at the .gbk file. What information does this contain? </b>
 
 
-## Formatting the genome and proteome for BLAST
+## Command-line BLAST
+
+### Setting up your query sequence(s)
 
 Next, you are going to do a BLAST search against the genome (.fna) and proteome (.faa) that you have downloaded.
 
@@ -78,10 +80,21 @@ AAATTGAAGAGTTTGATCATGGCTCAGATTGAACGCTGGCGGCAGGCCTAACACATGCAAGTCGAACGGTAACAGGAAGA
 
 * e.g. query protein sequence: 
 
-``curl https://www.uniprot.org/uniprot/B7LA79.fasta > e.coli.l7.faa``
+```
+>sp|B7LA79|RL7_ECO55 50S ribosomal protein L7/L12 OS=Escherichia coli (strain 55989 / EAEC) OX=585055 GN=rplL PE=3 SV=1
+MSITKDQIIEAVAAMSVMDVVELISAMEEKFGVSAAAAVAVAAGPVEAAEEKTEFDVILKAAGANKVAVIKAVRGATGLGLKEAKDLVESAPAALKEGVSKDDAEALKKALEEAGAEVEVK
+```
+
+Note: here is a quick way to download the above query protein sequence from Uniprot and rename it in one command
+
+```
+curl https://www.uniprot.org/uniprot/B7LA79.fasta > e.coli.l7.faa
+```
 
 
-When doing a BLAST, the query can be in FASTA format, but the database needs to be <b>formatted</b> for BLAST. This is done with the `makeblastdb` command. This tool sets up an 'indexed' database for BLAST, which chops sequences into their constitutent k-mer fragments and stores this data to facilitate rapid database searching.
+### Formatting the genome and proteome for BLAST
+
+When doing a BLAST search, the query can be in FASTA format, but the database needs to be <b>formatted</b> for BLAST. This is done with BLAST's `makeblastdb` command. This tool sets up an 'indexed' database for BLAST, which chops sequences into their constitutent k-mer fragments and stores this data to facilitate rapid database searching.
 
 Let's set up a BLAST database for the proteome
 
@@ -95,9 +108,46 @@ makeblastdb -in GCA_000007925.1_ASM792v1_protein.faa -dbtype 'prot'
 makeblastdb -in GCA_000007925.1_ASM792v1_genomic.faa -dbtype 'nucl'
 ```
 
-
 You can see that the `-dbtype` parameter defines whether the input FASTA file is for protein or nucleotide sequences.
 
+`makeblastdb` and other BLAST tools have lots of additional parameters as well that can be customized based on a users needs.
+Let's explore some more.
+
+```
+# to look at command usage and parameter options
+makeblastdb -help
+```
+
+### Advanced: retrieving specific entries and regions from your BLAST database
+
+One of the useful parameters here is the `-parse_seq_ids` flag. If this option is set, this makes it very easy to retrieve specific sequences from the database using their name or id. e.g.,
+
+```
+makeblastdb -in GCA_000007925.1_ASM792v1_genomic.fna -dbtype 'nucl' -parse_seqids
+makeblastdb -in GCA_000007925.1_ASM792v1_protein.faa -dbtype 'prot' -parse_seqids
+```
+
+And now if you want to print out to the screen the sequence of protein `AAP99047.1`, you can use the `blastdbcmd` program like this:
+
+```
+blastdbcmd -entry AAP99047.1 -db GCA_000007925.1_ASM792v1_protein.faa
+```
+This will output:
+>\>AAP99047.1 DNA polymerase III beta subunit [Prochlorococcus marinus subsp. marinus str. CCMP1375]
+MKLVCSQIELNTALQLVSRAVATRPSHPVLANVLLTADAGTGKLSLTGFDLNLGIQTSLSASIESSGAITVPSKLFGEII
+SKLSSESSITLSTDDSSEQVNLKSKSGNYQVRAMSADDFPDLPMVENGAFLKVNANSFAVSLKSTLFASSTDEAKQILTG
+VNLCFEGNSLKSAATDGHRLAVLDLQNVIASETNPEINNLSEKLEVTLPSRSLRELERFLSGCKSDSEISCFYDQGQFVF
+ISSGQIITTRTLDGNYPNYNQLIPDQFSNQLVLDKKYFIAALERIAVLAEQHNNVVKISTNKELQILNISADAQDLGSGS
+ESIPIKYDSEDIQIAFNSRYLLEGLKIIETNTILLKFNAPTTPAIFTPNDETNFVYLVMPVQIRS
+
+If you want a specific region (e.g., the first 10 amino acids) from this entry, you can use the `-range` parameter
+
+```
+blastdbcmd -entry AAP99047.1 -db GCA_000007925.1_ASM792v1_protein.faa -range 1-10
+```
+This will output:
+>\>AAP99047.1 DNA polymerase III beta subunit [Prochlorococcus marinus subsp. marinus str. CCMP1375]
+MKLVCSQIEL
 
 
 # ASSIGNMENT QUESTIONS
