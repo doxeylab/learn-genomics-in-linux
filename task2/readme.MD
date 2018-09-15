@@ -38,9 +38,7 @@ cd task2 #enters into folder
 
 ## Retrieving the raw data
 
-There are several ways to download data. Two common tools are `curl` and `wget`.
-
-The following command will download the raw sequencing data into your folder and then uncompress it.
+Download the raw sequencing data into your folder and then uncompress it.
 
 ```
 wget https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task2/mt_reads.fastq.gz
@@ -55,10 +53,10 @@ Now explore the structure of the fastq file
 less mt_reads.fastq.gz
 ```
 
-:large_blue_circle: <b>Q1</b> Paste the lines corresponding to the first 3 reads.
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q1) Paste the lines corresponding to the first 3 reads.
 
 
-:large_blue_circle: <b>Q2</b> How many lines are in the file? Hint: you can use `grep` or `wc` to answer this
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q2) How many reads are in the file? Hint: you can use `grep` to answer this.
 
 
 ## Data preprocessing
@@ -72,17 +70,16 @@ Before we can assemble a genome, we need to:
 
 ### Quality assessment
 For a quick quality report, you can use the program `fastqc`.
-The command below will analyze the mt_reads.fastq file and place the results in the 'qcresults' folder.
+The command below will analyze the mt_reads.fastq file and place the results (an .html file) in the 'qcresults' folder.
 
 ```
 fastqc -o qcresults mt_reads.fastq
 ```
 
-Now open the HTML file that was generated in firefox. The ampersand (&) will run the command in the background so you can still use the terminal.
+Next, [<b>download</b>](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task1/gcloud-download.png) the 'fastqc_report.html' file to your local machine and open it in a web browser.
 
-```
-firefox qcresults/mt_reads_fastqc/fastqc_report.html &
-```
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q3) Inspect the quality of your reads by examining the k-mer abundance profile. Why do you think some k-mers are unusually abundant?
+
 
 ### Splitting the barcodes (demultiplexing)
 
@@ -119,6 +116,8 @@ Next, we need to remove low quality sequences. This will increase the accuracy o
 fastq_quality_filter -i trimmed_mt1.fastq -q 25 -p 80 -o qual_trim_mt1.fastq -Q33 -v
 ```
 
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q4) Examine the quality of your data again using `fastqc`. Has the quality improved? Justify your answer.
+
 
 ## Genome Assembly
 
@@ -133,9 +132,13 @@ https://en.wikipedia.org/wiki/De_novo_sequence_assemblers
 
 
 
+Inspect your contigs.fa file (should be in your velvet_k12 directory).
+
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q5) How many contigs are produced?
+
 ### Assembly with ABYSS
 
-Inspect your contigs.fa file (should be in your velvet_k12 directory). There should be 139 separate contigs within this file. You can verify this by running:
+ There should be 139 separate contigs within this file. You can verify this by running:
 
 ```
 grep -c ">" contigs.fa
