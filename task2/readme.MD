@@ -73,7 +73,8 @@ For a quick quality report, you can use the program `fastqc`.
 The command below will analyze the mt_reads.fastq file and place the results (an .html file) in the 'qcresults' folder.
 
 ```
-fastqc -o qcresults mt_reads.fastq
+mkdir qcresults # make the folder
+fastqc -o qcresults mt_reads.fastq  # output  results to /qcresults folder
 ```
 
 Next, [<b>download</b>](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task1/gcloud-download.png) the 'fastqc_report.html' file to your local machine and open it in a web browser.
