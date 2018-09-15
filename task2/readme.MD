@@ -103,7 +103,6 @@ There are now two .fastq files; one for each barcode.  There is also an unmatche
 Barcode trimming is needed to remove the barcode sequences from the beginning of each read. The Q33 is required due to differences in sanger and illumina encoding.
 
 ```
-cd results
 fastx_trimmer -i splitData_mt1.fastq -f 8 -o trimmed_mt1.fastq -Q33
 ```
 
@@ -159,18 +158,15 @@ abyss-pe k=21 in='qual_trim_mt1.fastq' name=abyss-contigs
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q6) How many contigs did abyss generate?
 
 
-Examine the dinucleotide content of your assembled genome using the tool `compseq`. 
-
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q6) What dinucleotide is most underrepresented in the genome?
-
 
 ## Visualization using Artemis
 
-```
-art abyss_contigs.fa
-```
+Next, let's visualize the contigs you have produced using Artemis. Note: you will need to have `artemis` installed on your local machine.
+You will also need to [<b>downloaded</b>](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task1/gcloud-download.png) your contigs to your local machine.
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q7) Produce a gc plot (& increase sliding window length to maximum) covering the whole mitochondrial genome and paste a screenshot.
+* Open your contigs.fa file in `artemis`.
+
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q7) Produce a gc plot (& increase sliding window length to maximum) covering the whole genome and paste a screenshot.
 
 
 ## Genome Annotation
