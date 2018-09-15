@@ -179,5 +179,5 @@ You will also need to [<b>downloaded</b>](https://github.com/doxeylab/learn-geno
 
 # ASSIGNMENT QUESTIONS
 
-The questions for Task 2 are indicated by the lines starting with :large_blue_circle: above
+The questions for Task 2 are indicated by the lines starting with above
 Please submit the code you used as well as the answers to the questions. Submit your assignment to a dropbox on LEARN as a .docx, .txt, or .pdf file.
