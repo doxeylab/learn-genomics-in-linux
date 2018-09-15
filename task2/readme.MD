@@ -104,7 +104,7 @@ Barcode trimming is needed to remove the barcode sequences from the beginning of
 
 ```
 cd results
-fastx_trimmer -i mt1.fastq -f 8 -o trimmed_mt1.fastq -Q33
+fastx_trimmer -i splitData_mt1.fastq -f 8 -o trimmed_mt1.fastq -Q33
 ```
 
 
@@ -131,31 +131,37 @@ https://en.wikipedia.org/wiki/De_Bruijn_graph
 https://en.wikipedia.org/wiki/De_novo_sequence_assemblers
 
 
+The command below will compute the graph. The first parameter is the folder name (you choose) and the second parameter is the value of k.
 
-Inspect your contigs.fa file (should be in your velvet_k12 directory).
+```
+velveth out_21 21 -short -fastq trimmed_mt1.fastq
+```
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q5) How many contigs are produced?
+Now, to compute the actual contig sequences from the graph, run the following:
+
+```
+velvetg out_21/ -scaffolding no
+```
+
+Inspect the contigs.fa file that has been produced (will be in out_21 folder).
+
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q5) How many contigs did you produce? Try varying the k-mer value. Did the number of contigs change?
+
 
 ### Assembly with ABYSS
 
- There should be 139 separate contigs within this file. You can verify this by running:
-
-```
-grep -c ">" contigs.fa
-```
-
-But 139 separate contigs is not ideal. To improve the assembly, try assembling with the popular abyss assembler (with a kmer length of 21) using the following command:
+Next, let's try with a different assembler. We will be using the popular [abyss](https://github.com/bcgsc/abyss) assembler. We will keep the value of k = 21.
 
 ```
 abyss-pe k=21 in='qual_trim_mt1.fastq' name=abyss-contigs
 ```
 
-:large_blue_circle: How many contigs are produced now?
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q6) How many contigs did abyss generate?
 
 
-Examine the dinucleotide content of your assembled mitochondrial genome using the tool compseq. 
+Examine the dinucleotide content of your assembled genome using the tool `compseq`. 
 
-:large_blue_circle: What dinucleotide is most underrepresented in the genome? :grey_question:
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q6) What dinucleotide is most underrepresented in the genome?
 
 
 ## Visualization using Artemis
@@ -164,7 +170,7 @@ Examine the dinucleotide content of your assembled mitochondrial genome using th
 art abyss_contigs.fa
 ```
 
-:large_blue_circle: Produce a gc plot (& increase sliding window length to maximum) covering the whole mitochondrial genome and paste a screenshot.
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q7) Produce a gc plot (& increase sliding window length to maximum) covering the whole mitochondrial genome and paste a screenshot.
 
 
 ## Genome Annotation
