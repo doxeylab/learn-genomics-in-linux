@@ -93,10 +93,10 @@ We will use a standard script from the `fastx toolkit` to split the data by its 
 wget https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task2/mt_barcodes.txt
 
 #now split
-fastx_barcode_splitter.pl <mt_reads.fastq --bcfile mt_barcodes.txt --bol --suffix .fastq --prefix results/
+fastx_barcode_splitter.pl <mt_reads.fastq --bcfile mt_barcodes.txt --bol --suffix .fastq --prefix splitData_
 ```
 
-There are now two .fastq files in the results directory; one for each barcode.  There is also an unmatched.fasta file which should be empty.  We will be focusing on the first sample, ie. the one now in results/mt1.fastq.
+There are now two .fastq files; one for each barcode.  There is also an unmatched.fasta file which should be empty.  We will be focusing on the first sample, ie. the one now in the file 'splitData_mt1.fastq'.
 
 ### Barcode trimming
 
