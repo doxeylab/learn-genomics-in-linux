@@ -1,6 +1,6 @@
 # Task3 - Genome Annotation
 
-In this task, you will perform more detailed annotation of a genome and explore different types of ontologies.
+This task is a tutorial on genome annotation using `prokka` and other tools.
 
 ### Requirements
 
