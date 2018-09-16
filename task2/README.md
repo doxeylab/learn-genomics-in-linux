@@ -216,8 +216,13 @@ Open your contigs.fa file in `artemis`.
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q16) Now, mark the open reading frames (ORFs) with min length = 100nt (under 'Create' menu). Paste a snapshot of your Artemis window (make sure the full genome is visible). How many ORFs of length > 100nt are there? How many ORFs of length > 50nt are there? 
 
+### BONUS (+1 mark)
 
+We did not use all of the options in `velvet` and it can certainly be optimized to produce a better assembly.
 
+Can you change velvet's parameters to yield a genome with a single contig? 
+
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Bonus) Write your code to do so. What options did you change?
 
 # ASSIGNMENT QUESTIONS
 
