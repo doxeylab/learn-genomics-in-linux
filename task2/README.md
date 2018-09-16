@@ -1,4 +1,4 @@
-# Task2 - Genome Assembly (and basic annotation)
+# Task2 - Genome Assembly
 
 In this task, you will download raw sequencing data, perform genome assembly, basic genome annotation, and then compare your assembly to the database using BLAST.
 
@@ -215,29 +215,6 @@ Open your contigs.fa file in `artemis`.
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q16) Now, mark the open reading frames (ORFs) with min length = 100nt (under 'Create' menu). Paste a snapshot of your Artemis window (make sure the full genome is visible). How many ORFs of length > 100nt are there? How many ORFs of length > 50nt are there? 
 
-
-## Genome Annotation
-
-By marking the ORFs in your genome (given a min size threshold), you have essentially performed a simple gene finding algorithm. However, there are more advanced ways of gene-finding that take additional criteria into account.
-
-A popular genome annotation tool for prokaryotic genomes is [`prokka`](https://github.com/tseemann/prokka).
-`prokka` automates a series of genome annotation tools and is simple to run. It has been installed for you on the server.
-
-Type
-
-```
-prokka abyss-assembly-contigs.fa
-```
-
-* Now, download the .gbk file that was produced and view it in Artemis
-
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q17) Are the predicted gene locations consistent with your earlier ORF predictions? 
-
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q18) Why are there vertical black lines in the middle of predicted ORFs?
-
-* Quit artemis and change your artemis 'Options' to better reflect the source of this genome. 
-
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q19) Does this correct the issues above? Paste a screenshot.
 
 
 
