@@ -152,28 +152,59 @@ Inspect the contigs.fa file that has been produced (will be in out_21 folder).
 Next, let's try with a different assembler. We will be using the popular [abyss](https://github.com/bcgsc/abyss) assembler. We will keep the value of k = 21.
 
 ```
-abyss-pe k=21 in='qual_trim_mt1.fastq' name=abyss-contigs
+abyss-pe k=21 in='qual_trim_mt1.fastq' name=abyss-assembly
 ```
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q6) How many contigs did abyss generate?
 
+* Take a look at your abyss-assembly-stats output file.
 
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q7) How long (in kB) is your assembly?
+
+#### What is the taxonomic source of your genome? Explore with BLAST
+
+You still do not know the source of this genome. Is it eukaryotic? bacterial? is it nuclear or mitochondrial?
+
+To investigate this question, do a BLAST search using the <b>online</b> [BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi) tool.
+
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q8) Based on the BLAST result, what organism do you think this genome came from and what kind of genome is it?
 
 ## Visualization using Artemis
 
 Next, let's visualize the contigs you have produced using Artemis. Note: you will need to have `artemis` installed on your local machine.
-You will also need to [<b>downloaded</b>](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task1/gcloud-download.png) your contigs to your local machine.
+You will also need to [<b>downloaded</b>](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task1/gcloud-download.png) your contigs to your local machine. Tip: find the path to your file with `realpath yourFile.txt`
 
 * Open your contigs.fa file in `artemis`.
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q7) Produce a gc plot (& increase sliding window length to maximum) covering the whole genome and paste a screenshot.
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q9) What are the black vertical lines that appear in the sequence window?
+
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q10) Next, produce a gc plot of the genome (look under the 'Graph' window). Increase the sliding window length to 500 and make sure the whole genome is visible. Paste a screenshot.
+
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q11) Now, mark the open reading frames (ORFs) with min length = 100nt (under 'Create' menu). Paste a snapshot of your Artemis window (make sure the full genome is visible). How many ORFs of length > 100nt are there? How many ORFs of length > 50nt are there? 
 
 
 ## Genome Annotation
 
-...
+By marking the ORFs in your genome (given a min size threshold), you have essentially performed a simple gene finding algorithm. However, there are more advanced ways of gene-finding that take additional criteria into account.
 
-## BLAST
+A popular genome annotation tool for prokaryotic genomes is [`prokka`](https://github.com/tseemann/prokka).
+`prokka` automates a series of genome annotation tools and is simple to run. It has been installed for you on the server.
+
+Type
+
+```
+prokka abyss-assembly-contigs.fa
+```
+
+* Now, download the .gbk file that was produced and view it in Artemis
+
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q11) Are the predicted gene locations consistent with your earlier ORF predictions? 
+
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q12) Why are there vertical black lines in the middle of predicted ORFs?
+
+* Quite artemis and change your Artemis 'Options' to better reflect the source of this genome. 
+
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q13) Does this correct the issues above? Paste a screenshot.
 
 
 
