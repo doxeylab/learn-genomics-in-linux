@@ -20,9 +20,6 @@
   wget ftp://ftp.sanger.ac.uk/pub/resources/software/artemis/artemis.tar.gz
   tar zxf artemis.tar.gz
 
-# add following to path
-# export PATH="$PATH:/usr/bin/artemis/"
-
 # install prokka
   sudo apt-get install libdatetime-perl libxml-simple-perl libdigest-md5-perl git default-jre bioperl
   sudo cpan Bio::Perl
@@ -31,15 +28,10 @@
 
 # then cp prokka folder to usr/bin
 
-# add following to path
-# export PATH="$PATH:/usr/bin/prokka/bin/"
-
 # install tablet
   wget https://ics.hutton.ac.uk/resources/tablet/installers/tablet_linux_x64_1_17_08_17.sh
   sh tablet_linux_x64_1_17_08_17.sh
  
-#add following to path
-# export PATH="$PATH:/usr/bin/Tablet/"
 
 #install glimmer
 sudo apt install g++
@@ -55,6 +47,14 @@ cd ../bin/
 sudo cp * /usr/bin/.
 wget https://github.com/doxeylab/learn-genomics-in-unix/raw/master/scripts/glimmer2gff.pl
 sudo cp glimmer2gff.pl /usr/bin/.
+
+# add paths to system-wide bashrc files
+# add lines to /etc/bash.bashrc
+export PATH="$PATH:/usr/bin/prokka/bin/"
+# export PATH="$PATH:/usr/bin/Tablet/"
+# export PATH="$PATH:/usr/bin/artemis/"
+
+
 
 
 
