@@ -176,9 +176,11 @@ Open this file in the `Bandage` application.
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q10) Copy and paste a screenshot of a region that has an unambiguous assembly (region should contain more than one node).
 
-### Assembly with ABYSS
+### Generating an improved assembly with ABYSS
 
-Next, let's try with a different assembler. We will be using the popular [abyss](https://github.com/bcgsc/abyss) assembler. We will keep the value of k = 21.
+As you can see based on the results from above, `velvet` (with the parameters we chose) did not yield a high quality assembly. It is too fragmented.
+
+Often in genomics it is useful to try numerous parameters and different assemblers. Let's try to assemble this genome again but with a different assembler. This time, we will be using the popular [abyss](https://github.com/bcgsc/abyss) assembler. We will keep the value of k = 21.
 
 ```
 abyss-pe k=21 in='qual_trim_mt1.fastq' name=abyss-assembly
@@ -200,7 +202,9 @@ To investigate this question, do a BLAST search using the <b>online</b> [BLAST](
 
 ## Genome visualization using Artemis
 
-Next, let's visualize the contigs you have produced (using `abyss`) with the `Artemis` application. Note: you will need to have `artemis` installed on your local machine.
+Now that we have generated a good quality assembly, let's explore the genome sequence itself and do some initial annotation. 
+
+Visualize the genome you have produced (using `abyss`) with the `Artemis` application. Note: you will need to have `artemis` installed on your local machine.
 You will also need to [<b>downloaded</b>](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task1/gcloud-download.png) your contigs to your local machine. Tip: find the path to your file with `realpath yourFile.txt`
 
 Open your contigs.fa file in `artemis`.
