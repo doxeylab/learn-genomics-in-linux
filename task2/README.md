@@ -1,6 +1,6 @@
 # Task2 - Genome Assembly
 
-In this task, you will download raw sequencing data, perform genome assembly, basic genome annotation, and then compare your assembly to the database using BLAST.
+In this task, you will download raw sequencing data, perform genome assembly, visualize and analyze your assemblies, and compare the assembled genome sequence to the database using BLAST.
 
 ### Requirements
 
