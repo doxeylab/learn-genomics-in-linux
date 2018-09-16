@@ -124,11 +124,12 @@ fastq_quality_filter -i trimmed_mt1.fastq -q 25 -p 80 -o qual_trim_mt1.fastq -Q3
 Now we are ready to assemble a genome. 
 
 ### Assembly with Velvet
-To start we are going to try using the popular `velvet` assembler: https://en.wikipedia.org/wiki/Velvet_assembler
-Like many assemblers, `velvet` performs genome assembly using de bruijn graphs. This means that we must choose a value of <b>k</b> to define the k-mers (sequence fragments of length k) to be used in constructing the graph.
+To start we are going to try using the popular `velvet` assembler. Like many assemblers, `velvet` performs genome assembly using de bruijn graphs. This means that we must choose a value of <b>k</b> to define the k-mers (sequence fragments of length k) to be used in constructing the graph.
 
-https://en.wikipedia.org/wiki/De_Bruijn_graph
-https://en.wikipedia.org/wiki/De_novo_sequence_assemblers
+Read more:
+[velvet](https://en.wikipedia.org/wiki/Velvet_assembler).
+[de bruijn graphs](https://en.wikipedia.org/wiki/De_Bruijn_graph)
+[de novo assemblers](https://en.wikipedia.org/wiki/De_novo_sequence_assemblers)
 
 
 The command below will compute the graph. The first parameter is the folder name (you choose) and the second parameter is the value of k.
@@ -137,7 +138,7 @@ The command below will compute the graph. The first parameter is the folder name
 velveth out_21 21 -short -fastq trimmed_mt1.fastq
 ```
 
-Now, to compute the actual contig sequences from the graph, run the following:
+Next, to compute the actual contig sequences from the graph, run the following:
 
 ```
 velvetg out_21/ -scaffolding no -read_trkg yes -amos_file yes
