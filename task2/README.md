@@ -1,6 +1,6 @@
-# Task2 - Genome Assembly
+# Task2 - Genome Assembly (and basic annotation)
 
-In this task, you will download raw sequencing data, perform genome assembly, genome annotation, and then compare your assembly to the database using BLAST.
+In this task, you will download raw sequencing data, perform genome assembly, basic genome annotation, and then compare your assembly to the database using BLAST.
 
 ### Requirements
 
@@ -147,6 +147,8 @@ Inspect the contigs.fa file that has been produced (will be in out_21 folder).
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q5) How many contigs did you produce? Try varying the k-mer value. Did the number of contigs change?
 
+## Assembly visualization
+
 ### Assembly visualization with Tablet
 
 Velvet has the option of keeping track of where the reads map to the assembly using the `-read_trkg` flag. This will produce a `velvet_asm.afg` file.
@@ -196,7 +198,7 @@ To investigate this question, do a BLAST search using the <b>online</b> [BLAST](
 
 ## Genome visualization using Artemis
 
-Next, let's visualize the contigs you have produced using Artemis. Note: you will need to have `artemis` installed on your local machine.
+Next, let's visualize the contigs you have produced (using `abyss`) with the `Artemis` application. Note: you will need to have `artemis` installed on your local machine.
 You will also need to [<b>downloaded</b>](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task1/gcloud-download.png) your contigs to your local machine. Tip: find the path to your file with `realpath yourFile.txt`
 
 Open your contigs.fa file in `artemis`.
