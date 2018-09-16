@@ -184,7 +184,7 @@ abyss-pe k=21 in='qual_trim_mt1.fastq' name=abyss-assembly
 
 Take a look at your abyss-assembly-stats output file.
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q12) How long (in kB) is your assembly?
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q12) How long (in kB) is your assembly? What is the N50?
 
 #### What is the taxonomic source of your genome? Explore with BLAST
 
@@ -235,5 +235,5 @@ prokka abyss-assembly-contigs.fa
 
 # ASSIGNMENT QUESTIONS
 
-The questions for Task 2 are indicated by the lines starting with above
+The questions for this task are indicated by the lines starting with ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) above.
 Please submit the code you used as well as the answers to the questions. Submit your assignment to a dropbox on LEARN as a .docx, .txt, or .pdf file.
