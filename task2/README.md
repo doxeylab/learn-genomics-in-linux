@@ -164,7 +164,7 @@ Velvet and other de bruijn assemblers produce a graph that can be visualized. `b
 
 Find the 'lastgraph' file produced by `velvet` and [<b>download</b>](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task1/gcloud-download.png) it to your local machine. Tip: find the path to your file with `realpath yourFile.txt`
 
-Open this file in the Bandage application. 
+Open this file in the `Bandage` application. 
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q8) How long is the largest connected component of this graph?
 
