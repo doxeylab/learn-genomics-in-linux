@@ -140,12 +140,23 @@ velveth out_21 21 -short -fastq trimmed_mt1.fastq
 Now, to compute the actual contig sequences from the graph, run the following:
 
 ```
-velvetg out_21/ -scaffolding no
+velvetg out_21/ -scaffolding no -read_trkg yes -amos_file yes
 ```
 
 Inspect the contigs.fa file that has been produced (will be in out_21 folder).
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q5) How many contigs did you produce? Try varying the k-mer value. Did the number of contigs change?
+
+### Assembly visualization with Tablet
+
+Velvet has the option of keeping track of where the reads map to the assembly using the `-read_trkg` flag. This will produce a `velvet_asm.afg` file.
+
+[<b>Download</b>](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task1/gcloud-download.png) this file to your local machine. Tip: find the path to your file with `realpath yourFile.txt`
+
+Then open it in `tablet`.
+
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q6) Report the average contig length and N50
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q7)  Choose any contig and view its assembly using tablet. Paste a screenshot.
 
 ### Assembly visualization with Bandage
 
@@ -155,11 +166,11 @@ Find the 'lastgraph' file produced by `velvet` and [<b>download</b>](https://git
 
 Open this file in the Bandage application. 
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q6) How long is the largest connected component of this graph?
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q8) How long is the largest connected component of this graph?
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q7) Copy and paste a screenshot of a region of the graph that has an ambiguous assembly.
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q9) Copy and paste a screenshot of a region of the graph that has an ambiguous assembly.
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q8) Copy and paste a screenshot of a region that has an unambiguous assembly (region should contain more than one node).
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q10) Copy and paste a screenshot of a region that has an unambiguous assembly (region should contain more than one node).
 
 ### Assembly with ABYSS
 
@@ -169,11 +180,11 @@ Next, let's try with a different assembler. We will be using the popular [abyss]
 abyss-pe k=21 in='qual_trim_mt1.fastq' name=abyss-assembly
 ```
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q9) How many contigs did abyss generate?
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q11) How many contigs did abyss generate?
 
 Take a look at your abyss-assembly-stats output file.
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q10) How long (in kB) is your assembly?
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q12) How long (in kB) is your assembly?
 
 #### What is the taxonomic source of your genome? Explore with BLAST
 
@@ -181,7 +192,7 @@ You still do not know the source of this genome. Is it eukaryotic? bacterial? is
 
 To investigate this question, do a BLAST search using the <b>online</b> [BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi) tool.
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q11) Based on the BLAST result, what organism do you think this genome came from and what kind of genome is it?
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q13) Based on the BLAST result, what organism do you think this genome came from and what kind of genome is it?
 
 ## Genome visualization using Artemis
 
@@ -190,11 +201,11 @@ You will also need to [<b>downloaded</b>](https://github.com/doxeylab/learn-geno
 
 Open your contigs.fa file in `artemis`.
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q12) What are the black vertical lines that appear in the sequence window?
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q14) What are the black vertical lines that appear in the sequence window?
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q13) Next, produce a gc plot of the genome (look under the 'Graph' window). Increase the sliding window length to 500 and make sure the whole genome is visible. Paste a screenshot.
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q15) Next, produce a gc plot of the genome (look under the 'Graph' window). Increase the sliding window length to 500 and make sure the whole genome is visible. Paste a screenshot.
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q14) Now, mark the open reading frames (ORFs) with min length = 100nt (under 'Create' menu). Paste a snapshot of your Artemis window (make sure the full genome is visible). How many ORFs of length > 100nt are there? How many ORFs of length > 50nt are there? 
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q16) Now, mark the open reading frames (ORFs) with min length = 100nt (under 'Create' menu). Paste a snapshot of your Artemis window (make sure the full genome is visible). How many ORFs of length > 100nt are there? How many ORFs of length > 50nt are there? 
 
 
 ## Genome Annotation
@@ -212,13 +223,13 @@ prokka abyss-assembly-contigs.fa
 
 * Now, download the .gbk file that was produced and view it in Artemis
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q15) Are the predicted gene locations consistent with your earlier ORF predictions? 
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q17) Are the predicted gene locations consistent with your earlier ORF predictions? 
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q16) Why are there vertical black lines in the middle of predicted ORFs?
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q18) Why are there vertical black lines in the middle of predicted ORFs?
 
 * Quit artemis and change your artemis 'Options' to better reflect the source of this genome. 
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q17) Does this correct the issues above? Paste a screenshot.
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q19) Does this correct the issues above? Paste a screenshot.
 
 
 
