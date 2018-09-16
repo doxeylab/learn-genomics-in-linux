@@ -46,10 +46,15 @@ sudo apt install g++
 wget https://ccb.jhu.edu/software/glimmer/glimmer302b.tar.gz
 tar xzf glimmer302b.tar.gz
 cd glimmer3.02/src/
+cd ../scripts
+sudo cp * /usr/bin/.
+# then edit the locations in...
+sudo nano /usr/bin/g3-from-scratch.csh
 make
 cd ../bin/
 sudo cp * /usr/bin/.
-
+wget https://github.com/doxeylab/learn-genomics-in-unix/raw/master/scripts/glimmer2gff.pl
+sudo cp glimmer2gff.pl /usr/bin/.
 
 
 
