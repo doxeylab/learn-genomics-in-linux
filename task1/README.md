@@ -241,7 +241,11 @@ scp username@remoteserver.com:/path/to/file.txt /path/to/location/.
 
 If you are using ssh in a browser window, you can easily upload and download files via the browser.
 Look in the rop right corner for the options window, click `Download file` ([see here](https://raw.githubusercontent.com/doxeylab/learn-genomics-in-unix/master/task1/gcloud-download.png)) and then enter in the path to your file.
-Remember, your current path can be found using `pwd`.
+Remember, your current path can be found using `pwd`. A useful command for printing out the path to your file is:
+
+```
+realpath file.txt
+```
 
 
 #### Downloading a file off the internet
