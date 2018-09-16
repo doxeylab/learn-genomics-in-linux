@@ -151,9 +151,9 @@ Inspect the contigs.fa file that has been produced (will be in out_21 folder).
 
 Velvet and other de bruijn assemblers produce a graph that can be visualized. `bandage` is an excellent tool for this purpose.
 
-* Find the 'lastgraph' file produced by `velvet` and [<b>download</b>](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task1/gcloud-download.png) it to your local machine. Tip: find the path to your file with `realpath yourFile.txt`
+Find the 'lastgraph' file produced by `velvet` and [<b>download</b>](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task1/gcloud-download.png) it to your local machine. Tip: find the path to your file with `realpath yourFile.txt`
 
-* Open this file in the Bandage application. 
+Open this file in the Bandage application. 
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q6) How long is the largest connected component of this graph?
 
@@ -171,7 +171,7 @@ abyss-pe k=21 in='qual_trim_mt1.fastq' name=abyss-assembly
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q9) How many contigs did abyss generate?
 
-* Take a look at your abyss-assembly-stats output file.
+Take a look at your abyss-assembly-stats output file.
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q10) How long (in kB) is your assembly?
 
@@ -188,7 +188,7 @@ To investigate this question, do a BLAST search using the <b>online</b> [BLAST](
 Next, let's visualize the contigs you have produced using Artemis. Note: you will need to have `artemis` installed on your local machine.
 You will also need to [<b>downloaded</b>](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task1/gcloud-download.png) your contigs to your local machine. Tip: find the path to your file with `realpath yourFile.txt`
 
-* Open your contigs.fa file in `artemis`.
+Open your contigs.fa file in `artemis`.
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q12) What are the black vertical lines that appear in the sequence window?
 
@@ -216,7 +216,7 @@ prokka abyss-assembly-contigs.fa
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q16) Why are there vertical black lines in the middle of predicted ORFs?
 
-* Quite artemis and change your Artemis 'Options' to better reflect the source of this genome. 
+* Quit artemis and change your artemis 'Options' to better reflect the source of this genome. 
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q17) Does this correct the issues above? Paste a screenshot.
 
