@@ -27,6 +27,7 @@ Detailed software requirements will be listed at the beginning of each Task. Alt
 
 * [tablet](https://ics.hutton.ac.uk/tablet/)
 * [artemis and act](http://sanger-pathogens.github.io/Artemis/Artemis/)
+* [bandage](http://rrwick.github.io/Bandage/)
 * [R](https://www.r-project.org/)
 
 We have also documented installation instructions for building a bioinformatics system (Ubuntu 18.04) [here](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/VMbuild.README).
