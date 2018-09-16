@@ -41,6 +41,17 @@
 #add following to path
 # export PATH="$PATH:/usr/bin/Tablet/"
 
+#install glimmer
+sudo apt install g++
+wget https://ccb.jhu.edu/software/glimmer/glimmer302b.tar.gz
+tar xzf glimmer302b.tar.gz
+cd glimmer3.02/src/
+make
+cd ../bin/
+sudo cp * /usr/bin/.
+
+
+
 
 
 
