@@ -155,10 +155,12 @@ Velvet has the option of keeping track of where the reads map to the assembly us
 
 [<b>Download</b>](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task1/gcloud-download.png) this file to your local machine. Tip: find the path to your file with `realpath yourFile.txt`
 
-Then open it in `tablet`.
+Then open it in `tablet`. Tablet is a great program to explore how reads maps to assemblies and genomes.
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q6) Report the average contig length and N50
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q7)  Choose any contig and view its assembly using tablet. Paste a screenshot.
+
+Explore `tablet` more on your own. We will be using it later in the course.
 
 ### Assembly visualization with Bandage
 
