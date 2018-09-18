@@ -49,13 +49,20 @@ prokka abyss-assembly-contigs.fa
 
 * Now, download the .gbk file that was produced and view it in Artemis
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q1) Are the predicted gene locations consistent with your earlier ORF predictions from task 2? 
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q1) Why are there vertical black lines in the middle of predicted ORFs?
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q2) Why are there vertical black lines in the middle of predicted ORFs?
+To correct this issue, re-start artemis and change your artemis 'Options' to better reflect the source of this genome.
 
-* Quit artemis and change your artemis 'Options' to better reflect the source of this genome. 
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q2) What source organism did you select to correct the gene annotations? Paste a screenshot of the artemis genome visualization.
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q3) Does this correct the issues above? Paste a screenshot.
+When `prokka` is run without any parameters, it selects 'bacteria' as the default taxonomy.
+
+Look at the `--kingdom` options in `prokka -h` and re-run prokka to use the correct annotation mode.
+
+* Again, open your .gbk file in artemis
+
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q3) Has anything changed in this genome annotation? Provide an example. 
+
 
 ## Annotation of an <i>E. coli</i> genome
 
