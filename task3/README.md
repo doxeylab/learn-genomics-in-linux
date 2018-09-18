@@ -97,6 +97,13 @@ cut -f6 PROKKA_09182018.tsv | sort | uniq | wc -l
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q6) How many unique enzymatic activities (E.C. numbers) were assigned to the E. coli genome?
 
+## Extracting specific regions of interest
+
+Now, suppose you are interested in a non-coding (regulatory region) such as the promoter of the "trp operon". The trp operon promoter can be found directly upstream of the <b>trpE</b> gene.
+
+Using tools such as `makeblastdb`, `blastdbcmd`, `grep`, `revseq` (which reverse complements a sequence if necessary), and the information in the .gff file, extract the 30-nucleotide long sequence upstream of the trpE gene.
+
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q7) Paste this sequence into your assignment as well as the code you used to extract it.
 
 
 
