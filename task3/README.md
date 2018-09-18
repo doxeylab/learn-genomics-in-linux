@@ -73,9 +73,11 @@ Next, explore the files produced by `prokka`.
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q4) How many genes, tRNAs, and CRISPR loci were predicted? What is the size of the genome in Mb?
 
-Prokka also annotates genes based on COGs - https://www.ncbi.nlm.nih.gov/COG/
+Prokka also annotates genes based on [COGs](https://www.ncbi.nlm.nih.gov/COG/) and also [E.C.](https://enzyme.expasy.org/) (enzyme commission) numbers.
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q5) How many genes were annotated with COG1609 (DNA-binding transcriptional regulator, LacI/PurR family) ?
+
+
 
 
 
