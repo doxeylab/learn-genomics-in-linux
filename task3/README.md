@@ -17,13 +17,9 @@ All software used are available for Mac/Windows/Linux.
 
 ## Getting Started
 
-Login to your linux environment as you did in task1. e.g.,
+* Login to your linux environment as you did in task1.
 
-```
-ssh -i /path/to/your/.ssh/publickey yourUserName@remoteIP
-```
-
-Create a new folder for your task3
+* Create a new folder for your task3
 
 ```
 mkdir task3  #creates folder
@@ -32,7 +28,7 @@ cd task3 #enters into folder
 
 ## Retrieving the raw data
 
-Copy the genome you assembled from task2
+* Copy the genome you assembled from task2
 
 ```
 cp ../task2/abyss-assembly-contigs.fa . 
@@ -45,7 +41,7 @@ By marking the ORFs in your genome (given a min size threshold), you have essent
 A popular genome annotation tool for prokaryotic genomes is [`prokka`](https://github.com/tseemann/prokka).
 `prokka` automates a series of genome annotation tools and is simple to run. It has been installed for you on the server.
 
-Type
+* Run prokka using the following command
 
 ```
 prokka abyss-assembly-contigs.fa
@@ -65,10 +61,22 @@ prokka abyss-assembly-contigs.fa
 
 Next, let's perform genome annotation on a larger scale.
 
-Download the E. coli K12 genome from task1
+* Download the E. coli K12 genome from task1 and run `prokka`
 
 ```
-wget
+wget https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task1/e-coli-k12-genome.fasta.gz
+gunzip e-coli-k12-genome.fasta.gz
+prokka /e-coli-k12-genome.fasta
 ```
+
+Next, explore the files produced by `prokka`.
+
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q4) How many genes, tRNAs, and CRISPR loci were predicted? What is the size of the genome in Mb?
+
+Prokka also annotates genes based on COGs - https://www.ncbi.nlm.nih.gov/COG/
+
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q5) How many genes were annotated with COG1609 (DNA-binding transcriptional regulator, LacI/PurR family) ?
+
+
 
 
