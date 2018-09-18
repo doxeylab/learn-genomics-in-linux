@@ -34,7 +34,7 @@ cd task3 #enters into folder
 cp ../task2/abyss-assembly-contigs.fa . 
 ```
 
-## Genome Annotation I
+## Annotation of your genome from Task2
 
 By marking the ORFs in your genome (given a min size threshold), you have essentially performed a simple gene finding algorithm. However, there are more advanced ways of gene-finding that take additional criteria into account.
 
@@ -57,11 +57,11 @@ prokka abyss-assembly-contigs.fa
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q3) Does this correct the issues above? Paste a screenshot.
 
-## Genome Annotation II
+## Annotation of an <i>E. coli</i> genome
 
 Next, let's perform genome annotation on a larger scale.
 
-* Download the E. coli K12 genome from task1 and run `prokka`
+* Download (or copy from your task1 folder) the E. coli K12 genome from task1 and run `prokka`
 
 ```
 wget https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task1/e-coli-k12-genome.fasta.gz
@@ -69,13 +69,35 @@ gunzip e-coli-k12-genome.fasta.gz
 prokka /e-coli-k12-genome.fasta
 ```
 
-Next, explore the files produced by `prokka`.
+Next, explore the files produced by `prokka`. Start with the .txt file.
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q4) How many genes, tRNAs, and CRISPR loci were predicted? What is the size of the genome in Mb?
 
-Prokka also annotates genes based on [COGs](https://www.ncbi.nlm.nih.gov/COG/) and also [E.C.](https://enzyme.expasy.org/) (enzyme commission) numbers.
+Prokka also annotates genes based on [COGs](https://www.ncbi.nlm.nih.gov/COG/) and also [E.C.](https://enzyme.expasy.org/) (enzyme commission) numbers. This information can be found in the .tbl file. 
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q5) How many genes were annotated with COG1609 (DNA-binding transcriptional regulator, LacI/PurR family) ?
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q5) How many genes were annotated with COGS? What proportion of total genes is this?
+
+Column 6 of this .tsv file lists the COGs. To print out just column 6, do the following:
+
+```
+cut -f6 PROKKA_09182018.tsv
+```
+
+Next, let's sort this list using `sort` and pipe it to the `uniq` command.
+
+```
+cut -f6 PROKKA_09182018.tsv | sort | uniq
+```
+
+How many unique COGs were assigned? Just count the number of lines in the output
+
+```
+cut -f6 PROKKA_09182018.tsv | sort | uniq | wc -l
+```
+
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q6) How many unique enzymatic activities (E.C. numbers) were assigned to the E. coli genome?
+
+
 
 
 
