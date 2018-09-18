@@ -164,15 +164,15 @@ blastdbcmd -db PROKKA_09182018.fna -entry_batch list | muscle
 ```
 
 
-## Recap: Annotating a novel genome of unknown source
+## Analyzing a mystery genome of unknown source
 
 And now for something a little more difficult.
 
-Next, we will be giving you the raw reads for a sequencing project of an unknown organism (your only hint is that it is bacterial). Using any of the tools above: 
+* Download this "mystery" genome of unknown source
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q9) Assemble the genome into a single contig, annotate the genes, and produce a circular plot of the genome using `dnaPlotter` in the `artemis` package. Include your source code.
+https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task3/mysteryGenome.fna.gz
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q10) Based on 16S rRNA, what is the taxonomic source of this DNA? Include your source code.
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q9) Based on its 16S rRNA, identify the taxonomic origin of this genome sequence. Include your source code. This should take under 5 lines of code.
 
 
 
