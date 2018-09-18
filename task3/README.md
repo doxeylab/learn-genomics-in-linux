@@ -71,7 +71,7 @@ prokka /e-coli-k12-genome.fasta
 
 Next, explore the files produced by `prokka`. Start with the .txt file.
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q4) How many genes, tRNAs, and CRISPR loci were predicted? What is the size of the genome in Mb?
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q4) How many genes, rRNAs, tRNAs, and CRISPR loci were predicted? What is the size of the genome in Mb?
 
 Prokka also annotates genes based on [COGs](https://www.ncbi.nlm.nih.gov/COG/) and also [E.C.](https://enzyme.expasy.org/) (enzyme commission) numbers. This information can be found in the .tbl file. 
 
