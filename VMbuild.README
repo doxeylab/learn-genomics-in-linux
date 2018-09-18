@@ -5,7 +5,7 @@
 # Logged in via terminal (supplied my ssh public key to the gcloud meta ssh keys page in the console)
 
 # install  bioinformatics software
-  sudo apt install fastqc velvet abyss fasttree prodigal
+  sudo apt install fastqc velvet abyss fasttree prodigal barrnap
 
 # comment out following line (/etc/java-X-openjdk/accessibility.properties) to prevent Java issues
 # assistive_technologies=org.GNOME.Accessibility.AtkWrapper
