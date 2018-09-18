@@ -175,8 +175,7 @@ blastp -query e.coli.l7.faa -db GCA_000007925.1_ASM792v1_protein.faa
 
 * Pick a protein of interest (POI) (from any bacterial organism)
 
-* Now pick a genome of interest (GOI) from a different bacterial organism (these can be found in the the NCBI bacterial genomes ftp directory) where you suspect to find a homolog of your protein.
-** Note: We are restricting this to bacteria to keep the genome download sizes low.
+* Now pick a genome of interest (GOI) from a different bacterial organism (these can be found in the the NCBI bacterial genomes ftp directory) where you suspect to find a homolog of your protein. Go [here](ftp://ftp.ncbi.nlm.nih.gov/genomes/refseq/bacteria) or [here](ftp://ftp.ncbi.nlm.nih.gov/genomes/archive/old_refseq/Bacteria/) if the previous link is giving you trouble. ** Note: We are restricting this to bacteria to keep the genome download sizes low.
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q5 - List your POI and your GOI.
 
