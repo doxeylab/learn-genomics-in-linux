@@ -69,6 +69,8 @@ gunzip e-coli-k12-genome.fasta.gz
 prokka /e-coli-k12-genome.fasta
 ```
 
+<b>Note: This will generate a folder called PROKKA-XXXXXXXX where XXXXXXXX is the current date. It will be different than that below.</b>
+
 Next, explore the files produced by `prokka`. Start with the .txt file.
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q4) How many genes, rRNAs, tRNAs, and CRISPR loci were predicted? What is the size of the genome in Mb?
@@ -77,7 +79,7 @@ Prokka also annotates genes based on [COGs](https://www.ncbi.nlm.nih.gov/COG/) a
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q5) How many genes were annotated with COGS? What proportion of total genes is this?
 
-Column 6 of this .tsv file lists the COGs. To print out just column 6, do the following:
+Column 6 of this .tsv file lists the COGs. To print out only column 6, you can use the `cut` command as follows:
 
 ```
 cut -f6 PROKKA_09182018.tsv
@@ -89,7 +91,7 @@ Next, let's sort this list using `sort` and pipe it to the `uniq` command.
 cut -f6 PROKKA_09182018.tsv | sort | uniq
 ```
 
-How many unique COGs were assigned? Just count the number of lines in the output
+How many unique COGs were assigned? Count the number of lines in the output like this:
 
 ```
 cut -f6 PROKKA_09182018.tsv | sort | uniq | wc -l
@@ -101,19 +103,45 @@ cut -f6 PROKKA_09182018.tsv | sort | uniq | wc -l
 
 Now, suppose you are interested in a non-coding (regulatory region) such as the promoter of the "trp operon". The trp operon promoter can be found directly upstream of the <b>trpE</b> gene.
 
-Using tools such as `makeblastdb`, `blastdbcmd`, `grep`, `revseq` (which reverse complements a sequence if necessary), and the information in the .gff file, extract the 30-nucleotide long sequence upstream of the trpE gene.
+To extract this sequence, we can do the following:
+
+```
+# index the database so we can extract regions from it
+makeblastdb -in PROKKA_09182018.fna -dbtype 'nucl' -parse_seqids
+
+# search for the trpE gene in the gff file
+grep "trpE" PROKKA_09182018.gff
+```
+
+This will output:
+
+>U00096.3        Prodigal:2.6    CDS     1321384 1322946 .       -       0       ID=JKMANJED_01263;eC_number=4.1.3.27;Name=trpE;db_xref=COG:COG0147;gene=trpE;inference=ab initio prediction:Prodigal:2.6,similar to AA sequence:UniProtKB:P00895;locus_tag=JKMANJED_01263;product=Anthranilate synthase component 1
+
+This tells us that trpE is located in entry "U00096.3" at chromosome position "1321384 to 1322946" and encoded on the minus (-) strand.
+
+To extract this sequence, we can use `blastdbcmd` as follows:
+
+```
+blastdbcmd -entry U00096.3 -db PROKKA_09182018.fna -range 1321384-1322946 -strand minus
+```
+
+This should produce a fasta output of the gene starting with "ATG" (start codon) and ending with "TAG" (stop codon).
+
+But you are not interested in the gene sequence; you actually want the promoter region.
+
+* So, modify the code above to extract the 30-nucleotide long sequence upstream of the trpE gene
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q7) Paste this sequence into your assignment as well as the code you used to extract it.
 
 ### Advanced: Extracting the rRNAs predicted by barrnap
 
-Here is a quick three-liner to extract the 16S rRNAs predicted by barrnap, and align them.
+Sometimes you may be interested in extracting many genes or regions at once. E.g., suppose you want to extract all of the regions corresponding to predicted 16S rRNA sequences. In `prokka`, rRNA genes are predicted for you using the `barrnap` tool.
+
+Here is a one-liner to extract the 16S rRNAs predicted by `barrnap`, and for fun we will also pipe this to `muscle` to do an automatic alignment.
 
 ```
-# get the regions of  from the .gff file
-makeblastdb yourGenome.fna
 cat *.gff | grep "barrnap" | awk '{ if ($7 == "-") {print $1" "$4"-"$5" minus"} else {print $1" "$4"-"$5" plus"} }' >rRNAs.txt
-blastdbcmd -db yourGenome.fna -entry_batch list | muscle
+blastdbcmd -db PROKKA_09182018.fna -entry_batch list | muscle
 ```
 
 
