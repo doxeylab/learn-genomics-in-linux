@@ -179,7 +179,7 @@ https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task3/mysteryGenom
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q10) Now, using online BLAST, search this sequence against the NCBI 16S database. What is the taxonomic origin of this genome? 
 
-![](/16Ssearch.png)
+![](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/task3/16Ssearch.png)
 
 ---
 
