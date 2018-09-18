@@ -183,6 +183,9 @@ https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task3/mysteryGenom
 
 ---
 
+# ASSIGNMENT QUESTIONS
 
+The questions for this task are indicated by the lines starting with ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) above.
+Please submit the code you used as well as the answers to the questions. Submit your assignment to a dropbox on LEARN as a .docx, .txt, or .pdf file.
 
 
