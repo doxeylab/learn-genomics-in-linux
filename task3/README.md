@@ -5,7 +5,10 @@ This task is a tutorial on genome annotation using `prokka` and other tools.
 ### Requirements
 
 * Access to a linux-based OS running BASH
-* Prokka
+* [BLAST](http://blast.ncbi.nlm.nih.gov/)
+* [Prokka](https://github.com/tseemann/prokka)
+* [Artemis](http://sanger-pathogens.github.io/Artemis/Artemis/)
+
 
 ## Installation
 
@@ -156,11 +159,11 @@ But you are not interested in the gene sequence; you actually want the promoter 
 
 Sometimes you may be interested in extracting many genes or regions at once. E.g., suppose you want to extract all of the regions corresponding to predicted 16S rRNA sequences. In `prokka`, rRNA genes are predicted for you using the `barrnap` tool.
 
-Here is a one-liner to extract the 16S rRNAs predicted by `barrnap`, and for fun we will also pipe this to `muscle` to do an automatic alignment.
+Here is a two-liner to extract the 16S rRNAs predicted by `barrnap`, and for fun we will also pipe this to `muscle` to do an automatic alignment.
 
 ```
 cat *.gff | grep "barrnap" | awk '{ if ($7 == "-") {print $1" "$4"-"$5" minus"} else {print $1" "$4"-"$5" plus"} }' >rRNAs.txt
-blastdbcmd -db PROKKA_09182018.fna -entry_batch list | muscle
+blastdbcmd -db PROKKA_09182018.fna -entry_batch rRNAs.txt | muscle
 ```
 
 
@@ -172,10 +175,13 @@ And now for something a little more difficult.
 
 https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task3/mysteryGenome.fna.gz
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q9) Based on its 16S rRNA, identify the taxonomic origin of this genome sequence. Include your source code. This should take under 5 lines of code.
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q9) Identify a full-length 16S rRNA sequence. Paste this sequence into your assignment and include your source code.
 
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q10) Now, using online BLAST, search this sequence against the NCBI 16S database. What is the taxonomic origin of this genome? 
 
+[](/16Ssearch.png)
 
+---
 
 
 
