@@ -105,6 +105,28 @@ Using tools such as `makeblastdb`, `blastdbcmd`, `grep`, `revseq` (which reverse
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q7) Paste this sequence into your assignment as well as the code you used to extract it.
 
+### Advanced: Extracting the rRNAs predicted by barrnap
+
+Here is a quick three-liner to extract the 16S rRNAs predicted by barrnap, and align them.
+
+```
+# get the regions of  from the .gff file
+makeblastdb yourGenome.fna
+cat *.gff | grep "barrnap" | awk '{ if ($7 == "-") {print $1" "$4"-"$5" minus"} else {print $1" "$4"-"$5" plus"} }' >rRNAs.txt
+blastdbcmd -db yourGenome.fna -entry_batch list | muscle
+```
+
+
+## Recap: Annotating a novel genome of unknown source
+
+And now for something a little more difficult.
+
+Next, we will be giving you the raw reads for a sequencing project of an unknown organism (your only hint is that it is bacterial). Using any of the tools above: 
+
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q7) Assemble the genome into a single contig, annotate the genes, and produce a circular plot of the genome using `dnaPlotter` in the `artemis` package. Include your source code.
+
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q8) Based on 16S rRNA, what is the taxonomic source of this DNA? Include your source code.
+
 
 
 
