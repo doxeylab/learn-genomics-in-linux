@@ -99,9 +99,21 @@ cut -f6 PROKKA_09182018.tsv | sort | uniq | wc -l
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q6) How many unique enzymatic activities (E.C. numbers) were assigned to the E. coli genome?
 
+
+Next, download the .gbk file produced by prokka to your local machine and view it in `artemis`.
+
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q7) View the genome in DnaPlotter (under File menu) and paste a screenshot.
+
+Explore the genome in artemis and locate an operon containing at least 3 genes located immediately adjacent to eachother and encoded on the same strand (same direction).
+
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q8) Produce an image (screenshot) of this operon, and describe the function of the operon (use Google to help you).
+
+
 ## Extracting specific regions of interest
 
-Now, suppose you are interested in a non-coding (regulatory region) such as the promoter of the "trp operon". The trp operon promoter can be found directly upstream of the <b>trpE</b> gene.
+Sometimes, you may be interested inextracting specific regions of interest from a genome. 
+
+Suppose are interested in extracting the promoter of the "trp operon". The trp operon promoter can be found directly upstream of the <b>trpE</b> gene.
 
 To extract this sequence, we can do the following:
 
@@ -125,13 +137,13 @@ To extract this sequence, we can use `blastdbcmd` as follows:
 blastdbcmd -entry U00096.3 -db PROKKA_09182018.fna -range 1321384-1322946 -strand minus
 ```
 
-This should produce a fasta output of the gene starting with "ATG" (start codon) and ending with "TAG" (stop codon).
+This should produce a FASTA sequence output of the gene starting with "ATG" (start codon) and ending with "TAG" (stop codon).
 
 But you are not interested in the gene sequence; you actually want the promoter region.
 
 * So, modify the code above to extract the 30-nucleotide long sequence upstream of the trpE gene
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q7) Paste this sequence into your assignment as well as the code you used to extract it.
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q8) Paste this sequence into your assignment as well as the code you used to extract it.
 
 ### Advanced: Extracting the rRNAs predicted by barrnap
 
@@ -151,9 +163,9 @@ And now for something a little more difficult.
 
 Next, we will be giving you the raw reads for a sequencing project of an unknown organism (your only hint is that it is bacterial). Using any of the tools above: 
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q7) Assemble the genome into a single contig, annotate the genes, and produce a circular plot of the genome using `dnaPlotter` in the `artemis` package. Include your source code.
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q9) Assemble the genome into a single contig, annotate the genes, and produce a circular plot of the genome using `dnaPlotter` in the `artemis` package. Include your source code.
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q8) Based on 16S rRNA, what is the taxonomic source of this DNA? Include your source code.
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q10) Based on 16S rRNA, what is the taxonomic source of this DNA? Include your source code.
 
 
 
