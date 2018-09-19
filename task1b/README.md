@@ -175,13 +175,13 @@ blastp -query e.coli.l7.faa -db GCA_000007925.1_ASM792v1_protein.faa
 
 * Pick a protein of interest (POI) (from any bacterial organism)
 
-* Now pick a genome of interest (GOI) from a different bacterial organism (these can be found in the the NCBI bacterial genomes ftp directory) where you suspect to find a homolog of your protein. Go [here](ftp://ftp.ncbi.nlm.nih.gov/genomes/refseq/bacteria) or [here](ftp://ftp.ncbi.nlm.nih.gov/genomes/archive/old_refseq/Bacteria/) if the previous link is giving you trouble. ** Note: We are restricting this to bacteria to keep the genome download sizes low.
+* Now pick a different bacterial organism (these can be found in the the NCBI bacterial genomes ftp directory) where you suspect to find a homolog of your protein. Go [here](ftp://ftp.ncbi.nlm.nih.gov/genomes/refseq/bacteria) or [here](ftp://ftp.ncbi.nlm.nih.gov/genomes/archive/old_refseq/Bacteria/) if the previous link is giving you trouble. ** Note: We are restricting this to bacteria to keep the genome download sizes low.
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q5 - List your POI and your GOI.
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q5 - List your protein of interest and your organism of interest.
 
-* Download the genome (.fna) and predicted proteome (.faa) for the organism above
+* Download the genome (.fna) and predicted proteome (.faa) for your organism of interest above
 
-* Search the genome for your POI using `tblastn` and the proteome for your POI using `blastp`
+* Search the genome for matches to your POI using `tblastn` and the proteome for matches to your POI using `blastp`
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q6 - Paste your top result for each.
 
