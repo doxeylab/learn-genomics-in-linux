@@ -164,7 +164,7 @@ blastp -query e.coli.l7.faa -db GCA_000007925.1_ASM792v1_protein.faa
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q2 - How many significant (E < 0.001) hits did you get?
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q3 - Copy and paste the alignment for the top hit.
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q3 - Copy and paste (or take a screenshot of) the alignment for the top hit.
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q4 - Search this protein against the genomic sequence. Do you get the same result? Describe your answer.
 
