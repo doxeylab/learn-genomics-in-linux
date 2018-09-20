@@ -65,7 +65,7 @@ Open the `act` program that is packaged with `artemis` and input these three fil
 
 You should now be viewing a structural comparison of these two genomes, which should look like this:
 
-![](/act.png)
+![](act.png)
 
 
 
