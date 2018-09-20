@@ -2,6 +2,8 @@
 
 This task is a tutorial on genome annotation using `prokka` and other tools.
 
+You will learn how to perform basic genome annotation, and also how to extract specific regions of interest from your genome sequence.
+
 ### Requirements
 
 * Access to a linux-based OS running BASH
@@ -37,7 +39,7 @@ cd task3 #enters into folder
 cp ../task2/abyss-assembly-contigs.fa . 
 ```
 
-## Annotation of your genome from Task2
+## Annotating your genome from Task2 using `prokka`
 
 By marking the ORFs in your genome (given a min size threshold), you have essentially performed a simple gene finding algorithm. However, there are more advanced ways of gene-finding that take additional criteria into account.
 
@@ -49,8 +51,9 @@ A popular genome annotation tool for prokaryotic genomes is [`prokka`](https://g
 ```
 prokka abyss-assembly-contigs.fa
 ```
+<b>Note: This will generate a folder called PROKKA-XXXXXXXX where XXXXXXXX is the current date. It will be different for you than in the examples below.</b>
 
-* Now, download the .gbk file that was produced and view it in Artemis
+* Now, locate and download the .gbk file that was produced and view it in `artemis`
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q1) Why are there vertical black lines in the middle of predicted ORFs?
 
@@ -67,7 +70,7 @@ Look at the `--kingdom` options in `prokka -h` and re-run prokka to use the corr
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q3) Has anything changed in this genome annotation? Provide an example. 
 
 
-## Annotation of an <i>E. coli</i> genome
+## Annotation of an <i>E. coli</i> genome using `prokka`
 
 Next, let's perform genome annotation on a larger scale.
 
@@ -78,8 +81,6 @@ wget https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task1/e-coli-
 gunzip e-coli-k12-genome.fasta.gz
 prokka /e-coli-k12-genome.fasta
 ```
-
-<b>Note: This will generate a folder called PROKKA-XXXXXXXX where XXXXXXXX is the current date. It will be different than that below.</b>
 
 Next, explore the files produced by `prokka`. Start with the .txt file.
 
@@ -116,12 +117,38 @@ Next, download the .gbk file produced by prokka to your local machine and view i
 
 Explore the genome in artemis and locate an operon containing at least 3 genes located immediately adjacent to eachother and encoded on the same strand (same direction).
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q8) Produce an image (screenshot) of this operon, and describe the function of the operon (use Google to help you).
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q8) Produce an image (screenshot) of this operon, and describe the general function of the operon (use Google to help you).
+
+
+## More detailed protein annotation using `eggnog`
+
+[`eggnog`](http://eggnogdb.embl.de/) is another pipeline that performs high-quality functional annotation of genomes/proteomes.
+
+It is capable of generating additional types of functional annotations such as Gene Ontology ([GO](http://geneontology.org/)) terms.
+
+Note: Eggnog-mapper is a very large pipeline (over 150 Gb in size), so beware when installing this on your own local machine.
+
+Run the following command to re-annotate the <b>proteome</b> (.faa file) you predicted using `prokka`.
+
+```
+emapper.py -o eggnogpredictions -i PROKKA_09182018.faa --database bact --override
+
+#for more help on emapper.py type
+emapper.py -h
+```
+
+This will generate an `eggnogpredictions.emapper.annotations` file, which contains your predicted functional annotations.
+
+This one-liner will extract column 6 (GO terms), and list them according to their frequency in your proteome.
+
+```
+cat eggnogpredictions.emapper.annotations | grep -v "#" | cut -f6 | tr , '\n' | sort | uniq -c | sort -n -r
+```
 
 
 ## Extracting specific regions of interest
 
-Sometimes, you may be interested inextracting specific regions of interest from a genome. 
+Sometimes, you may be interested in extracting specific regions of interest from a genome. 
 
 Suppose are interested in extracting the promoter of the "trp operon". The trp operon promoter can be found directly upstream of the <b>trpE</b> gene.
 
