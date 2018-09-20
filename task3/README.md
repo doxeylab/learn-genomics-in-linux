@@ -79,7 +79,7 @@ Next, let's perform genome annotation on a larger scale.
 ```
 wget https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task1/e-coli-k12-genome.fasta.gz
 gunzip e-coli-k12-genome.fasta.gz
-prokka /e-coli-k12-genome.fasta
+prokka e-coli-k12-genome.fasta
 ```
 
 Next, explore the files produced by `prokka`. Start with the .txt file.
