@@ -63,6 +63,10 @@ Now, download to your local machine the following files:
 
 Open the `act` program that is packaged with `artemis` and input these three files.
 
+You should now be viewing a structural comparison of these two genomes, which should look like this:
+
+![](/act.png)
+
 
 
 
