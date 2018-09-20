@@ -118,29 +118,22 @@ Next, download the .gbk file produced by prokka to your local machine and view i
 
 
 
-## More detailed protein annotation using `eggnog`
+## Assigning GO terms
 
-[`eggnog`](http://eggnogdb.embl.de/) is another pipeline that performs high-quality functional annotation of genomes/proteomes.
+Next, we will be assigning Gene Ontology ([GO](http://geneontology.org/)) terms to your predicted genes/proteins.
 
-It is capable of generating additional types of functional annotations such as Gene Ontology ([GO](http://geneontology.org/)) terms.
-
-Note: Eggnog-mapper is a very large pipeline (over 150 Gb in size), so beware when installing this on your own local machine.
-
-Run the following command to re-annotate the <b>proteome</b> (.faa file) you predicted using `prokka`.
+Prokka identifies homologs of your proteins within the UniProtKB database. Since there are already pre-computed GO terms for all proteins in UniProtKB, we can map these GO terms over using the following commands:
 
 ```
-emapper.py -o eggnogpredictions -i PROKKA_09182018.faa --database bact
 
-#for more help on emapper.py type
-emapper.py -h
 ```
 
-This will generate an `eggnogpredictions.emapper.annotations` file, which contains your predicted functional annotations.
+This will generate an `.GOannotations` file, which contains your predicted functional annotations.
 
 This one-liner will extract column 6 (GO terms), and list them according to their frequency in your proteome.
 
 ```
-cat eggnogpredictions.emapper.annotations | grep -v "#" | cut -f6 | tr , '\n' | sort | uniq -c | sort -n -r
+cat .annotations | grep -v "#" | cut -f6 | tr , '\n' | sort | uniq -c | sort -n -r
 ```
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q8) What is the most common GO term (GO ID and its function) and why do you think this term is so common? Note: you can get the GO description here: http://amigo.geneontology.org/amigo/term/GO:XXXXXXXX
