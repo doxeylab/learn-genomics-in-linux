@@ -142,20 +142,52 @@ This one-liner will extract column 6 (GO terms), and list them according to thei
 cat eggnogpredictions.emapper.annotations | grep -v "#" | cut -f6 | tr , '\n' | sort | uniq -c | sort -n -r
 ```
 
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q8) What is the most common GO term (GO ID and its function) and why do you think this term is so common? Note: you can get the GO description here: http://amigo.geneontology.org/amigo/term/GO:XXXXXXXX
 
-## Extracting specific regions of interest
 
-Sometimes, you may be interested in extracting specific regions of interest from a genome. 
+## After annotation: Extracting genes and regions of interest
 
-Suppose are interested in extracting the promoter of the "trp operon". The trp operon promoter can be found directly upstream of the <b>trpE</b> gene.
+Once your genome has been assembled and annotated, you may be interested in identifying and extracting specific genes or regions of interest.
 
-To extract this sequence, we can do the following:
+### Extracting genes of interest
+For example, suppose you are interested in the "trpE" gene from E. coli. You can see whether this gene exists in the predictions like this:
 
 ```
-# index the database so we can extract regions from it
-makeblastdb -in PROKKA_09182018.fna -dbtype 'nucl' -parse_seqids
+grep "trpE" PROKKA_09202018.tsv
+```
 
-# search for the trpE gene in the gff file
+This will output
+>JKMANJED_01263  CDS     1563    trpE    4.1.3.27        COG0147 Anthranilate synthase component 1
+
+... which tells you that "trpE" has been assigned to the gene labeled "JKMANJED_01263"
+
+You can then extract this gene seqeunce from the gene predictions file (.ffn) like this:
+
+```
+# index the .ffn file so we can extract from it
+makeblastdb -in PROKKA_09202018.ffn -dbtype 'nucl' -parse_seqids
+
+blastdbcmd -entry JKMANJED_01263 -db PROKKA_09202018.ffn
+```
+
+This will output:
+
+>\>>JKMANJED_01263 Anthranilate synthase component 1
+ATGCAAACACAAAAACCGACTCTCGAACTGCTAACCTGCGAAGGCGCTTATCGCGACAATCCCACCGCGCTTTTTCACCA
+GTTGTGTGGGGATCGTCCGGCAACGCTGCTGCTGGAATCCGCAGATATCGACAGCAAAGATGATTTAAAAAGCCTGCTGC
+TGGTAGACAGTGCGCTGCGCATTACAGCTTTAGGTGACACTGTCACAATCCAGGCACTTTCCGGCAACGGCGAAGCCCTC
+CTGGCACTACTGGATAACGCCCTGCCTGCGGGTGTGGAAAGTGAACAATCACCAAACTGCCGTGTGCTGCGCTTCCCCCC
+...
+
+<b>Note: in this example we searched the annotations with a text query "trpE". However, the best way of finding your gene of interest is to do a BLAST search since it may not be labeled correctly in your annotations</b>
+
+### Extracting regions of interest
+
+Next, suppose are interested in extracting the promoter of the "trp operon". The trp operon promoter can be found directly upstream of the <b>trpE</b> gene. These regions are not in the annotations files so you will need to locate them yourself.
+
+First, let's see where the trpE gene is located in the genome:
+
+```
 grep "trpE" PROKKA_09182018.gff
 ```
 
@@ -165,13 +197,16 @@ This will output:
 
 This tells us that trpE is located in entry "U00096.3" at chromosome position "1321384 to 1322946" and encoded on the minus (-) strand.
 
-To extract this sequence, we can use `blastdbcmd` as follows:
+To extract the sequence for these coordinates, we can use `blastdbcmd` against the genome as follows:
 
 ```
+# index the genome so we can extract regions from it
+makeblastdb -in PROKKA_09182018.fna -dbtype 'nucl' -parse_seqids
+
 blastdbcmd -entry U00096.3 -db PROKKA_09182018.fna -range 1321384-1322946 -strand minus
 ```
 
-This should produce a FASTA sequence output of the gene starting with "ATG" (start codon) and ending with "TAG" (stop codon).
+This should produce a FASTA sequence output of the gene identical to that in the above example.
 
 But you are not interested in the gene sequence; you actually want the promoter region.
 
@@ -179,9 +214,10 @@ But you are not interested in the gene sequence; you actually want the promoter 
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q8) Paste this sequence into your assignment as well as the code you used to extract it.
 
+
 ### Advanced: Extracting the rRNAs predicted by barrnap
 
-Sometimes you may be interested in extracting many genes or regions at once. E.g., suppose you want to extract all of the regions corresponding to predicted 16S rRNA sequences. In `prokka`, rRNA genes are predicted for you using the `barrnap` tool.
+Sometimes you may be interested in extracting multiple genes or regions at once. E.g., suppose you want to extract all of the regions corresponding to predicted 16S rRNA sequences. In `prokka`, rRNA genes are predicted for you using the `barrnap` tool.
 
 Here is a two-liner to extract the 16S rRNAs predicted by `barrnap`, and for fun we will also pipe this to `muscle` to do an automatic alignment.
 
