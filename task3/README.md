@@ -115,9 +115,6 @@ Next, download the .gbk file produced by prokka to your local machine and view i
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q7) View the genome in DnaPlotter (under File menu) and paste a screenshot.
 
-Explore the genome in artemis and locate an operon containing at least 3 genes located immediately adjacent to eachother and encoded on the same strand (same direction).
-
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q8) Produce an image (screenshot) of this operon, and describe the general function of the operon (use Google to help you).
 
 
 ## More detailed protein annotation using `eggnog`
@@ -131,7 +128,7 @@ Note: Eggnog-mapper is a very large pipeline (over 150 Gb in size), so beware wh
 Run the following command to re-annotate the <b>proteome</b> (.faa file) you predicted using `prokka`.
 
 ```
-emapper.py -o eggnogpredictions -i PROKKA_09182018.faa --database bact --override
+emapper.py -o eggnogpredictions -i PROKKA_09182018.faa --database bact
 
 #for more help on emapper.py type
 emapper.py -h
