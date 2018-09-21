@@ -10,8 +10,6 @@ You will learn how to perform basic genome annotation, and also how to extract s
 * [BLAST](http://blast.ncbi.nlm.nih.gov/)
 * [Prokka](https://github.com/tseemann/prokka)
 * [Artemis](http://sanger-pathogens.github.io/Artemis/Artemis/)
-* [eggnog-mapper](http://eggnogdb.embl.de/#/app/emapper)
-
 
 ## Installation
 
