@@ -101,7 +101,7 @@ makeblastdb -in GCA_000007925.1_ASM792v1_protein.faa -dbtype 'prot'
 ... and now the genome as well
 
 ```
-makeblastdb -in GCA_000007925.1_ASM792v1_genomic.faa -dbtype 'nucl'
+makeblastdb -in GCA_000007925.1_ASM792v1_genomic.fna -dbtype 'nucl'
 ```
 
 You can see that the `-dbtype` parameter defines whether the input FASTA file is for protein or nucleotide sequences.
