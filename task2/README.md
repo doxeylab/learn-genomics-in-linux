@@ -24,13 +24,7 @@ All software used are available for Mac/Windows/Linux.
 
 ## Getting Started
 
-Login to your linux environment as you did in task1. e.g.,
-
-```
-ssh -i /path/to/your/.ssh/publickey yourUserName@remoteIP
-```
-
-Create a new folder for your task2
+Login to your linux environment as you did in task1, and create a new folder for your task2 work
 
 ```
 mkdir task2  #creates folder
