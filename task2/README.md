@@ -6,7 +6,7 @@ In this task, you will download raw sequencing data, perform genome assembly, vi
 
 * Access to a linux-based OS running BASH
 * <b>This task also requires graphical software indicated below </b> (*)
-* [fastqc](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) *
+* [fastqc](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
 * [fastx toolkit](http://hannonlab.cshl.edu/fastx_toolkit/)
 * [velvet](https://www.ebi.ac.uk/~zerbino/velvet/)
 * [abyss](https://github.com/bcgsc/abyss)
