@@ -45,7 +45,7 @@ gunzip mt_reads.fastq.gz
 Now explore the structure of the fastq file
 
 ```
-less mt_reads.fastq.gz
+less mt_reads.fastq
 ```
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q1) Paste the lines corresponding to the first 3 reads.
@@ -221,4 +221,4 @@ Can you change velvet's parameters to yield a genome with a single contig?
 # ASSIGNMENT QUESTIONS
 
 The questions for this task are indicated by the lines starting with ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) above.
-Please submit the code you used as well as the answers to the questions. Submit your assignment to a dropbox on LEARN as a .docx, .txt, or .pdf file.
+Please submit the code you used (when required) as well as the answers to the questions. Submit your assignment to a dropbox on LEARN as a .docx, .txt, or .pdf file.
