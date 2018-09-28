@@ -10,6 +10,8 @@ You will learn how to perform basic genome annotation, and also how to extract s
 * [BLAST](http://blast.ncbi.nlm.nih.gov/)
 * [Prokka](https://github.com/tseemann/prokka)
 * [Artemis](http://sanger-pathogens.github.io/Artemis/Artemis/)
+* uniprot2go.py script located [here](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/task3/uniprot2go.py)
+-- must be installed in /usr/bin
 
 ## Installation
 
