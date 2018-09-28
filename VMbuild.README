@@ -42,7 +42,16 @@
   sudo mv uniprot2go.py /usr/bin
   
 # building the uniprot-to-go SQL database
-  TO ADD
+  #ftp://ftp.ebi.ac.uk/pub/databases/GO/goa/UNIPROT/ - all GO data is here
+  wget ftp://ftp.ebi.ac.uk/pub/databases/GO/goa/UNIPROT/goa_uniprot_all.gpa.gz
+  zcat goa_uniprot_all.gpa.gz | awk -F'\t' '{print $2","$4}' >uniprot-vs-go.csv
+  sqlite3 uniprot-vs-go-db.sl3
+    sqlite> create table unitogo (uniprotID text, goTerm text);
+    sqlite> .mode csv
+    sqlite> .import uniprot-vs-go.csv unitogo
+    sqlite> CREATE INDEX unigoindex ON unitogo(uniprotID);
+    sqlite> VACUUM;
+    sqlite> .quit
 
 # add paths to system-wide bashrc files
 # add lines to /etc/bash.bashrc
