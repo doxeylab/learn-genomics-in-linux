@@ -35,6 +35,9 @@
 # install pip (for python packages)
   sudo apt install python pip
   pip install getopt pysqlw
+  
+# building the uniprot-to-go SQL database
+  TO ADD
 
 # add paths to system-wide bashrc files
 # add lines to /etc/bash.bashrc
