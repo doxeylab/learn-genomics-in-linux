@@ -6,18 +6,18 @@ You will learn how to perform basic genome annotation, and also how to extract s
 
 ### Requirements
 
+Graphical software indicated by (*)
+
 * Access to a linux-based OS running BASH
 * [BLAST](http://blast.ncbi.nlm.nih.gov/)
 * [Prokka](https://github.com/tseemann/prokka)
-* [Artemis](http://sanger-pathogens.github.io/Artemis/Artemis/)
+* [Artemis](http://sanger-pathogens.github.io/Artemis/Artemis/) *
 * uniprot2go.py script located [here](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/task3/uniprot2go.py)
 -- must be installed in /usr/bin
 
 ## Installation
 
 If you do not already have access to a GUI running the graphical software listed above, please install the software on your local machine. Once locally installed, you can download results off the linux server and locally visualize them on your own system.
-
-All software used are available for Mac/Windows/Linux.
 
 ---
 
