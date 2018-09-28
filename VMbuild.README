@@ -32,6 +32,9 @@
   wget https://ics.hutton.ac.uk/resources/tablet/installers/tablet_linux_x64_1_17_08_17.sh
   sh tablet_linux_x64_1_17_08_17.sh
  
+# install pip (for python packages)
+  sudo apt install python pip
+  pip install getopt pysqlw
 
 # add paths to system-wide bashrc files
 # add lines to /etc/bash.bashrc
