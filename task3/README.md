@@ -116,26 +116,27 @@ Next, download the .gbk file produced by prokka to your local machine and view i
 
 
 
-## Assigning GO terms
+## Assigning GO terms (Advanced/Optional)
 
 Next, we will be assigning Gene Ontology ([GO](http://geneontology.org/)) terms to your predicted genes/proteins.
 
 Prokka identifies homologs of your proteins within the UniProtKB database. Since there are already pre-computed GO terms for all proteins in UniProtKB, we can map these GO terms over using the following commands:
 
 ```
+#extract the predicted proteins that have been mapped to entries in UniProt
+cat PROKKA_09182018.gff | grep -o "UniProtKB.*;" | awk -F'[:;=]' '{print $4" "$2}' >uniProts.txt
 
+#assign GO annotations from a uniprot-GO database table
+uniprot2go.py -i uniProts.txt -d /data/uniprot2go/uniprot-vs-go-db.sl3 > go.annotations
 ```
 
-This will generate an `.GOannotations` file, which contains your predicted functional annotations.
+This will generate an `go.annotations` file, which contains your predicted functional annotations.
 
-This one-liner will extract column 6 (GO terms), and list them according to their frequency in your proteome.
+This one-liner will extract column 3 (GO terms), and list them according to their frequency in your proteome.
 
 ```
-cat .annotations | grep -v "#" | cut -f6 | tr , '\n' | sort | uniq -c | sort -n -r
+cat go.annotations | awk '{print $3}' | tr "," "\n" | sort | uniq -c | sort -n -r
 ```
-
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q8) What is the most common GO term (GO ID and its function) and why do you think this term is so common? Note: you can get the GO description here: http://amigo.geneontology.org/amigo/term/GO:XXXXXXXX
-
 
 ## After annotation: Extracting genes and regions of interest
 
@@ -227,9 +228,9 @@ And now for something a little more difficult.
 
 https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task3/mysteryGenome.fna.gz
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q9) Identify a full-length 16S rRNA sequence. Paste this sequence into your assignment and include your source code.
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q8) Identify a full-length 16S rRNA sequence. Paste this sequence into your assignment and include your source code.
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q10) Now, using [web-BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn), search this sequence against the NCBI 16S database. What is the taxonomic origin of this genome? 
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q9) Now, using [web-BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn), search this sequence against the NCBI 16S database. What is the taxonomic origin of this genome? 
 
 ![](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/task3/16Ssearch.png)
 
