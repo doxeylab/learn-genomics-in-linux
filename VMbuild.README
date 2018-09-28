@@ -36,6 +36,11 @@
   sudo apt install python pip
   pip install getopt pysqlw
   
+# installing uniprot2go.py (Doxey Lab script)
+  wget https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task3/uniprot2go.py
+  chmod +x uniprot2go.py
+  sudo mv uniprot2go.py /usr/bin
+  
 # building the uniprot-to-go SQL database
   TO ADD
 
