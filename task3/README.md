@@ -230,9 +230,9 @@ And now for something a little more difficult.
 
 https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task3/mysteryGenome.fna.gz
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q8) Identify a full-length 16S rRNA sequence. Paste this sequence into your assignment and include your source code.
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q9) Identify a full-length 16S rRNA sequence. Paste this sequence into your assignment and include your source code.
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q9) Now, using [web-BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn), search this sequence against the NCBI 16S database. What is the taxonomic origin of this genome? 
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q10) Now, using [web-BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn), search this sequence against the NCBI 16S database. What is the taxonomic origin of this genome? 
 
 ![](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/task3/16Ssearch.png)
 
