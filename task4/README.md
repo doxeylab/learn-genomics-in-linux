@@ -92,6 +92,8 @@ Want to try aligning/comparing more than two genomes?
 
 * Open the sequences in `Mauve` and align them
 
+* Visualize the multiple alignment
+
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Bonus) Paste a screenshot of your result.
 
 
