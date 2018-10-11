@@ -9,7 +9,7 @@ It is divided into a series of tasks
   * [Task 1b](task1b/) - Command-line BLAST
   * [Task 2](task2/) - Genome Assembly
   * [Task 3](task3/) - Genome Annotation
-  * Task 4 - Comparative genomics: synteny comparison genomes
+  * [Task 4](task4/) - Comparative genomics: synteny comparison genomes
   * Task 5 - Comparative genomics: gene set comparison between two genomes
   * Task 6 - Metagenomics: taxonomic and functional profiling
   * Task 7 - Resequencing: variant calling from NGS data
