@@ -71,7 +71,7 @@ Open the `act` program that is packaged with `artemis` and input these three fil
 
 ## Working with your own dataset
 
-Next, find two related genomes (i.e., different strains of same species)  from the (NCBI FTP directory)[ftp://ftp.ncbi.nlm.nih.gov/genomes/archive/old_genbank/Bacteria/]
+Next, find two related genomes (i.e., different strains of same species)  from the [NCBI FTP directory](ftp://ftp.ncbi.nlm.nih.gov/genomes/archive/old_genbank/Bacteria/)
 
 * Repeat the analyses above to perform a structural genome comparison.
 
@@ -86,7 +86,7 @@ This is for bonus marks.
 
 Want to try aligning/comparing more than two genomes? 
 
-* Download/install (mauve)[http://darlinglab.org/mauve/download.html] to your local machine
+* Download/install [mauve](http://darlinglab.org/mauve/download.html) to your local machine
 
 * Select three or more genomes of interest
 
