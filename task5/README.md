@@ -1,8 +1,9 @@
 # Task5 - Comparative genomics - gene set comparison
 
-This task is a tutorial on comparative genomics with a focus on gene set comparison.
-You will learn how to identify gene duplications, gene gains and gene losses.
-You will also learn how to compare functional profiles and identify functional categories (e.g., GO terms) that have changed in frequency between genomes.
+This task is a tutorial on comparative genomics with a focus on gene set comparison. It is a fun one with some interesting biology!
+
+You are going to download, annotate and compare the genomes of a enterohemorrhagic <i>E. coli</i> (strain O157:H7) versus a non-pathogenic <i>E. coli</i> (strain K12). You are then going to identify genes and gene duplications that are unique to each organism and biologically interpret your results.
+
 
 ### Requirements
 
