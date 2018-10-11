@@ -6,12 +6,12 @@ This task is a tutorial on structural comparison of genomes using synteny mappin
 
 * Access to a linux-based OS running BASH
 * [BLAST](http://blast.ncbi.nlm.nih.gov/)
-* [Artemis](http://sanger-pathogens.github.io/Artemis/Artemis/)
-* [Mauve](http://darlinglab.org/mauve/download.html)
+* [Artemis](http://sanger-pathogens.github.io/Artemis/Artemis/) *
+* [Mauve](http://darlinglab.org/mauve/download.html) (optional) *
 
 ## Installation
 
-If you do not already have access to a GUI running the graphical software listed above, please install the software on your local machine. Once locally installed, you can download results off the linux server and locally visualize them on your own system.
+If you do not already have access to a GUI running the graphical software listed above (*), please install the software on your local machine. Once locally installed, you can download results off the linux server and locally visualize them on your own system.
 
 All software used are available for Mac/Windows/Linux.
 
@@ -69,6 +69,8 @@ Open the `act` program that is packaged with `artemis` and input these three fil
 
 ---
 
+## Working with your own dataset
+
 Next, find two related genomes (i.e., different strains of same species)  from the (NCBI FTP directory)[ftp://ftp.ncbi.nlm.nih.gov/genomes/archive/old_genbank/Bacteria/]
 
 * Repeat the analyses above to perform a structural genome comparison.
@@ -76,6 +78,24 @@ Next, find two related genomes (i.e., different strains of same species)  from t
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q3) Paste a screenshot of your result.
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q4) Describe the synteny patterns that you are observing.
+
+
+## Multiple genome alignment with MAUVE -- Bonus (+1)
+
+This is for bonus marks.
+
+Want to try aligning/comparing more than two genomes? 
+
+* Download/install (mauve)[http://darlinglab.org/mauve/download.html] to your local machine
+
+* Select three or more genomes of interest
+
+* Open the sequences in `Mauve` and align them
+
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Bonus) Paste a screenshot of your result.
+
+
+---
 
 
 # ASSIGNMENT QUESTIONS
