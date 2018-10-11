@@ -63,9 +63,30 @@ Now, download to your local machine the following files:
 
 Open the `act` program that is packaged with `artemis` and input these three files.
 
-You should now be viewing a structural comparison of these two genomes, which should look like this:
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q1) Paste a screenshot of your result.
 
-![](act.png)
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q2) Describe the synteny patterns that you are observing. Is there 1:1 synteny involving the entire genome or have there been genomic rearrangements?
+
+---
+
+Next, find two related genomes (i.e., different strains of same species)  from the (NCBI FTP directory)[ftp://ftp.ncbi.nlm.nih.gov/genomes/archive/old_genbank/Bacteria/]
+
+* Repeat the analyses above to perform a structural genome comparison.
+
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q3) Paste a screenshot of your result.
+
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q4) Describe the synteny patterns that you are observing.
+
+
+# ASSIGNMENT QUESTIONS
+
+The questions for this task are indicated by the lines starting with ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) above.
+Please submit the code you used (when required) as well as the answers to the questions. Submit your assignment to a dropbox on LEARN as a .docx, .txt, or .pdf file.
+
+
+
+
+
 
 
 
