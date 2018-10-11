@@ -1,8 +1,8 @@
 # Task5 - Comparative genomics - gene set comparison
 
-This task is a tutorial on comparative genomics with a focus on gene set comparison. It is a fun one with some interesting biology!
+This task is a tutorial on comparative genomics with a focus on gene set comparison.
 
-You are going to download, annotate and compare the genomes of a enterohemorrhagic <i>E. coli</i> (strain O157:H7) versus a non-pathogenic <i>E. coli</i> (strain K12). You are then going to identify genes and gene duplications that are unique to each organism and biologically interpret your results.
+You are going to download, annotate and compare the genomes of a enterohemorrhagic <i>E. coli</i> (strain [O157:H7](https://en.wikipedia.org/wiki/Escherichia_coli_O157:H7)) versus a non-pathogenic <i>E. coli</i> (strain [K12](https://en.wikipedia.org/wiki/Escherichia_coli_in_molecular_biology#K-12)). You are then going to identify genes and gene duplications that are unique to each organism and biologically interpret your results.
 
 
 ### Requirements
