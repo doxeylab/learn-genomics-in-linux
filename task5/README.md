@@ -53,10 +53,10 @@ prokka O157H7.fna --outdir O157H7 --norrna --notrna
 ```
 cd K12/
 #generate a gene list text file by grepping the gene names from the .tbl file
-grep "gene" PROKKA*.tbl | awk '{print $2}' | awk -F'_' '{print $1}' | sort > genelist_K12.txt
+cat PROKKA*.tbl | awk '{if ($1 == "gene") {print $2}}' | awk -F'_' '{print $1}' | sort > genelist_K12.txt
 
 cd ../O157H7/
-grep "gene" PROKKA*.tbl | awk '{print $2}' | awk -F'_'  '{print $1}' | sort > genelist_0157H7.txt
+cat PROKKA*.tbl | awk '{if ($1 == "gene") {print $2}}' | awk -F'_' '{print $1}' | sort > genelist_O157H7.txt
 ```
 
 
@@ -77,7 +77,7 @@ We can compare both gene lists like this:
 
 ```
 cd ../  #go back one folder
-comm O157H7/genelist_0157H7.txt K12/genelist_K12.txt >geneListComparison.txt
+comm O157H7/genelist_O157H7.txt K12/genelist_K12.txt >geneListComparison.txt
 ```
 
 Examine the output of `geneListComparison.txt` using `less`
