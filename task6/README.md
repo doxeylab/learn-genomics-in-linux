@@ -11,8 +11,9 @@ You will be mapping the reads from a single population of E. coli at 38,000 g
 ### Requirements
 
 * Access to a linux-based OS running BASH
-* [BLAST](http://blast.ncbi.nlm.nih.gov/)
-* [prokka](https://github.com/tseemann/prokka)
+* [bwa](http://bio-bwa.sourceforge.net/)
+* [samtools](http://samtools.sourceforge.net/)
+* [tablet](https://ics.hutton.ac.uk/tablet/download-tablet/)
 
 
 ## Getting Started
