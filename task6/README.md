@@ -40,6 +40,10 @@ Next, download the resequencing data. This is 229 MB so you may have to be pati
 wget http://ftp.sra.ebi.ac.uk/vol1/fastq/SRR098/SRR098038/SRR098038.fastq.gz
 ```
 
+
+## Mapping your reads to the reference genome
+
+
 Before we can map reads with `bwa` (note: `bowtie` is another option), we need to index the reference genome. This can be done with `bwa index`.
 
 ```
@@ -52,6 +56,38 @@ Now, let's map the reads to the reference genome. This is also a fairly intensiv
 bwa aln REL606.fa SRR098038.fastq.gz > SRR098038.sai
 ```
 
+Make a .SAM file which contains all information about where each read maps onto the reference genome
+
+```
+bwa samse REL606.fa SRR098038.sai SRR098038.fastq.gz > SRR098038.sam
+```
+
+Index the reference genome (again) so that `samtools` can work with it
+
+```
+samtools faidx REL606.fa
+```
+
+Convert .SAM file to .BAM file
+
+```
+samtools import REL606.fa.fai SRR098038.sam SRR098038.bam
+```
+
+Sort BAM file and index it
+
+```
+samtools sort SRR098038.bam SRR098038.sorted
+samtools index SRR098038.sorted.bam
+```
+
+## Visualizing your mapped reads
+
+Now, you can visualize your mapped reads and identify variants
+
+```
+tablet SRR098038.sorted.bam REL606.fa
+```
 
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q1 - Look within the ftp directories for these bacterial genome projects. Are there additional genomes (.fna files) present and, if so, what might they represent?
