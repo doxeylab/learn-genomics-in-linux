@@ -11,10 +11,11 @@ It is divided into a series of tasks
   * [Task 3](task3/) - Genome Annotation
   * [Task 4](task4/) - Comparative genomics: synteny comparison genomes
   * [Task 5](task5/) - Comparative genomics: gene set comparison between two genomes
-  * Task 6 - Metagenomics: taxonomic and functional profiling
-  * Task 7 - Resequencing: variant calling from NGS data
-  * TBD - Task 8 - ChIP-seq data analysis
-  * TBD - Task 9 - GWAS
+  * [Task 6](task6/) - Resequencing: variant calling from NGS data
+  * TBD - ChIP-seq data analysis
+  * TBD - GWAS
+  * TBD - Metagenomics: taxonomic and functional profiling
+
   
 # Requirements & Software Installation
 
