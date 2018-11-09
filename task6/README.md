@@ -5,7 +5,7 @@ More on Lenski's long term evolution experiment can be found in this [article](h
 
 ...and here: https://en.wikipedia.org/wiki/Richard_Lenski
 
-You will be mapping the reads from a single population of E. coli at 38,000 generations that has evolved citrate-utilization capacity (Cit+). You will map the reads to the reference genome in order to identify SNPs that have occurred in this lineage (or its ancestors). You will focus on one SNP in particular that has created a "mutator" strain by disrupting the mutS DNA-repair gene.
+You will be mapping the reads from a single population of E. coli at 38,000 generations that has evolved citrate-utilization capacity (Cit+). You will map the reads to the reference genome in order to identify SNPs that have occurred in this lineage (or its ancestors). You will focus on one SNP in particular that has created a "mutator" strain by disrupting the <i>mutS</i> DNA-repair gene.
 
 
 ### Requirements
@@ -123,7 +123,7 @@ bcftools view calls.bcf > calls.vcf
 
 This lineage of <i>E. coli</i> has a mutation in the <i>mutS</i> gene (protein sequence can be found [here](https://www.uniprot.org/uniprot/P23909.fasta)). This mutation creates a premature stop codon. Your task is to find this mutation within your sequencing data!
 
-Find the region in the reference genome that encodes the mutS gene using `blast`. You may need to refer to earlier tasks to help you with this.
+Find the region in the reference genome that encodes the <i>mutS</i> gene using `blast`. You may need to refer to earlier tasks to help you with this.
 
 Now, extract the mapped regions for this region from your .bam file. The command will be something like this:
 
@@ -138,9 +138,9 @@ Download the following three files and open these files in `igv` on your home ma
 - the calls.vcf file you created above
 - the reference genome ([REL606.fa](http://athyra.idyll.org/~t/REL606.fa.gz))
 
-Now, locate the region containing the mutS gene within `igv`.
+Now, locate the region containing the <i>mutS</i> gene within `igv`.
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q5 - Paste a screenshot of the region containing this mutation. Your `igv` screenshot should span the full region of the mutS gene and display two tracks: the coverage and the variants.
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q5 - Paste a screenshot of the region containing this mutation. Your `igv` screenshot should span the full region of the <i>mutS</i> gene and display two tracks: the coverage and the variants.
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q6 - Now locate the variant that corresponds to the premature stop codon. Paste a screenshot highlighting this mutation (you will need to zoom in) and show the amino acid translation (see [here](https://software.broadinstitute.org/software/igv/sequence_track_options). What was the amino acid encoded by this codon before this mutation?
 
