@@ -128,6 +128,15 @@ This lineage of E. coli has a mutation in the mutS gene, which is encoded at 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q5 - Paste a screenshot of the region containing this mutation and what was the amino acid encoded by this codon before this mutation? Hint: see [here](https://software.broadinstitute.org/software/igv/sequence_track_options)
 
 
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Once you are finished, please delete the files in your task 6 folder like this:
+
+```
+cd task6
+rm *
+```
+
+
+
 ---
 
 # ASSIGNMENT QUESTIONS
