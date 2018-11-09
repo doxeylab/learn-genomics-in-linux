@@ -77,7 +77,7 @@ samtools import REL606.fa.fai SRR098038.sam SRR098038.bam
 Sort BAM file and index it
 
 ```
-samtools sort SRR098038.bam SRR098038.sorted
+samtools sort SRR098038.bam > SRR098038.sorted
 samtools index SRR098038.sorted.bam
 ```
 
