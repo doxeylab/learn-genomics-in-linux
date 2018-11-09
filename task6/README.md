@@ -123,22 +123,22 @@ bcftools view calls.bcf > calls.vcf
 
 This lineage of <i>E. coli</i> has a mutation in the <i>mutS</i> gene (protein sequence can be found [here](https://www.uniprot.org/uniprot/P23909.fasta)). This mutation creates a premature stop codon. Your task is to find this mutation within your sequencing data!
 
-* Find the region in the reference genome that encodes the mutS gene using `blast`. You may need to refer to earlier tasks to help you with this.
+Find the region in the reference genome that encodes the mutS gene using `blast`. You may need to refer to earlier tasks to help you with this.
 
-* Now, extract the mapped regions for this region from your .bam file. The command will be something like this:
+Now, extract the mapped regions for this region from your .bam file. The command will be something like this:
 
 ```
 samtools view SRR098038.sorted.bam "rel606:START-END" > region.sam   # where START and END are position numbers
 ```
 
 
-* Download the following three files and open these files in `igv` on your home machine.
+Download the following three files and open these files in `igv` on your home machine.
 
 - the region.sam file you created above
 - the calls.vcf file you created above
 - the reference genome ([REL606.fa](http://athyra.idyll.org/~t/REL606.fa.gz))
 
-* Now, locate the region containing the mutS gene within `igv`.
+Now, locate the region containing the mutS gene within `igv`.
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q5 - Paste a screenshot of the region containing this mutation. Your `igv` screenshot should span the full region of the mutS gene and display two tracks: the coverage and the variants.
 
