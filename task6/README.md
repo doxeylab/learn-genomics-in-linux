@@ -16,6 +16,12 @@ You will be mapping the reads from a single population of E. coli at 38,000 g
 * [tablet](https://ics.hutton.ac.uk/tablet/download-tablet/)
 * [bcftools](https://samtools.github.io/bcftools/bcftools.html)
 
+### Installing IGV
+
+You will also need to download and install IGV on your own machine.
+
+* [igv](http://software.broadinstitute.org/software/igv/)
+
 
 ## Getting Started
 
@@ -82,31 +88,18 @@ samtools sort SRR098038.bam > SRR098038.sorted.bam
 samtools index SRR098038.sorted.bam
 ```
 
-Cleanup the files you no longer need.
+## Viewing your BAM file
 
+BAM files can be viewed with `igv` or with `tablet`. But let's take a quick look in the terminal.
 
+```
+samtools tview SRR098038.sorted.bam
+```
 
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q1 - Can you find a read with a mutation? Paste a screenshot and indicate where the mutation is. 
 
-## Visualizing your mapped reads
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q2 - Do you think this mutation is a real variant or an error? Why?
 
-Now, you can visualize your mapped reads and identify variants.
-
-[<b>Download</b>](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task1/gcloud-download.png) the following two files to your local machine. Tip: find the path to your file with `realpath yourFile.txt`
-
-* SRR098038.sorted.bam
-* REL606.fa
-
-Then open them both in `tablet`.
-
-
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q1 - Paste a screenshot of a portion of the mapped reads covering a few kilobases of DNA (pileup).
-
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q2 - Use tablet to visually identify SNPs or other variants. Go to Adjust/Variants to turn up the contrast. Find a position that is likely a SNP and not a sequencing error. Paste a screenshot.
-
-
-This lineage of E. coli has a mutation in the mutS gene. The mutation creates a premature stop codon. Can you find it!?
-
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q3 - Paste a screenshot of the region containing this mutation and what was the amino acid encoded by this codon before this mutation?
 
 ## Variant calling
 
@@ -120,7 +113,19 @@ bcftools view calls.bcf > calls.vcf
 
 ```
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q4 - How many total variants are present?
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q3 - How many total variants are present?
+
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q4 - Include a line containing a SNP and a line containing an indel variant.
+
+
+## Locating a key SNP in Lenski's E. coli evolution experiment
+
+This lineage of E. coli has a mutation in the mutS gene, which is encoded at position 2751953-2754514 in its genome. The mutation creates a premature stop codon. Can you find it!?
+
+* Download the .vcf file you created above and the reference genome (REL606.fa) and open these files in `igv`
+
+
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q5 - Paste a screenshot of the region containing this mutation and what was the amino acid encoded by this codon before this mutation? Hint: see [here](https://software.broadinstitute.org/software/igv/sequence_track_options)
 
 
 ---
