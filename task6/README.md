@@ -116,11 +116,11 @@ Instead of identifying SNPs by eye, use `bcftools` to call variants in an auto
 bcftools mpileup -f REL606.fa SRR098038.sorted.bam | bcftools call -mv -Ob --ploidy 1 -o calls.bcf
 
 #convert to vcf (human-readable variant call format). This file should contain all identified SNPs and other variants.
-bcftools view -v -c -g SRR098038.raw.bcf > SRR098038.raw.vcf
+bcftools view calls.bcf > calls.vcf
 
 ```
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q4 - How many total variants are present? Hint: use "grep -v"
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q4 - How many total variants are present?
 
 
 ---
