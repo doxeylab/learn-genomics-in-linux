@@ -110,10 +110,10 @@ This lineage of E. coli has a mutation in the mutS gene. The mutation creates
 
 ## Variant calling
 
-Instead of identifying SNPs by eye, use `samtools` to call variants in an automated fashion.
+Instead of identifying SNPs by eye, use `bcftools` to call variants in an automated fashion.
 
 ```
-samtools mpileup -uD -f REL606.fa SRR098038.sorted.bam | bcftools view -bvcg - > SRR098038.raw.bcf
+bcftools mpileup -f REL606.fa SRR098038.sorted.bam | bcftools call -mv -Ob --ploidy 1 -o calls.bcf
 
 #convert to vcf (human-readable variant call format). This file should contain all identified SNPs and other variants.
 bcftools view -v -c -g SRR098038.raw.bcf > SRR098038.raw.vcf
