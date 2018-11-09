@@ -14,6 +14,7 @@ You will be mapping the reads from a single population of E. coli at 38,000 g
 * [bwa](http://bio-bwa.sourceforge.net/)
 * [samtools](http://samtools.sourceforge.net/)
 * [tablet](https://ics.hutton.ac.uk/tablet/download-tablet/)
+* [bcftools](https://samtools.github.io/bcftools/bcftools.html)
 
 
 ## Getting Started
@@ -77,9 +78,14 @@ samtools import REL606.fa.fai SRR098038.sam SRR098038.bam
 Sort BAM file and index it
 
 ```
-samtools sort SRR098038.bam > SRR098038.sorted
+samtools sort SRR098038.bam > SRR098038.sorted.bam
 samtools index SRR098038.sorted.bam
 ```
+
+Cleanup the files you no longer need.
+
+
+
 
 ## Visualizing your mapped reads
 
