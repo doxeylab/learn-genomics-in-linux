@@ -114,7 +114,7 @@ bcftools view calls.bcf > calls.vcf
 
 ```
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q3 - How many total variants are present? Hint: use `grep -v`
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q3 - How many total variants are present? Hint: `grep` for a pattern found only in your variant lines.
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q4 - Copy and paste into your assignment a line from the VCF file containing a SNP and a line containing an indel variant.
 
