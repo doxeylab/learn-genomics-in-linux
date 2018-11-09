@@ -121,10 +121,11 @@ bcftools view calls.bcf > calls.vcf
 
 ## Locating a key SNP in Lenski's E. coli evolution experiment
 
-This lineage of E. coli has a mutation in the mutS gene (sequence can be found [here](https://www.uniprot.org/uniprot/P23909.fasta)). The mutation creates a premature stop codon. Can you find this mutation!?
+This lineage of <i>E. coli</i> has a mutation in the mutS gene (sequence can be found [here](https://www.uniprot.org/uniprot/P23909.fasta)). The mutation creates a premature stop codon. Can you find this mutation!?
+Note: this will take a bit of thinking. You may need methods from previous labs to help you identify your genomic region of interest.
 
-* Download the .vcf file you created above and the reference genome (REL606.fa) and open these files in `igv`
 
+* Download the .vcf file you created above from the cloud to your home machine, and also the reference genome ([REL606.fa](http://athyra.idyll.org/~t/REL606.fa.gz)) and open these files in `igv`.
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q5 - Paste a screenshot of the region containing this mutation and what was the amino acid encoded by this codon before this mutation? Hint: see [here](https://software.broadinstitute.org/software/igv/sequence_track_options)
 
