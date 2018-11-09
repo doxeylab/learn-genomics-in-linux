@@ -10,12 +10,13 @@ You will be mapping the reads from a single population of E. coli at 38,000 g
 
 ### Requirements
 
+#### Command-line tools
 * Access to a linux-based OS running BASH
 * [bwa](http://bio-bwa.sourceforge.net/)
 * [samtools](http://samtools.sourceforge.net/)
 * [bcftools](https://samtools.github.io/bcftools/bcftools.html)
 
-### Installing IGV
+#### Graphical tools
 
 You will also need to download and install IGV on your own machine.
 
@@ -103,7 +104,7 @@ samtools tview SRR098038.sorted.bam
 
 ## Variant calling
 
-Instead of identifying SNPs by eye, use `bcftools` to call variants in an automated fashion.
+Instead of identifying SNPs by eye, use `bcftools` to perform automated variant calling
 
 ```
 bcftools mpileup -f REL606.fa SRR098038.sorted.bam | bcftools call -mv -Ob --ploidy 1 -o calls.bcf
@@ -113,14 +114,14 @@ bcftools view calls.bcf > calls.vcf
 
 ```
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q3 - How many total variants are present?
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q3 - How many total variants are present? Hint: use `grep -v`
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q4 - Include a line containing a SNP and a line containing an indel variant.
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q4 - Copy and paste into your assignment a line from the VCF file containing a SNP and a line containing an indel variant.
 
 
 ## Locating a key SNP in Lenski's E. coli evolution experiment
 
-This lineage of E. coli has a mutation in the mutS gene, which is encoded at position 2751953-2754514 in its genome. The mutation creates a premature stop codon. Can you find it!?
+This lineage of E. coli has a mutation in the mutS gene (sequence can be found [here](https://www.uniprot.org/uniprot/P23909.fasta)). The mutation creates a premature stop codon. Can you find this mutation!?
 
 * Download the .vcf file you created above and the reference genome (REL606.fa) and open these files in `igv`
 
