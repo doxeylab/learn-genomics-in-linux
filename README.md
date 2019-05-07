@@ -1,7 +1,7 @@
 # learn-genomics-in-unix
 
 This repository contains a tutorial on how to use command-line genomics/bioinformatics tools in Linux.
-It has been designed for BIOL 469 (Genomics) @ the University of Waterloo.
+It has been designed for BIOL 469 (Genomics) and BIOL 614 (Bioinformatics Tools and Techniques) @ the University of Waterloo.
 
 It is divided into a series of tasks
 
@@ -35,9 +35,8 @@ We have also documented installation instructions for building a bioinformatics 
 
 
  
-# Development & Contact
+# Contact
 
-This tutorial was developed by Dr. Andrew Doxey and other members of the [Doxey Lab](http://doxey.uwaterloo.ca/).
 If you have any questions, please contact acdoxey at uwaterloo dot ca.
 
 Enjoy
