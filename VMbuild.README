@@ -56,6 +56,7 @@
     sqlite> CREATE INDEX unigoindex ON unitogo(uniprotID);
     sqlite> VACUUM;
     sqlite> .quit
+  # now move uniprot-vs-go-db.sl3 to /data/uniprot2go/uniprot-vs-go-db.sl3
 
 # add paths to system-wide bashrc files
 # add lines to /etc/bash.bashrc
