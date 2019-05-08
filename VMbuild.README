@@ -4,6 +4,9 @@
 
 # Logged in via terminal (supplied my ssh public key to the gcloud meta ssh keys page in the console)
 
+# update package list
+  sudo apt update
+
 # install  bioinformatics software
   sudo apt install fastqc velvet abyss fasttree prodigal barrnap bcftools
 
