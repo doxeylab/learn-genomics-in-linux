@@ -51,7 +51,7 @@ wget ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/007/925/GCA_000007925.1_ASM7
 
 wget ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/007/925/GCA_000007925.1_ASM792v1/GCA_000007925.1_ASM792v1_genomic.gff.gz
 
-ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/007/925/GCA_000007925.1_ASM792v1/GCA_000007925.1_ASM792v1_protein.faa.gz
+wget ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/007/925/GCA_000007925.1_ASM792v1/GCA_000007925.1_ASM792v1_protein.faa.gz
 
 ```
 
