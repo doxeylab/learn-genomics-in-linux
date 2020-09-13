@@ -176,18 +176,15 @@ blastp -query e.coli.l7.faa -db GCA_000007925.1_ASM792v1_protein.faa
 ACTGGCATTGATAGAACAACCATTTATTCGAGATAGTTCAATTACTGTAGAGCAAGTTGTAAAACA
 ```
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q5 - Does this exact sequence of DNA occur in the genome you have been analyzing (genome of Prochlorococcus marinus subsp. marinus str. CCMP1375)?
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q5 - Search for this fragment of DNA in the genome of Prochlorococcus marinus subsp. marinus str. CCMP1375. What did you find?
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q6 - How many mutations (mismatches) does it have compared to its top DNA sequence match?
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q6 - Based on your BLAST result, what is the likely function of this fragment of DNA?
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q7 - Do you think it is a fragment of a protein coding gene?
-
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q8 - If so, enter the name of the protein. If not, enter "NA".
 
 
 # ASSIGNMENT QUESTIONS
 
-<i>* Complete questions 1 - 8 above and submit your answers on LEARN.</i>
+<i>* Complete questions 1-6 above and submit your answers on LEARN.</i>
 
 
 #### Congratulations. You are now finished Task 1b.
