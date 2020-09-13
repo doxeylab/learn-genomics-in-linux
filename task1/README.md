@@ -211,7 +211,10 @@ blastp --help
 ```
 grep "word" file.txt  # prints lines in file.txt containing "word"
 
-grep -c "word" file.txt # prints the number of occurrences of "word" in file.txt
+grep -o "word" file.txt #print out all the occurrences of "word"
+
+grep -c "word" file.txt # counts the number of lines containing "word" in file.txt
+
 ```
 
 #### Piping commands
@@ -224,6 +227,11 @@ grep "word" file.txt | wc -l  # will count the number of lines containing the wo
 # or alternatively
 
 cat file.txt | grep "word" | wc -l  # does the same thing as above
+
+# if we want to count ALL the occurrences of "word" in the file (allowing multiple per line), we can do
+
+grep -o "word" file.txt | wc -l
+
 ```
 
 #### Copying a file to and from a remote server
@@ -293,11 +301,11 @@ Hint: remember to use `man` if you want to explore added functionality of comman
 
 * Download this file containing the genome sequence of E. coli K12 https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task1/e-coli-k12-genome.fasta.gz
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q1 - What is the size of the compressed file in megabytes (to one decimal place)?
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q1 - What is the size of the compressed file in megabytes (round to one decimal place)?
 
 * Uncompress the file.
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q2 -  What is the size of the uncompressed file in megabytes (to one decimal place)?
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q2 -  What is the size of the uncompressed file in megabytes (round to one decimal place)?
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q3 - How many characters are in this file?
 
