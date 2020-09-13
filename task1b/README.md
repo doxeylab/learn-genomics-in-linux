@@ -47,11 +47,11 @@ There is also another file called:
 Download these files, uncompress them, and explore them (with `less` for example).
 
 ```
-wget ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/bacteria/Prochlorococcus_marinus/reference/GCA_000007925.1_ASM792v1/GCA_000007925.1_ASM792v1_genomic.fna.gz
+wget ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/007/925/GCA_000007925.1_ASM792v1/GCA_000007925.1_ASM792v1_genomic.fna.gz
 
-wget ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/bacteria/Prochlorococcus_marinus/reference/GCA_000007925.1_ASM792v1/GCA_000007925.1_ASM792v1_genomic.gff.gz
+wget ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/007/925/GCA_000007925.1_ASM792v1/GCA_000007925.1_ASM792v1_genomic.gff.gz
 
-wget ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/bacteria/Prochlorococcus_marinus/reference/GCA_000007925.1_ASM792v1/GCA_000007925.1_ASM792v1_protein.faa.gz
+ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/007/925/GCA_000007925.1_ASM792v1/GCA_000007925.1_ASM792v1_protein.faa.gz
 
 ```
 
