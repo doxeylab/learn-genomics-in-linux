@@ -55,7 +55,7 @@ wget ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/007/925/GCA_000007925.1_ASM7
 
 ```
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q1 - Look at the .gff file. What information does this contain?
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q1 - Examine the contents of the three files you have just downloaded. What information does each contain?
 
 
 ## Command-line BLAST
