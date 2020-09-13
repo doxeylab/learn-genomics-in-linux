@@ -170,29 +170,24 @@ blastp -query e.coli.l7.faa -db GCA_000007925.1_ASM792v1_protein.faa
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q4 - Compare your result to the previous search.
 
+* Suppose you have sequenced the following fragment of DNA:
+
+```
+ACTGGCATTGATAGAACAACCATTTATTCGAGATAGTTCAATTACTGTAGAGCAAGTTGTAAAACA
+```
+
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q5 - Does this exact sequence of DNA occur in the genome you have been analyzing (genome of Prochlorococcus marinus subsp. marinus str. CCMP1375)?
+
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q6 - How many mutations (mismatches) does it have compared to its top DNA sequence match?
+
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q7 - Do you think it is a fragment of a protein coding gene?
+
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q8 - If so, enter the name of the protein. If not, enter "NA".
+
 
 # ASSIGNMENT QUESTIONS
 
-<i>* Answer questions 1 - 4 above</i>
-
-* Pick a protein of interest (POI) (from any bacterial organism)
-
-* Now pick a different bacterial organism (these can be found in the the NCBI bacterial genomes ftp directory) where you suspect to find a homolog of your protein. Go [here](ftp://ftp.ncbi.nlm.nih.gov/genomes/refseq/bacteria) or [here](ftp://ftp.ncbi.nlm.nih.gov/genomes/archive/old_refseq/Bacteria/) if the previous link is giving you trouble. ** Note: We are restricting this to bacteria to keep the genome download sizes low.
-
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q5 - List your protein of interest and your organism of interest.
-
-* Download the genome (.fna) and predicted proteome (.faa) for your organism of interest above
-
-* Search the genome for matches to your POI using `tblastn` and the proteome for matches to your POI using `blastp`
-
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q6 - Paste your top result for each.
-
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q7 - Have you a identified true homolog of your POI? Justify your answer using the E-value and sequence identity.
-
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q8 - How many homologs did you detect? Again, justify your answer by pasting the relevant output from your BLAST result.
-
-
-Submit your assignment to a dropbox on LEARN as a .docx, .txt, or .pdf file.
+<i>* Complete questions 1 - 8 above and submit your answers on LEARN.</i>
 
 
 #### Congratulations. You are now finished Task 1b.
