@@ -192,6 +192,7 @@ e.g., try
 ```
 man ls
 #type 'q' to quit
+#Note: this line and the line above are interpreted as comments since they start with the "#" character. They will not be executed as a command.
 ```
 
 `man` will work with some bioinformatics tools. However, not always.
@@ -284,29 +285,36 @@ If you need to interrupt a command or process that you have started, press Ctrl-
 
 # ASSIGNMENT QUESTIONS
 
-Your assignment will be to write a series of shell commands to answer the following questions. Please submit the code you used as well as the answers to the questions. Submit your assignment to a dropbox on LEARN as a .docx, .txt, or .pdf file.
+<b>PLEASE COMPLETE QUIZ 1 ON LEARN (BIOL 469).</b>
+
+You will be asked to answer the following questions.
 
 Hint: remember to use `man` if you want to explore added functionality of commands.
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q1 - Download this file containing the genome sequence of E. coli K12 https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task1/e-coli-k12-genome.fasta.gz
+* Download this file containing the genome sequence of E. coli K12 https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task1/e-coli-k12-genome.fasta.gz
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q2 - What is the size of this compressed file in megabytes?
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q1 - What is the size of the compressed file in megabytes (to one decimal place)?
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q3 - Uncompress the file. What is the size now in megabytes?
+* Uncompress the file.
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q4 - Print out (within the shell) the first 3 lines of the file. Copy and paste the result into your assignment.
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q2 -  What is the size of the uncompressed file in megabytes (to one decimal place)?
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q5 - How many characters are in this file?
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q3 - How many characters are in this file?
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q6 - How many lines are in the file?
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q4 - How many lines in the file contain the word "ATATATAT"?
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q7 - How many lines in the file contain the word "ATATATAT"?
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q5 - How many times does the word "CCGG" occur in the file?
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q8 - How many times does the word "ATATATAT" occur in the file? Hint: -o
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q6 - What character (A, C, G, or T) is most common in the uncompressed file?
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q9 - Print out the last 50 lines of the file to a new file called tail.txt. Do not paste the result into your assignment.
+* Bonus questions
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q10 - What character (A, C, G, or T) is most common in tail.txt?
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q7 - What is the size of the uncompressed file in bytes?
+
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q8 - How many times does "AT" occur in lines 3 to 10 of the uncompressed file?
+
+
+
 
 
 #### Congratulations. You are now finished Task 1.
