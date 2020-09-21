@@ -73,8 +73,11 @@ fastqc mt_reads.fastq
 
 Next, [<b>download</b>](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task1/gcloud-download.png) the 'fastqc_report.html' file to your local machine and open it in a web browser.
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q3) Inspect the quality of your reads by examining the k-mer abundance profile. Why do you think some k-mers are unusually abundant?
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q3) Inspect the FastQC report. Which of the following statement is correct?
 
+* The reads passed all of the quality control measures
+* The reads failed all of the quality control measures
+* The reads passed some of the quality control measures but failed others
 
 ### Splitting the barcodes (demultiplexing)
 
