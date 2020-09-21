@@ -51,7 +51,7 @@ less mt_reads.fastq
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q1) Paste the lines corresponding to the first 3 reads.
 
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q2) How many reads are in the file? Hint: you can use `grep` to answer this.
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q2) How many reads are in the file? Hint: the command `grep "^X"` reports all lines starting with the character `X`.
 
 
 ## Data preprocessing
