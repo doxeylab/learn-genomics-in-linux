@@ -116,7 +116,7 @@ fastq_quality_filter -i trimmed_mt1.fastq -q 25 -p 80 -o qual_trim_mt1.fastq -Q3
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q4) What percentage of reads were removed?
 
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q5) Now that your data has been processed by trimming and quality filtering, examine the quality of your processed data using `fastqc`. Has the quality improved? Justify your answer.
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q5) Now that your data has been processed by trimming and quality filtering, examine the quality of your processed data using `fastqc`. Which of the measures improved from a warning/fail to a pass?
 
 
 ## Genome Assembly
