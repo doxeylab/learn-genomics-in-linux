@@ -146,7 +146,7 @@ velvetg out_21/ -scaffolding no -read_trkg yes -amos_file yes
 
 Inspect the contigs.fa file that has been produced (will be in out_21 folder).
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q5) How many contigs did you produce? Try varying the k-mer value. Did the number of contigs change?
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q5) Re-do the assembly using a k value of 31. Now, how many contigs did you produce?
 
 ## Assembly visualization
 
