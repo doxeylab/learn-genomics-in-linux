@@ -101,7 +101,7 @@ There are now two .fastq files; one for each barcode.  There is also an unmatche
 Barcode trimming is needed to remove the barcode sequences from the beginning of each read. The Q33 is required due to differences in sanger and illumina encoding.
 
 ```
-fastx_trimmer -i splitData_mt1.fastq -f 8 -o trimmed_mt1.fastq -Q33
+fastx_trimmer -i splitData_mt1.fastq -f 9 -o trimmed_mt1.fastq -Q33
 ```
 
 
