@@ -1,4 +1,4 @@
-# Lab 2 - Genome Assembly
+# Task 2 - Genome Assembly
 
 In this lab, you will download raw sequencing data, perform genome assembly, visualize and analyze your assemblies, and compare the assembled genome sequence to the database using BLAST.
 
