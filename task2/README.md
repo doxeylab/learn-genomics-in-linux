@@ -181,34 +181,31 @@ Then open it in `tablet`. Tablet is a great program to explore how reads map to 
 
 Explore `tablet` more on your own. We will be using it later in the course.
 
-### Assembly visualization with Bandage
+### Assembly visualization with Bandage (optional)
 
 Velvet and other de bruijn assemblers produce a graph that can be visualized. `bandage` is an excellent tool for this purpose.
 
-Find the 'lastgraph' file produced by `velvet` and [<b>download</b>](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task1/gcloud-download.png) it to your local machine.
+If you are interested, locate the 'lastgraph' file produced by `velvet` and [<b>download</b>](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task1/gcloud-download.png) it to your local machine.
 
-Open this file in the `Bandage` application. 
-
-- How long is the largest connected component of this graph
-
+Open this file in the `Bandage` application, and explore further. 
 
 
 ### Generating an improved assembly with ABYSS
 
 As you can see based on the results from above, `velvet` (with the parameters we chose) did not yield a high quality assembly. It is too fragmented.
 
-Often in genomics it is useful to try numerous parameters and different assemblers. Let's try to assemble this genome again but with a different assembler. This time, we will be using the popular [abyss](https://github.com/bcgsc/abyss) assembler but we'll keep the value of k = 21.
+Often in genomics it is useful to try numerous parameters and different assemblers. Let's try to assemble this genome again but with a different assembler. This time, we will be using the popular [abyss](https://github.com/bcgsc/abyss) assembler and we'll keep the value of k = 21.
 
 
 ```
 abyss-pe k=21 in='qual_trim_mt1.fastq' name=abyss-assembly
 ```
 
-- How many contigs did abyss generate?
-- According to the abyss-assembly-stats file how long (in kB) is your assembly? What is the N50?
-- How many contigs were produced?
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q15) How long (in kB) is your assembly?
 
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q16) What is the N50?
 
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q17) How many contigs did abyss generate?
 
 
 
@@ -218,7 +215,12 @@ You still do not know the source of this genome. Is it eukaryotic? bacterial? is
 
 To investigate this question, do a BLAST search using the <b>online</b> [BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi) tool. Use the Abyss assemble as your query.
 
--  Based on the BLAST result, what organism do you think this genome came from and what kind of genome is it?
+
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q18) Based on the BLAST result, what organism do you think this genome came from and what kind of genome is it?
+- Organism A, genome type A
+- Organism B, genome type B
+- Organism C, genome type C
+- Organism D, genome type D
 
 
 
@@ -226,25 +228,7 @@ To investigate this question, do a BLAST search using the <b>online</b> [BLAST](
 # ASSIGNMENT QUESTIONS
 
 
-##### Download the lastgraph file and open with Bandage
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q9) How long is the largest connected component of the graph?
-
-##### Run Abyss with a k=21 and use the abyss-assembly-stats to answer the following questions
-
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q10) How long (in kB) is your assembly?
-
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q11) What is the N50?
-
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q12) How many contigs did abyss generate?
-
-##### Run [BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi) with your Abyss assembly as the query.
-
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q13) Based on the BLAST result, what organism do you think this genome came from and what kind of genome is it?
-- Organism A, genome type A
-- Organism B, genome type B
-- Organism C, genome type C
-- Organism D, genome type D
 
 
 
