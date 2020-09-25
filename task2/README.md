@@ -203,7 +203,7 @@ abyss-pe k=21 in='qual_trim_mt1.fastq' name=abyss-assembly
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q15) How long (# bases) is your assembly?
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q16) What is the N50?
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q16) What is the N50 value (# bases)?
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q17) How many contigs did abyss generate?
 
@@ -216,26 +216,20 @@ You still do not know the source of this genome. Is it eukaryotic? bacterial? is
 To investigate this question, do a BLAST search using the <b>online</b> [BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi) tool. Use the Abyss assemble as your query.
 
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q18) Based on the BLAST result, what organism do you think this genome came from and what kind of genome is it?
-- Organism A, genome type A
-- Organism B, genome type B
-- Organism C, genome type C
-- Organism D, genome type D
-
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q18) Based on the BLAST result, describe the most likely source of this DNA sequence?
 
 
 
 # ASSIGNMENT QUESTIONS
 
 
+Please answer questions 1-18 above on LEARN under Quizzes.
 
 
-
-
-### BONUS (+2 points)
+### BONUS (+1 points)
 
 We did not use all of the options in `velvet` and it can certainly be optimized to produce a better assembly.
 
 Can you change velvet's parameters to yield a genome with a single contig? 
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Bonus) What code did you use?
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Bonus) Which parameter, when enabled, produces an assembly with a single contig?
