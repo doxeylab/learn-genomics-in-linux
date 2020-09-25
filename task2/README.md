@@ -35,10 +35,15 @@ cd task2 #enters into folder
 
 Download the raw sequencing data from *https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task2/mt_reads.fastq.gz* into your folder and then uncompress it.
 
-- How many reads are in the file? Hint: the command `grep "^X"` reports all lines starting with the character `X`.
+Explore the file using `less`.
 
-- How would you return the sequence of the nth read using only head and tail or grep? Hint: each read consists of x lines and the first line of read starts with a specific character.
+Next, consider how would you return the sequence of the nth read using only head and tail or grep? Note that each read consists of a fixed number of lines and the first line of a read starts with a specific character.
 
+
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q1) What is the sequence of the third read in the file? Make sure to remove all spaces.
+
+
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q2) How many reads are in the file?  Hint: the command `grep "^X"` reports all lines starting with the character `X`.
 
 
 
@@ -61,7 +66,23 @@ fastqc mt_reads.fastq
 
 [<b>Download</b>](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task1/gcloud-download.png) the 'fastqc_report.html' file to your local machine and open it in a web browser. Tip: find the path to your file with `realpath yourFile.txt`
 
-- What information do you get from the report?
+Explore and inspect the FastQC report for mt_reads.fastq.
+
+
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q3) Which of the following statements is correct?
+* The reads passed all of the quality control measures
+* The reads failed all of the quality control measures
+* The reads passed some of the quality control measures but failed others
+
+
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q4) The per-base sequence quality is lowest at the \_\_\_\_\_ of the reads.
+
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q5) Most of the reads were assigned a quality (Phred) score of \_\_\_\_\_ .
+
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q6) There is an unexpected spike in the frequency of certain k-mers at the \_\_\_\_\_ of the reads.
+
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q7) This spike in k-mer frequency may have resulted from the inclusion of \_\_\_\_\_ .
+
 
 
 
@@ -193,21 +214,12 @@ To investigate this question, do a BLAST search using the <b>online</b> [BLAST](
 
 
 # ASSIGNMENT QUESTIONS
-#### Use the file mt_reads.fastq to answer the following questions.
-
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q1) What is the sequence of the third read in the file? Make sure to remove all spaces.
 
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q2) How many reads are in the file? 
 
 
-Generate and inspect the FastQC report for mt_reads.fastq
 
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q3) Which of the following statement is correct?
-* The reads passed all of the quality control measures
-* The reads failed all of the quality control measures
-* The reads passed some of the quality control measures but failed others
 
 
 #### Use the file splitData_mt2.fastq to answer the following questions.
