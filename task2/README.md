@@ -178,7 +178,7 @@ Then open it in `tablet`. Tablet is a great program to explore how reads map to 
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q14) What is the N50 value?
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q15) Examine the read coverage across the longest contig. Does the coverage match that shown  [<b>here</b>](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task2/tablet.png)?
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q15) Examine the read coverage across the longest contig. Does the coverage plot match that shown  [<b>here</b>](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task2/tablet-coverage-plot.png)?
 
 
 Explore `tablet` more on your own. We will be using it later in the course.
