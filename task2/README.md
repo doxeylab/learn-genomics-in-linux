@@ -170,7 +170,7 @@ Inspect the contigs.fa file that has been produced (will be in out_21 folder).
 
 Velvet has the option of keeping track of where the reads map to the assembly using the `-read_trkg` flag. This will produce a `velvet_asm.afg` file.
 
-[<b>Download</b>](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task1/gcloud-download.png) this file to your local machine. 
+[<b>Download</b>](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task1/gcloud-download.png) this file (from your k=31 assembly) to your local machine. 
 Then open it in `tablet`. Tablet is a great program to explore how reads map to assemblies and genomes.
 
 
