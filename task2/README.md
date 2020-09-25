@@ -211,7 +211,7 @@ abyss-pe k=21 in='qual_trim_mt1.fastq' name=abyss-assembly
 
 
 
-#### What is the taxonomic source of your genome? Explore with BLAST
+### What is the taxonomic source of your genome? Explore with BLAST
 
 You still do not know the source of this genome. Is it eukaryotic? bacterial? is it nuclear or mitochondrial?
 
