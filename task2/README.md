@@ -213,9 +213,9 @@ abyss-pe k=21 in='qual_trim_mt1.fastq' name=abyss-assembly
 
 ### What is the taxonomic source of your genome? Explore with BLAST
 
-You still do not know the source of this genome. Is it eukaryotic? bacterial? is it nuclear or mitochondrial?
+You still do not know the source of this genome. Is it eukaryotic? bacterial? Is it a nuclear genome, a plasmid, or something else?
 
-To investigate this question, do a BLAST search using the <b>online</b> [BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi) tool. Use the Abyss assemble as your query.
+To investigate this question, do a BLAST search using the <b>online</b> [BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi) tool. Use the Abyss assembly as your query.
 
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q19) Based on the BLAST result, describe the most likely source of this DNA sequence?
