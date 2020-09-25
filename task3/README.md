@@ -34,11 +34,27 @@ cd task3 #enters into folder
 
 ## Retrieving the raw data
 
-* Copy the genome you assembled from task2
+* Copy the genome you assembled with `abyss` from task2
 
 ```
 cp ../task2/abyss-assembly-contigs.fa . 
 ```
+
+## Exploring the assembly using `artemis`
+
+
+Now that we have generated a good quality assembly, let's explore the genome sequence itself and do some very basic annotation using `artemis`. 
+
+Visualize the genome you have produced (using `abyss`) with the `Artemis` application. Note: you will need to have `artemis` installed on your local machine.
+You will also need to [<b>download</b>](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task1/gcloud-download.png) your contigs to your local machine. Open your contigs.fa file in `artemis`.
+
+- What are the black vertical lines that appear in the sequence window?
+- How do you product a gc plot of the genome?
+- Why would a researcher create a gc plot?
+- How do you mark open reading frames (ORFs)?
+
+
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q1) How many ORFs of length > 50nt are there? 
 
 ## Annotating your genome from Task2 using `prokka`
 
