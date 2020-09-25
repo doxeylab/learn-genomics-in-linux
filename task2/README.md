@@ -103,6 +103,8 @@ fastx_barcode_splitter.pl <mt_reads.fastq --bcfile mt_barcodes.txt --bol --suffi
 
 There are now two .fastq files; one for each barcode.  There is also an unmatched.fasta file which should be empty.  We will be focusing on the first sample, ie. the one now in the file 'splitData_mt1.fastq'.
 
+
+
 ### Barcode trimming
 
 Barcode trimming is needed to remove the barcode sequences from the beginning of each read. The Q33 is required due to differences in sanger and illumina encoding.
@@ -120,9 +122,10 @@ Next, we need to remove low quality sequences. This will increase the accuracy o
 fastq_quality_filter -i trimmed_mt1.fastq -q 25 -p 80 -o qual_trim_mt1.fastq -Q33 -v
 ```
 
-- What percentage of reads were removed?
-- After creating a new FastQC report what measures have changed?
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q8) What percentage of reads were removed?
 
+
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q9) Compare FastQC reports from before and after trimming and quality filtering. Which of the measures improved from a warning/fail to a pass?
 
 
 
@@ -139,7 +142,7 @@ Read more:
 [de novo assemblers](https://en.wikipedia.org/wiki/De_novo_sequence_assemblers)
 
 
-The command below will compute the graph. The first parameter is the folder name (you choose) and the second parameter is the value of k.
+The command below will compute the graph. The first parameter is the folder name (you choose) and the second parameter is the value of k. So below, we are assembling the genome using a k-mer value of 21.
 
 ```
 velveth out_21 21 -short -fastq trimmed_mt1.fastq
@@ -152,9 +155,11 @@ velvetg out_21/ -scaffolding no -read_trkg yes -amos_file yes
 ```
 
 Inspect the contigs.fa file that has been produced (will be in out_21 folder).
-- How many contigs do you have?
-- How many contigs do you get if you increase the k value to 31?
 
+
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q10) How many contigs do you get using k=21?
+
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q11) How many contigs do you get using k=31?
 
 
 ## Assembly visualization
@@ -166,7 +171,12 @@ Velvet has the option of keeping track of where the reads map to the assembly us
 [<b>Download</b>](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task1/gcloud-download.png) this file to your local machine. 
 Then open it in `tablet`. Tablet is a great program to explore how reads map to assemblies and genomes.
 
-- Where can you find the average contig length and N50 value? 
+
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q12) What is the average contig length?
+
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q13) What is the N50 value?
+
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q14) Examine the read coverage across the longest contig. Does the coverage match that shown  [<b>here</b>](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task2/tablet.png)?
 
 
 Explore `tablet` more on your own. We will be using it later in the course.
@@ -215,32 +225,6 @@ To investigate this question, do a BLAST search using the <b>online</b> [BLAST](
 
 # ASSIGNMENT QUESTIONS
 
-
-
-
-
-
-
-
-#### Use the file splitData_mt2.fastq to answer the following questions.
-
-##### After trimming the barcodes and quality filtering.
-
-
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q4) What percentage of reads were removed?
-
-
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q5) Compare FastQC reports from before and after trimming and quality filtering. Which of the measures improved from a warning/fail to a pass?
-
-
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q6) How many contigs do you get when assembling using Velvet with a k=31?
-
-
-##### Download the velvet_asm.afg file and open it in tablet.
-
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q7) What is the average contig length?
-
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q8) What is the N50 value?
 
 ##### Download the lastgraph file and open with Bandage
 
