@@ -12,7 +12,6 @@ In this lab, you will download raw sequencing data, perform genome assembly, vis
 * [abyss](https://github.com/bcgsc/abyss)
 * [tablet](https://ics.hutton.ac.uk/tablet/) *
 * [bandage](http://rrwick.github.io/Bandage/) *
-* [artemis](http://sanger-pathogens.github.io/Artemis/Artemis/) *
 
 
 ## Installation
@@ -192,19 +191,6 @@ To investigate this question, do a BLAST search using the <b>online</b> [BLAST](
 
 
 
-## Genome visualization using Artemis
-
-Now that we have generated a good quality assembly, let's explore the genome sequence itself and do some very basic annotation using `artemis`. 
-
-Visualize the genome you have produced (using `abyss`) with the `Artemis` application. Note: you will need to have `artemis` installed on your local machine.
-You will also need to [<b>download</b>](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task1/gcloud-download.png) your contigs to your local machine. Open your contigs.fa file in `artemis`.
-
-- What are the black vertical lines that appear in the sequence window?
-- How do you product a gc plot of the genome?
-- Why would a researcher create a gc plot?
-- How do you mark open reading frames (ORFs)?
-
-
 
 # ASSIGNMENT QUESTIONS
 #### Use the file mt_reads.fastq to answer the following questions.
@@ -265,9 +251,6 @@ Generate and inspect the FastQC report for mt_reads.fastq
 - Organism D, genome type D
 
 
-##### Using Artemis
-
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q14) How many ORFs of length > 50nt are there? 
 
 ### BONUS (+2 points)
 
