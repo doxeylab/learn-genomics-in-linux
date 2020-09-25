@@ -228,10 +228,6 @@ To investigate this question, do a BLAST search using the <b>online</b> [BLAST](
 Please answer questions 1-19 above on LEARN under Quizzes.
 
 
-### BONUS (+1 points)
+#
 
-We did not use all of the options in `velvet` and it can certainly be optimized to produce a better assembly.
-
-Can you change velvet's parameters to yield a genome with a single contig? 
-
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Bonus) Which parameter, when enabled, produces an assembly with a single contig?
+Congratulations. You have now completed Task 2.
