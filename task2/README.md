@@ -142,20 +142,19 @@ Read more:
 [de novo assemblers](https://en.wikipedia.org/wiki/De_novo_sequence_assemblers)
 
 
-The command below will compute the graph. The first parameter is the folder name (you choose) and the second parameter is the value of k. So below, we are assembling the genome from the trimmed and quality-filtered reads using a k-mer value of 21.
+The commands below will compute the graph. The first parameter is the folder name (you choose) and the second parameter is the value of k. So below, we are assembling the genome from the trimmed and quality-filtered reads using a k-mer value of 21.
 
 ```
 velveth out_21 21 -short -fastq qual_trim_mt1.fastq
 ```
-
-
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q10) How many nodes are there in the graph that was produced?
 
 Next, to compute the actual contig sequences from the graph, run the following:
 
 ```
 velvetg out_21/ -scaffolding no -read_trkg yes -amos_file yes
 ```
+
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q10) How many nodes are there in the graph that was produced?
 
 Inspect the contigs.fa file that has been produced (will be in out_21 folder).
 
