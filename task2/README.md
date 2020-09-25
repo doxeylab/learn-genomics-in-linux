@@ -142,10 +142,10 @@ Read more:
 [de novo assemblers](https://en.wikipedia.org/wiki/De_novo_sequence_assemblers)
 
 
-The command below will compute the graph. The first parameter is the folder name (you choose) and the second parameter is the value of k. So below, we are assembling the genome using a k-mer value of 21.
+The command below will compute the graph. The first parameter is the folder name (you choose) and the second parameter is the value of k. So below, we are assembling the genome from the trimmed and quality-filtered reads using a k-mer value of 21.
 
 ```
-velveth out_21 21 -short -fastq trimmed_mt1.fastq
+velveth out_21 21 -short -fastq qual_trim_mt1.fastq
 ```
 
 
