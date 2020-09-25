@@ -148,6 +148,9 @@ The command below will compute the graph. The first parameter is the folder name
 velveth out_21 21 -short -fastq trimmed_mt1.fastq
 ```
 
+
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q10) How many nodes are there in the graph that was produced?
+
 Next, to compute the actual contig sequences from the graph, run the following:
 
 ```
@@ -157,9 +160,9 @@ velvetg out_21/ -scaffolding no -read_trkg yes -amos_file yes
 Inspect the contigs.fa file that has been produced (will be in out_21 folder).
 
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q10) How many contigs do you get using k=21?
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q11) How many contigs do you get using k=21?
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q11) How many contigs do you get using k=31?
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q12) How many contigs do you get using k=31?
 
 
 ## Assembly visualization
@@ -172,11 +175,11 @@ Velvet has the option of keeping track of where the reads map to the assembly us
 Then open it in `tablet`. Tablet is a great program to explore how reads map to assemblies and genomes.
 
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q12) What is the average contig length?
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q13) What is the average contig length?
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q13) What is the N50 value?
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q14) What is the N50 value?
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q14) Examine the read coverage across the longest contig. Does the coverage match that shown  [<b>here</b>](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task2/tablet.png)?
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q15) Examine the read coverage across the longest contig. Does the coverage match that shown  [<b>here</b>](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task2/tablet.png)?
 
 
 Explore `tablet` more on your own. We will be using it later in the course.
@@ -201,11 +204,11 @@ Often in genomics it is useful to try numerous parameters and different assemble
 abyss-pe k=21 in='qual_trim_mt1.fastq' name=abyss-assembly
 ```
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q15) How long (# bases) is your assembly?
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q16) How long (# bases) is your assembly?
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q16) What is the N50 value (# bases)?
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q17) What is the N50 value (# bases)?
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q17) How many contigs did abyss generate?
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q18) How many contigs did abyss generate?
 
 
 
@@ -216,14 +219,14 @@ You still do not know the source of this genome. Is it eukaryotic? bacterial? is
 To investigate this question, do a BLAST search using the <b>online</b> [BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi) tool. Use the Abyss assemble as your query.
 
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q18) Based on the BLAST result, describe the most likely source of this DNA sequence?
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q19) Based on the BLAST result, describe the most likely source of this DNA sequence?
 
 
 
 # ASSIGNMENT QUESTIONS
 
 
-Please answer questions 1-18 above on LEARN under Quizzes.
+Please answer questions 1-19 above on LEARN under Quizzes.
 
 
 ### BONUS (+1 points)
