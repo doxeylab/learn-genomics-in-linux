@@ -201,7 +201,7 @@ Often in genomics it is useful to try numerous parameters and different assemble
 abyss-pe k=21 in='qual_trim_mt1.fastq' name=abyss-assembly
 ```
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q15) How long (in kB) is your assembly?
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q15) How long (# bases) is your assembly?
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q16) What is the N50?
 
