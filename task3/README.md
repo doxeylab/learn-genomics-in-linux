@@ -142,10 +142,10 @@ uniprot2go.py -i uniProts.txt -d /data/uniprot-vs-go-db.sl3 >go.annotations
 
 This will generate an `go.annotations` file, which contains your predicted functional annotations.
 
-This one-liner will extract column 3 (GO terms), and list them according to their frequency in your proteome.
+This one-liner will extract column 3 (GO terms), and list the top 20 according to their frequency in your proteome.
 
 ```
-cat go.annotations | awk '{print $3}' | tr "," "\n" | sort | uniq -c | sort -n -r
+cat go.annotations | awk '{print $3}' | tr "," "\n" | sort | uniq -c | sort -n -r | head -20
 ```
 
 ## After annotation: Extracting genes and regions of interest
