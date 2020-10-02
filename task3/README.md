@@ -126,7 +126,7 @@ cut -f3 file.txt | sort | uniq | wc -l
 
 
 
-## Assigning GO terms (Advanced/Optional)
+## Assigning GO terms
 
 Next, we will be assigning Gene Ontology ([GO](http://geneontology.org/)) terms to your predicted genes/proteins.
 
@@ -147,6 +147,11 @@ This one-liner will extract column 3 (GO terms), and list the top 20 according t
 ```
 cat go.annotations | awk '{print $3}' | tr "," "\n" | sort | uniq -c | sort -n -r | head -20
 ```
+
+Now, there is a lot you can explore using your predicted GO terms for your genome.
+e.g., Suppose you want to find all the predicted DNA binding proteins. Look [here](http://amigo.geneontology.org/amigo) to find the GO ID for "DNA binding".
+
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q9) How many proteins were annotated with the GO TERM for "DNA binding"? 
 
 ## After annotation: Extracting genes and regions of interest
 
