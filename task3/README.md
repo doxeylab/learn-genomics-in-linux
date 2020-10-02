@@ -91,12 +91,10 @@ Look at the `--kingdom` options in `prokka -h` and re-run prokka to use the corr
 
 Next, let's perform genome annotation on a larger scale.
 
-* Download (or copy from your task1 folder) the E. coli K12 genome from task1 and run `prokka`
+* Download (or copy from your task1 folder) the E. coli K12 genome below from task1 and annotate it using `prokka`
 
 ```
-wget https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task1/e-coli-k12-genome.fasta.gz
-gunzip e-coli-k12-genome.fasta.gz
-prokka e-coli-k12-genome.fasta
+https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task1/e-coli-k12-genome.fasta.gz
 ```
 
 Next, explore the files produced by `prokka`. Start with the .txt file.
