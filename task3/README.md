@@ -103,32 +103,34 @@ Next, explore the files produced by `prokka`. Start with the .txt file.
 
 Prokka also annotates genes based on [COGs](https://www.ncbi.nlm.nih.gov/COG/) and also [E.C.](https://enzyme.expasy.org/) (enzyme commission) numbers. This information can be found in the .tbl file. 
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q7) How many genes were annotated with COGS?
-
 Column 6 of this .tsv file lists the COGs. To print out only column 6, you can use the `cut` command as follows (replace "yourPROKKAoutput"):
 
 ```
 cut -f6 yourPROKKAoutput.tsv
 ```
 
-Next, let's sort this list using `sort` and pipe it to the `uniq` command.
+Next, let's sort this list using `sort` and pipe it to the `uniq` command. This will list all of the unique COGs.
 
 ```
 cut -f6 yourPROKKAoutput.tsv | sort | uniq
 ```
 
-How many unique COGs were assigned? Count the number of lines in the output like this:
+You can then count the number of lines in the output like this:
 
 ```
 cut -f6 yourPROKKAoutput.tsv | sort | uniq | wc -l
 ```
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q6) How many unique enzymatic activities (E.C. numbers) were assigned to the E. coli genome?
+
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q7) How many genes were annotated with COGS?
+
+
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q8) How many unique enzymatic activities (E.C. numbers) were assigned to the E. coli genome?
 
 
 Next, download the .gbk file produced by prokka to your local machine and view it in `artemis`.
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q7) View the genome in DnaPlotter (under File menu) and paste a screenshot.
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q9) View the genome in DnaPlotter (under File menu) and paste a screenshot.
 
 
 
