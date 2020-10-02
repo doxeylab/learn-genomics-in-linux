@@ -121,7 +121,7 @@ cut -f3 file.txt | sort | uniq | wc -l
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q7) How many genes were annotated with COGS?
 
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q8) How many unique enzymatic activities (E.C. numbers) were assigned to the E. coli genome?
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q8) How many unique enzymatic activities (E.C. numbers) were assigned to the E. coli genome? Note: `1.-.-.-` and `1.1.1.17` would count as two separate E.C. numbers.
 
 
 
