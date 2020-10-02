@@ -80,7 +80,7 @@ prokka abyss-assembly-contigs.fa
 
 When `prokka` is run without any parameters, it selects 'bacteria' as the default taxonomy.
 
-Look at the `--kingdom` options in `prokka -h` and re-run prokka to use the correct annotation mode.
+Look at the `--kingdom` options in `prokka -h` and re-run prokka to use the correct annotation mode. You will also need to use `--outdir` to specify a folder for your new results.
 
 * Again, open your .gbk file in artemis
 
