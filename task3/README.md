@@ -218,10 +218,10 @@ This should produce a FASTA sequence output of the gene identical to that in the
 
 But you are not interested in the gene sequence; you actually want the upstream regulatory region. Suppose you want to identify the 30-nucleotide long region upstream (before but not including the start codon) of the trpE coding sequence. By modifying the code above, answer the following question.
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q8) What is the 30-nucleotide long sequence immediately upstream of the TrpE coding sequence?
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q10) What is the 30-nucleotide long sequence immediately upstream of the TrpE coding sequence?
 
 
-### Advanced: Extracting the rRNAs predicted by barrnap
+### Extracting the rRNAs predicted by barrnap
 
 Sometimes you may be interested in extracting multiple genes or regions at once. E.g., suppose you want to extract all of the regions corresponding to predicted 16S rRNA sequences. In `prokka`, rRNA genes are predicted for you using the `barrnap` tool.
 
@@ -241,9 +241,9 @@ And now for something a little more difficult.
 
 https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task3/mysteryGenome.fna.gz
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q9) Identify a full-length 16S rRNA sequence. Paste this sequence into your assignment and include your source code.
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q11) Identify a full-length 16S rRNA sequence. Paste this sequence (do not include the header and do not include any spaces).
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q10) Now, using [web-BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn), search this sequence against the NCBI 16S database. What is the taxonomic origin of this genome? 
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q12) Now, using [web-BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn), search this sequence against the NCBI 16S database. What is the taxonomic origin of this genome? 
 
 ![](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/task3/16Ssearch.png)
 
