@@ -169,7 +169,7 @@ This will output
 
 ... which tells you that "trpE" has been assigned to the gene labeled "JKMANJED_01263"
 
-You can then extract this gene seqeunce from the gene predictions file (.ffn) like this:
+You can then extract this gene sequence from the gene predictions file (.ffn) like this:
 
 ```
 # index the .ffn file so we can extract from it
@@ -191,7 +191,7 @@ CTGGCACTACTGGATAACGCCCTGCCTGCGGGTGTGGAAAGTGAACAATCACCAAACTGCCGTGTGCTGCGCTTCCCCCC
 
 ### Extracting regions of interest
 
-Next, suppose are interested in extracting the promoter of the "trp operon". The trp operon promoter can be found directly upstream of the <b>trpE</b> gene. These regions are not in the annotations files so you will need to locate them yourself.
+Next, suppose are interested in extracting the promoter of the "trp operon". See [here](https://en.wikipedia.org/wiki/Trp_operon) for some background information. The trp operon regulatory sequences (operator and promoter) can be found upstream of the <b>trpE</b> gene. These regions are not in the annotations files so you will need to locate them yourself.
 
 First, let's see where the trpE gene is located in the genome:
 
@@ -216,11 +216,9 @@ blastdbcmd -entry U00096.3 -db yourPROKKAoutput.fna -range 1321384-1322946 -stra
 
 This should produce a FASTA sequence output of the gene identical to that in the above example.
 
-But you are not interested in the gene sequence; you actually want the promoter region.
+But you are not interested in the gene sequence; you actually want the upstream regulatory region. Suppose you want to identify the 30-nucleotide long region upstream (before but not including the start codon) of the trpE coding sequence. By modifying the code above, answer the following question.
 
-* So, modify the code above to extract the 30-nucleotide long sequence upstream of the trpE gene
-
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q8) Paste this sequence into your assignment as well as the code you used to extract it.
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q8) What is the 30-nucleotide long sequence immediately upstream of the TrpE coding sequence?
 
 
 ### Advanced: Extracting the rRNAs predicted by barrnap
