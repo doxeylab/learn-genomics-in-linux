@@ -74,11 +74,9 @@ prokka abyss-assembly-contigs.fa
 
 * Now, locate and download the .gbk file that was produced and view it in `artemis`
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q1) Why are there vertical black lines in the middle of predicted ORFs?
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q3) You will notice that there are vertical black lines in the middle of predicted ORFs. What do these lines represent?
 
-To correct this issue, re-start artemis and change your artemis 'Options' to better reflect the source of this genome.
-
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q2) What source organism did you select to correct the gene annotations? Paste a screenshot of the artemis genome visualization.
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q4) Re-start artemis and change your artemis 'Options' to better reflect the source of this genome. Which source did you choose (e.g., "Standard", "Vertebrate Mitochondrial", etc.)?
 
 When `prokka` is run without any parameters, it selects 'bacteria' as the default taxonomy.
 
