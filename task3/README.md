@@ -109,17 +109,7 @@ Column 6 of this .tsv file lists the COGs. To print out only column 6, you can u
 cut -f6 yourPROKKAoutput.tsv
 ```
 
-Next, let's sort this list using `sort` and pipe it to the `uniq` command. This will list all of the unique COGs.
-
-```
-cut -f6 yourPROKKAoutput.tsv | sort | uniq
-```
-
-You can then count the number of lines in the output like this:
-
-```
-cut -f6 yourPROKKAoutput.tsv | sort | uniq | wc -l
-```
+Using commands such as `cut`, `sort`, `grep`, and `uniq`, answer the following two questions.
 
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q7) How many genes were annotated with COGS?
