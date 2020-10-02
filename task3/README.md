@@ -109,18 +109,19 @@ Column 6 of this .tsv file lists the COGs. To print out only column 6, you can u
 cut -f6 yourPROKKAoutput.tsv
 ```
 
-Using commands such as `cut`, `sort`, `grep`, and `uniq`, answer the following two questions.
+Using commands such as `cut`, `sort`, `grep`, `uniq`, and `wc` answer the following two questions (Q7 and Q8).
+
+e.g., this line below will count the number of unique entries in column 3 of file.txt
+
+```
+cut -f3 file.txt | sort | uniq | wc -l
+```
 
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q7) How many genes were annotated with COGS?
 
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q8) How many unique enzymatic activities (E.C. numbers) were assigned to the E. coli genome?
-
-
-Next, download the .gbk file produced by prokka to your local machine and view it in `artemis`.
-
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q9) View the genome in DnaPlotter (under File menu) and paste a screenshot.
 
 
 
