@@ -84,7 +84,7 @@ Look at the `--kingdom` options in `prokka -h` and re-run prokka to use the corr
 
 * Again, open your .gbk file in artemis
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q3) Has anything changed in this genome annotation? Provide an example. 
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q5) Has anything changed in this genome annotation? Examine the CDSs, tRNAs, and rRNAs, and their annotations.
 
 
 ## Annotation of an <i>E. coli</i> genome using `prokka`
@@ -101,11 +101,11 @@ prokka e-coli-k12-genome.fasta
 
 Next, explore the files produced by `prokka`. Start with the .txt file.
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q4) How many genes, rRNAs, tRNAs, and CRISPR loci were predicted? What is the size of the genome in Mb?
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q6) How many genes, rRNAs, tRNAs, and CRISPR loci were predicted? What is the size of the genome in Mb?
 
 Prokka also annotates genes based on [COGs](https://www.ncbi.nlm.nih.gov/COG/) and also [E.C.](https://enzyme.expasy.org/) (enzyme commission) numbers. This information can be found in the .tbl file. 
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q5) How many genes were annotated with COGS? What proportion of total genes is this?
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q7) How many genes were annotated with COGS? What proportion of total genes is this?
 
 Column 6 of this .tsv file lists the COGs. To print out only column 6, you can use the `cut` command as follows:
 
