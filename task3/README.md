@@ -54,7 +54,8 @@ You will also need to [<b>download</b>](https://github.com/doxeylab/learn-genomi
 - How do you mark open reading frames (ORFs)?
 
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q1) How many ORFs of length > 50nt are there? 
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q1) How many ORFs of length >= 100nt are there? 
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q2) How many ORFs of length >= 50nt are there? 
 
 ## Annotating your genome from Task2 using `prokka`
 
