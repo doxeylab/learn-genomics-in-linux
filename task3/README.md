@@ -225,12 +225,16 @@ But you are not interested in the gene sequence; you actually want the upstream 
 
 Sometimes you may be interested in extracting multiple genes or regions at once. E.g., suppose you want to extract all of the regions corresponding to predicted 16S rRNA sequences. In `prokka`, rRNA genes are predicted for you using the `barrnap` tool.
 
-Here is a two-liner to extract the 16S rRNAs predicted by `barrnap`, and for fun we will also pipe this to `muscle` to do an automatic alignment.
+Here is a two-liner to extract the 16S rRNAs predicted by `barrnap`.
 
 ```
 cat *.gff | grep "barrnap" | awk '{ if ($7 == "-") {print $1" "$4"-"$5" minus"} else {print $1" "$4"-"$5" plus"} }' >rRNAs.txt
-blastdbcmd -db yourPROKKAoutput.fna -entry_batch rRNAs.txt | muscle
+blastdbcmd -db yourPROKKAoutput.fna -entry_batch rRNAs.txt > rRNAs.fa
 ```
+
+Now, to predict taxonomy, we can BLAST these rRNA sequences against the NCBI 16S database for example using [web-BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn). Note, that there may be multiple rRNAs and some of them may be partial sequences.
+
+![](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/task3/16Ssearch.png)
 
 
 ## Analyzing a mystery genome of unknown source
@@ -241,11 +245,10 @@ And now for something a little more difficult.
 
 https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task3/mysteryGenome.fna.gz
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q11) Identify a full-length 16S rRNA sequence. Paste this sequence (do not include the header and do not include any spaces).
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q11) Identify a full-length 16S rRNA sequence. Paste this sequence into your assignment (do not include the header and do not include any spaces).
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q12) Now, using [web-BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn), search this sequence against the NCBI 16S database. What is the taxonomic origin of this genome? 
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q12) What is the taxonomic origin of this genome (genus and species)?
 
-![](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/task3/16Ssearch.png)
 
 ---
 
