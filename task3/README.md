@@ -118,7 +118,7 @@ cut -f3 file.txt | sort | uniq | wc -l
 ```
 
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q7) How many genes were annotated with COGS?
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q7) How many genes were annotated with COGs?
 
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q8) How many unique enzymatic activities (E.C. numbers) were assigned to the E. coli genome? Note: `1.-.-.-` and `1.1.1.17` would count as two separate E.C. numbers.
@@ -133,7 +133,7 @@ Prokka identifies homologs of your proteins within the UniProtKB database. Since
 
 ```
 #extract the predicted proteins that have been mapped to entries in UniProt
-cat PROKKA_09182018.gff | grep -o "UniProtKB.*;" | awk -F'[:;=]' '{print $4" "$2}' >uniProts.txt
+cat yourPROKKAoutput.gff | grep -o "UniProtKB.*;" | awk -F'[:;=]' '{print $4" "$2}' >uniProts.txt
 
 #assign GO annotations from a uniprot-GO database table
 uniprot2go.py -i uniProts.txt -d /data/uniprot2go/uniprot-vs-go-db.sl3 > go.annotations
@@ -155,7 +155,7 @@ Once your genome has been assembled and annotated, you may be interested in iden
 For example, suppose you are interested in the "trpE" gene from E. coli. You can see whether this gene exists in the predictions like this:
 
 ```
-grep "trpE" PROKKA_09202018.tsv
+grep "trpE" yourPROKKAoutput.tsv
 ```
 
 This will output
@@ -167,9 +167,9 @@ You can then extract this gene seqeunce from the gene predictions file (.ffn) li
 
 ```
 # index the .ffn file so we can extract from it
-makeblastdb -in PROKKA_09202018.ffn -dbtype 'nucl' -parse_seqids
+makeblastdb -in yourPROKKAoutput.ffn -dbtype 'nucl' -parse_seqids
 
-blastdbcmd -entry JKMANJED_01263 -db PROKKA_09202018.ffn
+blastdbcmd -entry JKMANJED_01263 -db yourPROKKAoutput.ffn
 ```
 
 This will output:
@@ -190,7 +190,7 @@ Next, suppose are interested in extracting the promoter of the "trp operon". The
 First, let's see where the trpE gene is located in the genome:
 
 ```
-grep "trpE" PROKKA_09182018.gff
+grep "trpE" yourPROKKAoutput.gff
 ```
 
 This will output:
@@ -203,9 +203,9 @@ To extract the sequence for these coordinates, we can use `blastdbcmd` against t
 
 ```
 # index the genome so we can extract regions from it
-makeblastdb -in PROKKA_09182018.fna -dbtype 'nucl' -parse_seqids
+makeblastdb -in yourPROKKAoutput.fna -dbtype 'nucl' -parse_seqids
 
-blastdbcmd -entry U00096.3 -db PROKKA_09182018.fna -range 1321384-1322946 -strand minus
+blastdbcmd -entry U00096.3 -db yourPROKKAoutput.fna -range 1321384-1322946 -strand minus
 ```
 
 This should produce a FASTA sequence output of the gene identical to that in the above example.
@@ -225,7 +225,7 @@ Here is a two-liner to extract the 16S rRNAs predicted by `barrnap`, and for fun
 
 ```
 cat *.gff | grep "barrnap" | awk '{ if ($7 == "-") {print $1" "$4"-"$5" minus"} else {print $1" "$4"-"$5" plus"} }' >rRNAs.txt
-blastdbcmd -db PROKKA_09182018.fna -entry_batch rRNAs.txt | muscle
+blastdbcmd -db yourPROKKAoutput.fna -entry_batch rRNAs.txt | muscle
 ```
 
 
