@@ -245,9 +245,8 @@ And now for something a little more difficult.
 
 https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task3/mysteryGenome.fna.gz
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q11) Identify a full-length 16S rRNA sequence. Paste this sequence into your assignment (do not include the header and do not include any spaces).
-
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q12) What is the taxonomic origin of this genome (genus and species)?
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q11) Based on 16S rRNA sequences, determine the taxonomic origin of this genome (genus and species)? 
+e.g., "Escherichia coli"
 
 
 ---
