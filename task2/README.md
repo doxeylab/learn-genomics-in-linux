@@ -196,7 +196,7 @@ Open this file in the `Bandage` application, and explore further.
 
 As you can see based on the results from above, `velvet` (with the parameters we chose) did not yield a high quality assembly. It is too fragmented.
 
-Often in genomics it is useful to try numerous parameters and different assemblers. Let's try to assemble this genome again but with a different assembler. This time, we will be using the popular [abyss](https://github.com/bcgsc/abyss) assembler and we'll keep the value of k = 21.
+Often in genomics it is useful to try numerous parameters and different assemblers. Let's try to assemble this genome again but with a different assembler. This time, we will be using the popular [abyss](https://github.com/bcgsc/abyss) assembler and we'll keep the value of k = 21. And see [here](https://github.com/bcgsc/abyss/wiki/ABySS-File-Formats#stats) for info on stats reported by an Abyss assembly.
 
 
 ```
