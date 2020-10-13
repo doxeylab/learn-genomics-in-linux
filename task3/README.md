@@ -12,7 +12,7 @@ Graphical software indicated by (*)
 * [BLAST](http://blast.ncbi.nlm.nih.gov/)
 * [Prokka](https://github.com/tseemann/prokka)
 * [Artemis](http://sanger-pathogens.github.io/Artemis/Artemis/) *
-Note: for Artemis, you may need to first install the JRE (Java Runtime Environment) and/or JDK (Java Development Kit) on your system. Also, if you have difficulties installing the latest version on Windows, try installing (version 17.0.1)[ftp://ftp.sanger.ac.uk/pub/resources/software/artemis/v17.0.1/].
+Note: for Artemis, you may need to first install the JRE (Java Runtime Environment) and/or JDK (Java Development Kit) on your system. Also, if you have difficulties installing the latest version on Windows, try installing [version 17.0.1](ftp://ftp.sanger.ac.uk/pub/resources/software/artemis/v17.0.1/).
 * uniprot2go.py script located [here](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/task3/uniprot2go.py)
 -- must be installed in /usr/bin
 
