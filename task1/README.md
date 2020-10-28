@@ -293,7 +293,7 @@ If you need to interrupt a command or process that you have started, press Ctrl-
 
 # ASSIGNMENT QUESTIONS
 
-<b>PLEASE COMPLETE ASSIGNMENT 1 ON LEARN (BIOL 469).</b>
+<b>PLEASE COMPLETE ASSIGNMENT 1 ON LEARN.</b>
 This can be found under <b>Quizzes</b>.
 
 You will be asked to answer the following questions.
