@@ -2,7 +2,7 @@
 
 This task is a tutorial on comparative genomics with a focus on gene set comparison.
 
-You are going to download, annotate and compare the genomes of a enterohemorrhagic <i>E. coli</i> (strain [O157:H7](https://en.wikipedia.org/wiki/Escherichia_coli_O157:H7)) versus a non-pathogenic <i>E. coli</i> (strain [K12](https://en.wikipedia.org/wiki/Escherichia_coli_in_molecular_biology#K-12)). You are then going to identify genes and gene duplications that are unique to each organism and biologically interpret your results.
+You are going to download, annotate and compare the genomes of a enterohemorrhagic <i>E. coli</i> (strain [O157:H7](https://en.wikipedia.org/wiki/Escherichia_coli_O157:H7)) versus a non-pathogenic <i>E. coli</i> (strain [K12](https://en.wikipedia.org/wiki/Escherichia_coli_in_molecular_biology#K-12)). You are then going to identify genes and gene duplications that are unique to each organism and biologically interpret your results.
 
 
 ### Requirements
@@ -15,25 +15,24 @@ You are going to download, annotate and compare the genomes of a enterohemorrhag
 ## Getting Started
 
 * Login to your linux environment and create a new folder for your task5
+* Work on your assignment in the folder your created
 
-```
-mkdir task5  #creates folder
-cd task5 #enters into folder
-```
+
 
 ## Retrieving the raw data
 
 You will be comparing two genomes of E. coli - strain K12 (non-pathogenic lab strain) and O157H7 (pathogenic E. coli associated with disease outbreaks).
 
-* Download both of these genomes using `curl`
+* Download both of these genomes using `curl` or `wget`. Check the man pages for `curl` and `wget` or use the --help flag to determine how to save the files with the following file names. 
+  * Name the O157H7 genome O157H7.fna
+  * Name the K12 genome K12.fna
 
 ```
-curl ftp://ftp.ncbi.nlm.nih.gov/genomes/archive/old_genbank/Bacteria/Escherichia_coli_O157H7_EDL933_uid259/AE005174.fna >O157H7.fna
-
-curl ftp://ftp.ncbi.nlm.nih.gov/genomes/archive/old_genbank/Bacteria/Escherichia_coli_K_12_substr__DH10B_uid20079/CP000948.fna >K12.fna
+ftp://ftp.ncbi.nlm.nih.gov/genomes/archive/old_genbank/Bacteria/Escherichia_coli_O157H7_EDL933_uid259/AE005174.fna
+ftp://ftp.ncbi.nlm.nih.gov/genomes/archive/old_genbank/Bacteria/Escherichia_coli_K_12_substr__DH10B_uid20079/CP000948.fna
 ```
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q1 - Look within the ftp directories for these bacterial genome projects. Are there additional genomes (.fna files) present and, if so, what might they represent?
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q1 - Look within the ftp directories for these bacterial genome projects. What do the other files contain?
 
 
 ## Annotating both genomes
@@ -42,27 +41,24 @@ curl ftp://ftp.ncbi.nlm.nih.gov/genomes/archive/old_genbank/Bacteria/Escherichi
 
 ```
 #this may take a while so be patient... Remember, these are full bacterial genomes as opposed to small mitochondrial contigs
-prokka K12.fna --outdir K12 --norrna --notrna
 prokka O157H7.fna --outdir O157H7 --norrna --notrna
+prokka K12.fna --outdir K12 --norrna --notrna
 ```
 
 ## Generating gene lists
 
-* Next, make text files of the predicted gene lists for each genome
+* Next, make text files of the predicted gene lists for each genome. Have a look back at Task1 for how to redirect program output to a file.
+    * redirect the output for O157H7 to a file named genelist_O157H7.txt inside the O157H7 folder
+    * redirect the output for K12 to a file named genelist_K12.txt inside the K12 folder
 
 ```
-cd K12/
 #generate a gene list text file by grepping the gene names from the .tbl file
-cat PROKKA*.tbl | awk '{if ($1 == "gene") {print $2}}' | awk -F'_' '{print $1}' | sort > genelist_K12.txt
-
-cd ../O157H7/
-cat PROKKA*.tbl | awk '{if ($1 == "gene") {print $2}}' | awk -F'_' '{print $1}' | sort > genelist_O157H7.txt
+cat PROKKA*.tbl | awk '{if ($1 == "gene") {print $2}}' | awk -F'_' '{print $1}' | sort 
 ```
 
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q2 - How many genes are present in each genome?
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q3 - Can you find any gene duplicates? If so, provide an example.
 
 ## Comparing gene lists
 
@@ -73,16 +69,15 @@ Explore the command-line usage and options of these commands using `man`
 
 ### Comparison including gene duplicates
 
-We can compare both gene lists like this:
+We can compare both gene lists like this in your task5 folder:
 
 ```
-cd ../  #go back one folder
 comm O157H7/genelist_O157H7.txt K12/genelist_K12.txt >geneListComparison.txt
 ```
 
 Examine the output of `geneListComparison.txt` using `less`
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q4 - What do the genes in column 1, column 2, and column 3 represent? 
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q3 - What do the genes in column 1, column 2, and column 3 represent? 
 
 Now, suppose we want to output the genes in column 1 (ignoring spaces). We can do so like this:
 
@@ -98,21 +93,20 @@ cat geneListComparison.txt | awk -F'\t' '{print $1}' | grep -v -e '^$' | wc -l
 
 * Analyze the core versus variable gene content for these two strains
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q5 - Construct a simple Venn diagram (by hand or drawing tool) illustrating the number of shared vs genome-specific genes
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q4 - How many genes are only in the O157H7 genome? Only in the K12 genome? In both?
 
 
 ### Comparison without gene duplicates (finding unique genes)
-
-In the Venn diagram you have just constructed, if a gene G is duplicated (2 copies) in genome A and not in genome B (1 copy), then gene G will contribute to the unique genes in genome A. This is not really true, since genome B has a copy of gene G.
+Construct a simple Venn diagram  illustrating the number of shared vs genome-specific genes. In this Venn diagram, if a gene G is duplicated (2 copies) in genome A and not in genome B (1 copy), then gene G will contribute to the unique genes in genome A. This is not really true, since genome B has a copy of gene G.
 
 Let's account for this by "removing gene redundancy". This can be done by first filtering each initial gene list using the tool `uniq`
 
 ```
-cd K12/
-uniq genelist_K12.txt > unique_genelist_K12.txt
-
-cd ../O157H7/
+cd /O157H7/
 uniq genelist_O157H7.txt > unique_genelist_O157H7.txt
+
+cd ../K12
+uniq genelist_K12.txt > unique_genelist_K12.txt
 
 cd ..
 ```
@@ -123,55 +117,27 @@ Now, when we compare these lists using `comm`, we will only be comparing single 
 comm O157H7/unique_genelist_O157H7.txt K12/unique_genelist_K12.txt > uniqueGeneListComparison.txt
 ```
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q6 - Construct a second Venn diagram illustrating the number of shared vs genome-specific genes
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q5 - How many unique genes are only in the O157H7 genome? Only in the K12 genome? In both?
 
 
 ## Going further: inspecting your duplicated and unique genes within each organism
 
 Now, let's examine the output of the lists above.
 
-Examine `geneListComparison.txt` to find the gene expansions specific to enterohemorrhagic E. coli O157:H7. The following code will sort the O157:H7-specific genes by their copy number. This will identify those that have undergone the most pathogen-specific duplication.
+Examine `geneListComparison.txt` to find the gene expansions specific to enterohemorrhagic E. coli O157:H7. The following code will sort the O157:H7-specific genes by their copy number. This will identify those that have undergone the most pathogen-specific duplication.
 
 ```
-cat geneListComparison.txt | awk -F'\t' '{print $1}' | sort | uniq -c | sort -
-n -r | head -20
+cat geneListComparison.txt | awk -F'\t' '{print $1}' | sort | uniq -c | sort -n -r | head -20
 ```
 
 Examine your result carefully. Column 1 states the copy number and copy 2 states the gene name.
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q7 - Find a BIOLOGICALLY INTERESTING result among the top-ranked (most duplicated) genes in your list and explain why YOU THINK it is interesting. There are many. Feel free to use Google to help you.
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q6 - Which gene in O157H7 occurs the most times. In K12?
 
-* Repeat the above analysis but using your `uniqueGeneListComparison.txt` file.
-
-Examine the list of genes that are unique to O157H7 (make sure this list is sorted alphabetically using `sort`).
-
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q8 - Can you find an operon (this will often be a series of genes with similar names) that is unique to E. coli O157H7 that may play a role in its virulence/pathogenicity? Again, use Google to help you.
 
 
 ---
 
 # ASSIGNMENT QUESTIONS
 
-The questions for this task are indicated by the lines starting with ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) above.
-Please submit the code you used as well as the answers to the questions. Submit your assignment to a dropbox on LEARN as a .docx, .txt, or .pdf file.
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
+The questions for this task are indicated by the lines starting with ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) above. Please submit your answers using the quiz on LEARN.
