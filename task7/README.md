@@ -74,6 +74,16 @@ Now, let's measure transcript abundance using `Salmon`. For a single sample with
 salmon quant -i gencode_v29_idx -l A -1 forward_reads.fastq.gz -2 reverse_reads.fastq.gz -p 6 -o quants
 ```
 
+But the above line is just an example for a single sample. Here is a .bash script that will run `Salmon` on all of the 8 samples we have just downloaded.
+```
+#download bash script
+wget https://raw.githubusercontent.com/doxeylab/learn-genomics-in-unix/master/task7/runSalmon.bash
+
+#run bash script
+bash runSalmon.bash
+
+```
+
 Make a .SAM file which contains all information about where each read maps onto the reference genome
 
 ```
