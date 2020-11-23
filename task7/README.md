@@ -110,6 +110,7 @@ Support your answer using statistics. Perform a t-test comparing the expression 
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q2 -  Is the difference statistically significant (p < 0.001)?
 
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q3 -  Does this result make sense biologically given existing literature? Provide an answer using 2-3 written sentences, and provide a citation to support your answer.
 
 ## Detecting differentially expressed genes (DEGs) in R (Bonus)
 
@@ -121,6 +122,7 @@ Now that you have measured transcript abundance for all samples using `Salmon`, 
 * Download the quant files produced by Salmon to your local machine
 * Following the instructions [here](https://bioconductor.org/packages/release/bioc/vignettes/tximport/inst/doc/tximport.html)
 
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Bonus (+1) - Produce a table of the top 10 differentially expressed genes along with their fold-changes and adjusted p-values. Also include the code you used to do so.
 
 
 ---
