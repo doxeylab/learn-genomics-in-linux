@@ -53,6 +53,9 @@ cd data
 
 #download all of the .fastq files into your data folder
 wget -i ../ftp-list.txt
+
+#go back to your task7 folder
+cd ..
 ```
 
 
