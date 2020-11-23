@@ -12,6 +12,7 @@ It is divided into a series of tasks
   * [Task 4](task4/) - Comparative genomics: synteny comparison genomes
   * [Task 5](task5/) - Comparative genomics: gene set comparison between two genomes
   * [Task 6](task6/) - Resequencing: variant calling from NGS data
+  * [Task 7](task7/) - Transcriptomics and detection of differentially expressed genes
   * TBD - ChIP-seq data analysis
   * TBD - GWAS
   * TBD - Metagenomics: taxonomic and functional profiling
