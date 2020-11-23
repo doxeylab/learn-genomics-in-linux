@@ -4,7 +4,7 @@ for samp in SRR8451881 SRR8451882 SRR8451883 SRR8451884 SRR8451885 SRR8451886 SR
 do
 echo "Processing sample $samp"
 salmon quant -i gencode_v29_idx -l A \
-         -1 $samp_1.fastq.gz \
-         -2 $samp_2.fastq.gz \
+         -1 data/${samp}_1.fastq.gz \
+         -2 data/${samp}_2.fastq.gz \
          -p 6  -o quants/${samp}_quant
 done
