@@ -41,11 +41,18 @@ wget ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_29/gencode.
 gunzip gencode.v29.transcripts.fa.gz
 ```
 
-Next, download the RNA-seq data.
+Next, download the RNA-seq data from the public EBI FTP site. We will be downloading 8 samples (each has forward and reverse .fastq reads) - so 16 files total. To download all of these automatically, you can download a list of urls with `wget` as follows:
 
 ```
-#there are several 
-wget http://ftp.sra.ebi.ac.uk/vol1/fastq/SRR098/SRR098038/SRR098038.fastq.gz
+#download the list of urls first
+wget https://raw.githubusercontent.com/doxeylab/learn-genomics-in-unix/master/task7/ftp-list.txt
+
+#now create a folder for your data
+mkdir data
+cd data
+
+#download all of the .fastq files into your data folder
+wget -i ../ftp-list.txt
 ```
 
 
