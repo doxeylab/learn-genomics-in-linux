@@ -82,99 +82,35 @@ But the above line is just an example for a single sample. Here is a .bash scrip
 #download bash script
 wget https://raw.githubusercontent.com/doxeylab/learn-genomics-in-unix/master/task7/runSalmon.bash
 
-#run bash script
+#run bash script. This may take a while...
 bash runSalmon.bash
 
 ```
 
-Make a .SAM file which contains all information about where each read maps onto the reference genome
+## Exploring the transcript counts
 
-```
-bwa samse REL606.fa SRR098038.sai SRR098038.fastq.gz > SRR098038.sam
-```
+Now, the transcript expression levels have been quantified for each of your 8 samples. Look within the `quants/data` folder and examine the `quant.sf` files that you have produced for each sample.
 
-Index the reference genome (again) so that `samtools` can work with it
-
-```
-samtools faidx REL606.fa
-```
-
-Convert .SAM file to .BAM file
-
-```
-samtools import REL606.fa.fai SRR098038.sam SRR098038.bam
-rm SRR098038.sam  # remove this large file
-```
-
-Sort BAM file and index it
-
-```
-samtools sort SRR098038.bam > SRR098038.sorted.bam
-samtools index SRR098038.sorted.bam
-```
-
-## Viewing your BAM file
-
-BAM files can be viewed with `igv` or with `tablet`. But let's take a quick look in the terminal.
-
-```
-samtools tview SRR098038.sorted.bam
-```
-
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q1 - Can you find a read with a mutation? Paste a screenshot and indicate where the mutation is. 
-
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q2 - Do you think this mutation is a real variant or an error? Why?
+* Which column contains the transcript id?
+* Which column contains the TPM (transcripts per million) expression level?
 
 
-## Variant calling
 
-Instead of identifying SNPs by eye, use `bcftools` to perform automated variant calling
+## Detecting differentially expressed genes (DEGs) in R (Bonus)
 
-```
-bcftools mpileup -f REL606.fa SRR098038.sorted.bam | bcftools call -mv -Ob --ploidy 1 -o calls.bcf
+Now that you have measured transcript abundance for all samples using `Salmon`, you can perform a differential expression analysis using a tool such as DeSeq2 or edgeR. Here is a rough guide to the steps required:
 
-#convert to vcf (human-readable variant call format). This file should contain all identified SNPs and other variants.
-bcftools view calls.bcf > calls.vcf
-
-```
-
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q3 - How many total variants are present? Hint: `grep` for a pattern found only in your variant lines.
-
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q4 - Copy and paste into your assignment a line from the VCF file containing a SNP and a line containing an indel variant.
+* Install R on your machine
+* Install the `tximport` R package
+* Install either the `edgeR` or `deseq2` R package
+* Download the quant files produced by Salmon to your local machine
+* Following the instructions [here](https://bioconductor.org/packages/release/bioc/vignettes/tximport/inst/doc/tximport.html)
 
 
-## Locating a key SNP in Lenski's E. coli evolution experiment
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q1 - etc
 
-This lineage of <i>E. coli</i> has a mutation in the <i>mutS</i> gene (protein sequence can be found [here](https://www.uniprot.org/uniprot/P23909.fasta)). This mutation creates a premature stop codon. Your task is to find this mutation within your sequencing data!
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q2 - etc
 
-Find the region in the reference genome that encodes the <i>mutS</i> gene using `blast`. You may need to refer to earlier tasks to help you with this.
-
-Now, extract the mapped regions for this region from your .bam file. The command will be something like this:
-
-```
-samtools view SRR098038.sorted.bam "rel606:START-END" > region.sam   # where START and END are position numbers
-```
-
-
-Download the following three files and open these files in `igv` on your home machine.
-
-- the region.sam file you created above
-- the calls.vcf file you created above
-- the reference genome ([REL606.fa](http://athyra.idyll.org/~t/REL606.fa.gz))
-
-Now, locate the region containing the <i>mutS</i> gene within `igv`.
-
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q5 - Paste a screenshot of the region containing this mutation. Your `igv` screenshot should span the full region of the <i>mutS</i> gene and display two tracks: the coverage and the variants.
-
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q6 - Now locate the variant that corresponds to the premature stop codon. Paste a screenshot highlighting this mutation (you will need to zoom in) and show the amino acid translation (see [here](https://software.broadinstitute.org/software/igv/sequence_track_options). What was the amino acid encoded by this codon before this mutation?
-
-
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Once you are finished, please delete the files in your task 6 folder like this:
-
-```
-cd task6
-rm *
-```
 
 
 
