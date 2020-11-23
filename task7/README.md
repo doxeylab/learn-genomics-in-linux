@@ -122,7 +122,7 @@ Now that you have measured transcript abundance for all samples using `Salmon`, 
 * Download the quant files produced by Salmon to your local machine
 * Following the instructions [here](https://bioconductor.org/packages/release/bioc/vignettes/tximport/inst/doc/tximport.html)
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Bonus (+1) - Produce a table of the top 10 differentially expressed genes along with their fold-changes and adjusted p-values. Also include the code you used to do so.
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Bonus (+2 marks) - Produce a table of the top 10 differentially expressed genes along with their fold-changes and adjusted p-values. Also include the code you used to do so.
 
 
 ---
