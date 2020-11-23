@@ -91,9 +91,24 @@ bash runSalmon.bash
 
 Now, the transcript expression levels have been quantified for each of your 8 samples. Look within the `quants/data` folder and examine the `quant.sf` files that you have produced for each sample.
 
-* Which column contains the transcript id?
-* Which column contains the TPM (transcripts per million) expression level?
+* Take note of which column contains the transcript id.
+* Also take note of which column contains the TPM (transcripts per million) expression level.
 
+Suppose you are interested in the transcript "ENST00000379727.7".
+
+```
+#go to your quants/data folder
+cd quants/data
+
+#inspect the expression levels for this transcript
+grep "ENST00000379727.7" */quant.sf
+```
+
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q1 - Has this transcript's abundance increased, decreased, or stayed the same following smoke exposure?
+
+Support your answer using statistics. Perform a t-test comparing the expression level of this transcript between the 4 smoke-treated samples versus 4 control samples. Use any program of your choice to do so (R, excel, Google Sheets, etc.).
+
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q2 -  Is the difference statistically significant (p < 0.001)?
 
 
 ## Detecting differentially expressed genes (DEGs) in R (Bonus)
@@ -107,19 +122,13 @@ Now that you have measured transcript abundance for all samples using `Salmon`, 
 * Following the instructions [here](https://bioconductor.org/packages/release/bioc/vignettes/tximport/inst/doc/tximport.html)
 
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q1 - etc
-
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q2 - etc
-
-
-
 
 ---
 
 # ASSIGNMENT QUESTIONS
 
 The questions for this task are indicated by the lines starting with ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) above.
-Please submit the code you used as well as the answers to the questions. Submit your assignment to a dropbox on LEARN as a .docx, .txt, or .pdf file.
+Please submit your answers under quizzes on LEARN.
 
 
 
