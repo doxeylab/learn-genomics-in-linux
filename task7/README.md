@@ -31,7 +31,7 @@ mkdir task7  #creates folder
 cd task7 #enters into folder
 ```
 
-## Retrieving the raw data
+## Retrieving the raw data and reference transcriptome
 
 First, download a human reference transcriptome:
 
@@ -39,12 +39,6 @@ First, download a human reference transcriptome:
 #download a pre-made reference transcriptome from Gencode
 wget ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_29/gencode.v29.transcripts.fa.gz
 gunzip gencode.v29.transcripts.fa.gz
-```
-
-Now, before you can measure transcript abundance, you must index your reference transcriptome so that it can be analyzed with `Salmon`
-
-```
-salmon index -t gencode.v29.transcripts.fa -i gencode_v29_idx
 ```
 
 Next, download the RNA-seq data.
@@ -58,16 +52,19 @@ wget http://ftp.sra.ebi.ac.uk/vol1/fastq/SRR098/SRR098038/SRR098038.fastq.gz
 ## Transcript quantification with Salmon
 
 
-Before we can map reads with `bwa` (note: `bowtie` is another option), we need to index the reference genome. This can be done with `bwa index`.
+Now, before you can measure transcript abundance, you must index your reference transcriptome so that it can be analyzed with `Salmon`
 
 ```
-bwa index REL606.fa
+salmon index -t gencode.v29.transcripts.fa -i gencode_v29_idx
 ```
 
-Now, let's map the reads to the reference genome. This is also a fairly intensive step that may take a few minutes.
+
+Now, let's measure transcript abundance using `Salmon`. For a single sample with paired-end reads (e.g., `forward_reads.fastq.gz` and `reverse_reads.fastq.gz`, this can be done using the following line:
 
 ```
-bwa aln REL606.fa SRR098038.fastq.gz > SRR098038.sai
+#result will be output to "quants" folder
+# -p 6 means that six CPU threads will be used
+salmon quant -i gencode_v29_idx -l A -1 forward_reads.fastq.gz -2 reverse_reads.fastq.gz -p 6 -o quants
 ```
 
 Make a .SAM file which contains all information about where each read maps onto the reference genome
