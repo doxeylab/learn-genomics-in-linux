@@ -44,7 +44,7 @@ gunzip gencode.v29.transcripts.fa.gz
 Next, download the RNA-seq data from the public EBI FTP site. We will be downloading 8 samples (each has forward and reverse .fastq reads) - so 16 files total. To download all of these automatically, you can download a list of urls with `wget` as follows:
 
 ```
-#download the list of urls first
+#download the list of urls first - NOTE: THIS STEP CAN TAKE A LONG TIME (~1 hr)
 wget https://raw.githubusercontent.com/doxeylab/learn-genomics-in-unix/master/task7/ftp-list.txt
 
 #now create a folder for your data
@@ -89,7 +89,7 @@ bash runSalmon.bash
 
 ## Exploring the transcript counts
 
-Now, the transcript expression levels have been quantified for each of your 8 samples. Look within the `quants/data` folder and examine the `quant.sf` files that you have produced for each sample.
+Now, the transcript expression levels have been quantified for each of your 8 samples. Look within the `quants` folder and examine the `quant.sf` files that you have produced for each sample.
 
 * Take note of which column contains the transcript id.
 * Also take note of which column contains the TPM (transcripts per million) expression level.
@@ -98,7 +98,7 @@ Suppose you are interested in the transcript "ENST00000379727.7".
 
 ```
 #go to your quants/data folder
-cd quants/data
+cd quants
 
 #inspect the expression levels for this transcript
 grep "ENST00000379727.7" */quant.sf
