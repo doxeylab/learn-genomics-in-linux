@@ -4,7 +4,18 @@ In this lab, you will be analyzing RNA-seq data from a study by Aguiar et al. (2
 This study exposed a human lung cell line (Calu-3 cells) to tobacco smoke, cannabis smoke, and a common drug intervention (LABA/GCS).
 
 You will be measuring and comparing the transcript expression levels between normal untreated cells (controls) and cells exposed to tobacco smoke extract (TSE).
-There are 4 TSE samples vs 4 control samples.
+There are 4 TSE samples vs 4 control samples as labeled below.
+
+| SampleID | Status |
+| --- | --- | --- |
+| SRR8451881 | Control |
+| SRR8451882 | Control |
+| SRR8451883 | Control |
+| SRR8451884 | Control |
+| SRR8451885 | TSE |
+| SRR8451886 | TSE |
+| SRR8451887 | TSE |
+| SRR8451888 | TSE |
 
 The goal is to identify which genes are up-regulated and down-regulated following tobacco smoke exposure.
 
