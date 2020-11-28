@@ -6,8 +6,8 @@ This study exposed a human lung cell line (Calu-3 cells) to tobacco smoke, canna
 You will be measuring and comparing the transcript expression levels between normal untreated cells (controls) and cells exposed to tobacco smoke extract (TSE).
 There are 4 TSE samples vs 4 control samples as labeled below.
 
-| SampleID | Status |
-| --- | --- | --- |
+| Sample ID | Status |
+| --------------- | --------------- |
 | SRR8451881 | Control |
 | SRR8451882 | Control |
 | SRR8451883 | Control |
