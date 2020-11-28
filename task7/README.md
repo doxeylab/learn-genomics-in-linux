@@ -102,7 +102,7 @@ bash runSalmon.bash
 
 Now, the transcript expression levels have been quantified for each of your 8 samples. Look within the `quants` folder and examine the `quant.sf` files that you have produced for each sample.
 
-* Take note of which column contains the transcript id.
+* Take note of which column contains the transcript id. You can do this by using `head -1` to look at the header of the `quant.sf` file.
 * Also take note of which column contains the TPM (transcripts per million) expression level.
 
 Suppose you are interested in the transcript "ENST00000379727.7".
