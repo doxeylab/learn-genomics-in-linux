@@ -18,8 +18,9 @@ You will be mapping the reads from a single population of E. coli at 38,000 g
 
 #### Graphical tools
 
-You will also need to download and install IGV on your own machine.
+You will also need to download and install either Tablet or IGV on your own machine.
 
+* [tablet](https://ics.hutton.ac.uk/tablet/)
 * [igv](http://software.broadinstitute.org/software/igv/)
 
 
