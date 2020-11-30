@@ -66,7 +66,7 @@ bwa aln ecoli-rel606.fa /data/SRR098038.fastq.gz > SRR098038.sai
 Make a .SAM file which contains all information about where each read maps onto the reference genome
 
 ```
-bwa samse ecoli-rel606.fa SRR098038.sai SRR098038.fastq.gz > SRR098038.sam
+bwa samse ecoli-rel606.fa SRR098038.sai /data/SRR098038.fastq.gz > SRR098038.sam
 ```
 
 Index the reference genome (again) so that `samtools` can work with it
