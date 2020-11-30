@@ -41,10 +41,10 @@ wget https://raw.githubusercontent.com/doxeylab/learn-genomics-in-unix/master/ta
 gunzip ecoli-rel606.fa.gz
 ```
 
-Next, download the resequencing data. This is 229 MB so you may have to be patient.
+The resequencing data is located at `/data/SRR098038.fastq.gz`. This is a 229 MB file, so was downloaded for you using the following command:
 
 ```
-wget http://ftp.sra.ebi.ac.uk/vol1/fastq/SRR098/SRR098038/SRR098038.fastq.gz
+#wget http://ftp.sra.ebi.ac.uk/vol1/fastq/SRR098/SRR098038/SRR098038.fastq.gz
 ```
 
 
@@ -54,31 +54,31 @@ wget http://ftp.sra.ebi.ac.uk/vol1/fastq/SRR098/SRR098038/SRR098038.fastq.gz
 Before we can map reads with `bwa` (note: `bowtie` is another option), we need to index the reference genome. This can be done with `bwa index`.
 
 ```
-bwa index REL606.fa
+bwa index ecoli-rel606.fa
 ```
 
 Now, let's map the reads to the reference genome. This is also a fairly intensive step that may take a few minutes.
 
 ```
-bwa aln REL606.fa SRR098038.fastq.gz > SRR098038.sai
+bwa aln ecoli-rel606.fa /data/SRR098038.fastq.gz > SRR098038.sai
 ```
 
 Make a .SAM file which contains all information about where each read maps onto the reference genome
 
 ```
-bwa samse REL606.fa SRR098038.sai SRR098038.fastq.gz > SRR098038.sam
+bwa samse ecoli-rel606.fa SRR098038.sai SRR098038.fastq.gz > SRR098038.sam
 ```
 
 Index the reference genome (again) so that `samtools` can work with it
 
 ```
-samtools faidx REL606.fa
+samtools faidx ecoli-rel606.fa
 ```
 
 Convert .SAM file to .BAM file
 
 ```
-samtools import REL606.fa.fai SRR098038.sam SRR098038.bam
+samtools import ecoli-rel606.fa.fai SRR098038.sam SRR098038.bam
 rm SRR098038.sam  # remove this large file
 ```
 
