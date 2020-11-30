@@ -129,15 +129,19 @@ samtools view SRR098038.sorted.bam "rel606:START-END" > region.sam   # where STA
 Download the following three files and open these files in `tablet` on your home machine.
 
 - the region.sam file you created above
-- the calls.vcf file you created above
-- the reference genome ([REL606.fa](http://athyra.idyll.org/~t/REL606.fa.gz))
+- the reference genome ([ecoli-rel606.fa](https://raw.githubusercontent.com/doxeylab/learn-genomics-in-unix/master/task6/ecoli-rel606.fa.gz))
 
 Now, locate the region containing the <i>mutS</i> gene within `tablet`, and search for the premature stop codon variant.
 
 Here is an [example read-pileup](https://raw.githubusercontent.com/doxeylab/learn-genomics-in-unix/master/task6/example-pileup.png) in tablet that highlights a variant position.
 
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q2 - Paste a screenshot highlighting this mutation (you will need to zoom in) and show the amino acid translation (see [here](https://software.broadinstitute.org/software/igv/sequence_track_options). What was the amino acid encoded by this codon before this mutation?
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q2 - Paste a screenshot highlighting this mutation (you will need to zoom in) and show the amino acid translation (see [here](https://software.broadinstitute.org/software/igv/sequence_track_options). 
+
+
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q3 - The premature stop codon mutation is from the codon "_ _ _" to "_ _ _".
+
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q4 - The amino acid encoded by this codon before this mutation is _____?
 
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Once you are finished, please delete the files in your task 6 folder like this:
