@@ -97,10 +97,6 @@ BAM files can be viewed with `igv` or with `tablet`. But let's take a quick look
 samtools tview SRR098038.sorted.bam
 ```
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q1 - Can you find a read with a mutation? Paste a screenshot and indicate where the mutation is. 
-
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q2 - Do you think this mutation is a real variant or an error? Why?
-
 
 ## Variant calling
 
@@ -114,9 +110,7 @@ bcftools view calls.bcf > calls.vcf
 
 ```
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q3 - How many total variants are present? Hint: `grep` for a pattern found only in your variant lines.
-
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q4 - Copy and paste into your assignment a line from the VCF file containing a SNP and a line containing an indel variant.
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q1 - How many total variants are present? Hint: `grep` for a pattern found only in your variant lines.
 
 
 ## Locating a key SNP in Lenski's E. coli evolution experiment
@@ -132,17 +126,18 @@ samtools view SRR098038.sorted.bam "rel606:START-END" > region.sam   # where STA
 ```
 
 
-Download the following three files and open these files in `igv` on your home machine.
+Download the following three files and open these files in `tablet` on your home machine.
 
 - the region.sam file you created above
 - the calls.vcf file you created above
 - the reference genome ([REL606.fa](http://athyra.idyll.org/~t/REL606.fa.gz))
 
-Now, locate the region containing the <i>mutS</i> gene within `igv`.
+Now, locate the region containing the <i>mutS</i> gene within `tablet`, and search for the premature stop codon variant.
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q5 - Paste a screenshot of the region containing this mutation. Your `igv` screenshot should span the full region of the <i>mutS</i> gene and display two tracks: the coverage and the variants.
+Here is an [example read-pileup](https://raw.githubusercontent.com/doxeylab/learn-genomics-in-unix/master/task6/example-pileup.png) in tablet that highlights a variant position.
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q6 - Now locate the variant that corresponds to the premature stop codon. Paste a screenshot highlighting this mutation (you will need to zoom in) and show the amino acid translation (see [here](https://software.broadinstitute.org/software/igv/sequence_track_options). What was the amino acid encoded by this codon before this mutation?
+
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q2 - Paste a screenshot highlighting this mutation (you will need to zoom in) and show the amino acid translation (see [here](https://software.broadinstitute.org/software/igv/sequence_track_options). What was the amino acid encoded by this codon before this mutation?
 
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Once you are finished, please delete the files in your task 6 folder like this:
@@ -159,7 +154,7 @@ rm *
 # ASSIGNMENT QUESTIONS
 
 The questions for this task are indicated by the lines starting with ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) above.
-Please submit the code you used as well as the answers to the questions. Submit your assignment to a dropbox on LEARN as a .docx, .txt, or .pdf file.
+Submit your answers to questions 1-3 to the QUIZ on LEARN.
 
 
 
