@@ -91,7 +91,7 @@ samtools index SRR098038.sorted.bam
 
 ## Viewing your BAM file
 
-BAM files can be viewed with `igv` or with `tablet`. But let's take a quick look in the terminal.
+BAM files can be viewed with `igv` or with `tablet`. But let's take a quick look in the terminal. Type `q` to exit when finished.
 
 ```
 samtools tview SRR098038.sorted.bam
