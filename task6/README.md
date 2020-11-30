@@ -139,7 +139,7 @@ Here is an [example read-pileup](https://raw.githubusercontent.com/doxeylab/lear
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q2 - Paste a screenshot highlighting this mutation (you will need to zoom in) and show the amino acid translation (see [here](https://software.broadinstitute.org/software/igv/sequence_track_options). 
 
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q3 - The premature stop codon mutation is from the codon "_ _ _" to "_ _ _".
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q3 - The premature stop codon mutation is from the codon "_ _ _ " to "_ _ _ ".
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q4 - The amino acid encoded by this codon before this mutation is _____?
 
@@ -158,7 +158,7 @@ rm *
 # ASSIGNMENT QUESTIONS
 
 The questions for this task are indicated by the lines starting with ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) above.
-Submit your answers to questions 1-3 to the QUIZ on LEARN.
+Submit your answers to questions 1-4 to the QUIZ on LEARN.
 
 
 
