@@ -37,8 +37,8 @@ cd task6 #enters into folder
 First, download the E. coli reference genome:
 
 ```
-wget athyra.idyll.org/~t/REL606.fa.gz
-gunzip REL606.fa.gz
+wget https://raw.githubusercontent.com/doxeylab/learn-genomics-in-unix/master/task6/ecoli-rel606.fa.gz
+gunzip ecoli-rel606.fa.gz
 ```
 
 Next, download the resequencing data. This is 229 MB so you may have to be patient.
