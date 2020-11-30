@@ -107,7 +107,7 @@ samtools tview SRR098038.sorted.bam
 Instead of identifying SNPs by eye, use `bcftools` to perform automated variant calling
 
 ```
-bcftools mpileup -f REL606.fa SRR098038.sorted.bam | bcftools call -mv -Ob --ploidy 1 -o calls.bcf
+bcftools mpileup -f ecoli-rel606.fa SRR098038.sorted.bam | bcftools call -mv -Ob --ploidy 1 -o calls.bcf
 
 #convert to vcf (human-readable variant call format). This file should contain all identified SNPs and other variants.
 bcftools view calls.bcf > calls.vcf
