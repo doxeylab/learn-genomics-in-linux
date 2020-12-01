@@ -123,7 +123,7 @@ Find the region in the reference genome that encodes the <i>mutS</i> gene using 
 Now, extract the mapped regions for this region from your .bam file. The command will be something like this:
 
 ```
-samtools view SRR098038.sorted.bam "rel606:START-END" > region.sam   # where START and END are position numbers
+samtools view SRR098038.sorted.bam "ecoli:START-END" > region.sam   # where START and END are position numbers
 ```
 
 
