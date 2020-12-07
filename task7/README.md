@@ -119,7 +119,7 @@ grep "ENST00000379727.7" */quant.sf
 
 Support your answer using statistics. Perform a t-test comparing the expression level of this transcript between the 4 smoke-treated samples versus 4 control samples. Use any program of your choice to do so (R, excel, Google Sheets, etc.).
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q2 -  Is the difference statistically significant (p < 0.001)?
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q2 -  Is the difference statistically significant (p < 0.01)?
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q3 -  Does this result make sense biologically given existing literature? Provide an answer using 2-3 written sentences, and provide a citation to support your answer.
 
