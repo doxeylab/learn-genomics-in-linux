@@ -316,7 +316,7 @@ Hint: remember to use `man` if you want to explore added functionality of comman
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q6 - What character (A, C, G, or T) is most common in the uncompressed file?
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q7 - What is the most common trinucleotide in the file? Hint: you can answer this using the program `compseq`.
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q7 - What is the most common trinucleotide in the file? Hint: for an easy way to answer this, try the program `compseq`.
 
 
 #### Congratulations. You are now finished Task 1.
