@@ -300,23 +300,21 @@ You will be asked to answer the following questions.
 
 Hint: remember to use `man` if you want to explore added functionality of commands.
 
-* Download this file containing the genome sequence of E. coli K12 https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task1/e-coli-k12-genome.fasta.gz
+* Download and uncompress this file containing the genome sequence of E. coli K12 https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task1/e-coli-k12-genome.fasta.gz
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q1 - What is the size of the compressed file in megabytes (round to one decimal place)?
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q1 -  What is the size of the uncompressed file in megabytes (round to one decimal place)?
 
-* Uncompress the file.
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q2 - How many characters are in this file?
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q2 -  What is the size of the uncompressed file in megabytes (round to one decimal place)?
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q3 - How many lines in the file contain the word "ATATATAT"?
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q3 - How many characters are in this file?
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q4 - What character (A, C, G, or T) is most common in the uncompressed file?
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q4 - How many lines in the file contain the word "ATATATAT"?
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q5 - What is the most common trinucleotide in the file? Hint: for an easy way to answer this, try the program `compseq`.
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q5 - What character (A, C, G, or T) is most common in the uncompressed file?
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q6 - How many times does the word "CCGGAG" occur in the genome sequence?
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q6 - What is the most common trinucleotide in the file? Hint: for an easy way to answer this, try the program `compseq`.
-
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q7 - How many times does the word "CCGGAG" occur in the genome sequence?
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q7 - What is the answer to the above question if you also include matches on the reverse complement of the genome sequence?
 
 
 #### Congratulations. You are now finished Task 1.
