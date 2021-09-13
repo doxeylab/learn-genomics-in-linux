@@ -302,13 +302,13 @@ Hint: remember to use `man` if you want to explore added functionality of comman
 
 Download and uncompress this file containing the genome sequence of E. coli K12 https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task1/e-coli-k12-genome.fasta.gz
 
-* Q1 -  What is the size of the uncompressed file in megabytes (round to one decimal place)?
+* Q1 - What is the size of the uncompressed file in megabytes (round to one decimal place)?
 
 * Q2 - How many characters are in this file?
 
 * Q3 - How many lines in the file contain the word "ATATATAT"?
 
-* Q4 - What character (A, C, G, or T) is most common in the uncompressed file?
+* Q4 - What character (A, C, G, or T) is most common in the file?
 
 * Q5 - What is the most common trinucleotide in the file? Hint: for an easy way to answer this, try the program `compseq`.
 
