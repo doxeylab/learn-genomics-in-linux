@@ -316,8 +316,6 @@ Hint: remember to use `man` if you want to explore added functionality of comman
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q6 - What character (A, C, G, or T) is most common in the uncompressed file?
 
-* Bonus questions
-
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q7 - What is the size of the uncompressed file in bytes?
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q8 - How many times does "AT" occur in lines 3 to 10 of the uncompressed file?
