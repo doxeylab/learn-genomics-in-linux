@@ -242,6 +242,11 @@ It can be run like this:
 
 ```
 compseq file.fasta
+
+#or
+
+compseq -reverse file.fasta  #also counts occurrences on the reverse complement of the sequence
+
 ```
 
 
