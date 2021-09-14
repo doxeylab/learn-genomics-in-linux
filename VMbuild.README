@@ -78,6 +78,7 @@ export PATH="$PATH:/usr/bin/prokka/bin/"
 
 sudo chmod 751 /home
 sudo rm /usr/bin/who
+sudo rm /usr/bin/w
 sudo rm /usr/bin/users
 
 
