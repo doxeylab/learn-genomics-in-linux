@@ -167,7 +167,15 @@ blastp -query e.coli.l7.faa -db GCA_000007925.1_ASM792v1_protein.faa
 
 * Repeat the same BLAST search you did for Q2 but using the genomic sequence as the search database.
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q4 - Compare your result to the previous search.
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q4 - Compare your result to the previous search. Which of the following statements is most correct:
+
+```
+* There were no significant BLAST matches.
+* BLAST detected the same protein as the top hit. However, the alignment was shorter.
+* BLAST detected the same protein as the top hit. However, the alignment was not significant.
+* BLAST detected a different protein as the top hit.
+```
+
 
 * Suppose you have sequenced the following fragment of DNA:
 
@@ -177,8 +185,22 @@ ACTGGCATTGATAGAACAACCATTTATTCGAGATAGTTCAATTACTGTAGAGCAAGTTGTAAAACA
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q5 - Search for this fragment of DNA in the genome of Prochlorococcus marinus subsp. marinus str. CCMP1375. What did you find?
 
+```
+* I found an exact match to the sequence.
+* I did not find a good match to the sequence.
+* I found a good match to the sequence with 1 mutation.
+* I found a good match to the sequence with 2 mutations.
+
+```
+
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q6 - Based on your BLAST result, what is the likely function of this fragment of DNA?
 
+```
+* It is impossible to say.
+* It is part of a gene encoding Translation elongation factor Ts.
+* It is a segment of a protein.
+* It is a non-coding sequence.
+```
 
 
 # ASSIGNMENT QUESTIONS
