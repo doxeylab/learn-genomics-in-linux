@@ -217,6 +217,35 @@ grep -c "word" file.txt # counts the number of lines containing "word" in file.t
 
 ```
 
+Note: Be careful when using `grep` to analyze files containing nucleic acid or protein sequence data.
+
+e.g., your FASTA file may be separated into multiple lines like this:
+
+```
+>myFastaSequence
+ATCGACGTTATCGACTAGCTAT
+TCGGCGCGGTATTAGCGATTCG
+TAATATCGGCGCGATATATCGA
+```
+
+instead of this:
+
+```
+>myFastaSequence
+ATCGACGTTATCGACTAGCTATTCGGCGCGGTATTAGCGATTCGTAATATCGGCGCGATATATCGA
+```
+
+Therefore, `grep` may miss some words that span multiple lines.
+
+Fortunately, there is a useful tool called `compseq` that be used to examine the <b>k-mer</bf> composition of a FASTA file.
+It can be run like this:
+
+```
+compseq file.fasta
+```
+
+
+
 #### Piping commands
 
 We can also chain together multiple commands like this using the `|` (pipe) operator.
