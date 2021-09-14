@@ -237,7 +237,7 @@ ATCGACGTTATCGACTAGCTATTCGGCGCGGTATTAGCGATTCGTAATATCGGCGCGATATATCGA
 
 Therefore, `grep` may miss some words that span multiple lines.
 
-Fortunately, there is a useful tool called `compseq` that be used to examine the <b>k-mer</b> composition of a FASTA file.
+Fortunately, there is a useful tool called `compseq` that be used to examine the [<b>k-mer</b>](https://en.wikipedia.org/wiki/K-mer) composition of a FASTA file.
 It can be run like this:
 
 ```
