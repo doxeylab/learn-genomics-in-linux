@@ -85,7 +85,7 @@ Look at the `--kingdom` options in `prokka -h` and re-run prokka to use the corr
 
 * Again, open your .gbk file in artemis
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/questionbox.png) Q5) Has anything changed in this genome annotation? Examine the CDSs, tRNAs, and rRNAs, and their annotations.
+![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q5) Has anything changed in this genome annotation? Examine the CDSs, tRNAs, and rRNAs, and their annotations.
 
 
 ## Annotation of an <i>E. coli</i> genome using `prokka`
@@ -100,7 +100,7 @@ https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task1/e-coli-k12-g
 
 Next, explore the files produced by `prokka`. Start with the .txt file.
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/questionbox.png) Q6) How many genes, rRNAs, tRNAs, and CRISPR loci were predicted? What is the size of the genome in Mb?
+![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q6) How many genes, rRNAs, tRNAs, and CRISPR loci were predicted? What is the size of the genome in Mb?
 
 Prokka also annotates genes based on [COGs](https://www.ncbi.nlm.nih.gov/COG/) and also [E.C.](https://enzyme.expasy.org/) (enzyme commission) numbers. This information can be found in the .tbl file. 
 
@@ -119,10 +119,10 @@ cut -f3 file.txt | sort | uniq | wc -l
 ```
 
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/questionbox.png) Q7) How many genes were annotated with COGs?
+![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q7) How many genes were annotated with COGs?
 
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/questionbox.png) Q8) How many unique enzymatic activities (E.C. numbers) were assigned to the E. coli genome? Note: `1.-.-.-` and `1.1.1.17` would count as two separate E.C. numbers.
+![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q8) How many unique enzymatic activities (E.C. numbers) were assigned to the E. coli genome? Note: `1.-.-.-` and `1.1.1.17` would count as two separate E.C. numbers.
 
 
 
@@ -151,7 +151,7 @@ cat go.annotations | awk '{print $3}' | tr "," "\n" | sort | uniq -c | sort -n -
 Now, there is a lot you can explore using your predicted GO terms for your genome.
 e.g., Suppose you want to find all the predicted DNA binding proteins. Look [here](http://amigo.geneontology.org/amigo) to find the GO ID for "DNA binding".
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/questionbox.png) Q9) How many proteins were annotated with the GO TERM for "DNA binding"? 
+![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q9) How many proteins were annotated with the GO TERM for "DNA binding"? 
 
 ## After annotation: Extracting genes and regions of interest
 
@@ -218,7 +218,7 @@ This should produce a FASTA sequence output of the gene identical to that in the
 
 But you are not interested in the gene sequence; you actually want the upstream regulatory region. Suppose you want to identify the 30-nucleotide long region upstream (before but not including the start codon) of the trpE coding sequence. By modifying the code above, answer the following question.
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/questionbox.png) Q10) What is the 30-nucleotide long sequence immediately upstream of the TrpE coding sequence?
+![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q10) What is the 30-nucleotide long sequence immediately upstream of the TrpE coding sequence?
 
 
 ### Extracting the rRNAs predicted by barrnap
@@ -245,7 +245,7 @@ And now for something a little more difficult.
 
 https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task3/mysteryGenome.fna.gz
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/questionbox.png) Q11) Based on 16S rRNA sequences, what is the taxonomic origin of this genome (genus and species)? 
+![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q11) Based on 16S rRNA sequences, what is the taxonomic origin of this genome (genus and species)? 
 e.g., "Escherichia coli"
 
 
