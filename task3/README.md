@@ -55,9 +55,9 @@ You will also need to [<b>download</b>](https://github.com/doxeylab/learn-genomi
 - How do you mark open reading frames (ORFs)?
 
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/questionbox.png) Q1) How many ORFs are there of length >= 100 amino acids? 
+![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q1) How many ORFs are there of length >= 100 amino acids? 
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/questionbox.png) Q2) How many ORFs are theref of length >= 50 amino acids? 
+![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q2) How many ORFs are theref of length >= 50 amino acids? 
 
 ## Annotating your genome from Task2 using `prokka`
 
@@ -75,9 +75,9 @@ prokka abyss-assembly-contigs.fa
 
 * Now, locate and download the .gbk file that was produced and view it in `artemis`
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/questionbox.png) Q3) You will notice that there are vertical black lines in the middle of predicted ORFs. What do these lines represent?
+![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q3) You will notice that there are vertical black lines in the middle of predicted ORFs. What do these lines represent?
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/questionbox.png) Q4) Re-start artemis and change your artemis 'Options' to better reflect the source of this genome. Which source did you choose (e.g., "Standard", "Vertebrate Mitochondrial", etc.)?
+![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q4) Re-start artemis and change your artemis 'Options' to better reflect the source of this genome. Which source did you choose (e.g., "Standard", "Vertebrate Mitochondrial", etc.)?
 
 When `prokka` is run without any parameters, it selects 'bacteria' as the default taxonomy.
 
