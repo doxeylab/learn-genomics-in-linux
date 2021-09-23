@@ -100,14 +100,6 @@ Want to try aligning/comparing more than two genomes?
 
 # ASSIGNMENT QUESTIONS
 
-The questions for this task are indicated by the lines starting with ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) above.
+The questions for this task are indicated by the lines starting with ![question](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/questionbox.png) above.
 Please submit the code you used (when required) as well as the answers to the questions. Submit your assignment to a dropbox on LEARN as a .docx, .txt, or .pdf file.
-
-
-
-
-
-
-
-
 
