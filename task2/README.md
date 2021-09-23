@@ -79,9 +79,9 @@ Explore and inspect the FastQC report for mt_reads.fastq.
 
 ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q5) Most of the reads were assigned a quality (Phred) score of \_\_\_\_\_ .
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q6) There is an unexpected spike in the frequency of certain k-mers at the \_\_\_\_\_ of the reads.
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q6) Examine the per-base sequence content. The base composition is unusual/unexpected for position \_\_\_\_\_ to position \_\_\_\_\_ of the reads.
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q7) This spike in k-mer frequency may have resulted from the inclusion of \_\_\_\_\_ .
+![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q7) This unexpected composition may be due to the inclusion of \_\_\_\_\_ .
 
 
 
