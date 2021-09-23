@@ -336,19 +336,19 @@ Hint: remember to use `man` if you want to explore added functionality of comman
 
 Download and uncompress this file containing the genome sequence of E. coli K12 https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task1/e-coli-k12-genome.fasta.gz
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/questionbox.png) Q1 - What is the size of the uncompressed file in megabytes (round to one decimal place)?
+![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q1 - What is the size of the uncompressed file in megabytes (round to one decimal place)?
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/questionbox.png) Q2 - How many characters are in this file?
+![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q2 - How many characters are in this file?
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/questionbox.png) Q3 - How many lines in the file contain the word "ATATATAT"?
+![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q3 - How many lines in the file contain the word "ATATATAT"?
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/questionbox.png) Q4 - What character (A, C, G, or T) is most common in the file?
+![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q4 - What character (A, C, G, or T) is most common in the file?
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/questionbox.png) Q5 - What is the most common trinucleotide in the file? Hint: for an easy way to answer this, try the program `compseq`.
+![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q5 - What is the most common trinucleotide in the file? Hint: for an easy way to answer this, try the program `compseq`.
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/questionbox.png) Q6 - How many times does the word "CCGGAG" occur in the genome sequence?
+![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q6 - How many times does the word "CCGGAG" occur in the genome sequence?
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/questionbox.png) Q7 - What is the answer to the above question if you also include matches on the reverse complement of the genome sequence?
+![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q7 - What is the answer to the above question if you also include matches on the reverse complement of the genome sequence?
 
 
 #### Congratulations. You are now finished Task 1.
