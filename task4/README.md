@@ -61,9 +61,9 @@ Now, download to your local machine the following files:
 
 Open the `act` program that is packaged with `artemis` and input these three files.
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/questionbox.png) Q1) Paste a screenshot of your result.
+![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q1) Paste a screenshot of your result.
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/questionbox.png) Q2) Describe the synteny patterns that you are observing. Is there 1:1 synteny involving the entire genome or have there been genomic rearrangements?
+![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q2) Describe the synteny patterns that you are observing. Is there 1:1 synteny involving the entire genome or have there been genomic rearrangements?
 
 ---
 
@@ -73,9 +73,9 @@ Next, find two related genomes (i.e., different strains of same species)  from t
 
 * Repeat the analyses above to perform a structural genome comparison.
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/questionbox.png) Q3) Paste a screenshot of your result.
+![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q3) Paste a screenshot of your result.
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/questionbox.png) Q4) Describe the synteny patterns that you are observing.
+![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q4) Describe the synteny patterns that you are observing.
 
 
 ## Multiple genome alignment with MAUVE -- Bonus (+1)
@@ -92,7 +92,7 @@ Want to try aligning/comparing more than two genomes?
 
 * Visualize the multiple alignment
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/questionbox.png) Bonus) Paste a screenshot of your result.
+![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Bonus) Paste a screenshot of your result.
 
 
 ---
@@ -100,6 +100,6 @@ Want to try aligning/comparing more than two genomes?
 
 # ASSIGNMENT QUESTIONS
 
-The questions for this task are indicated by the lines starting with ![question](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/questionbox.png) above.
+The questions for this task are indicated by the lines starting with ![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) above.
 Please submit the code you used (when required) as well as the answers to the questions. Submit your assignment to a dropbox on LEARN as a .docx, .txt, or .pdf file.
 
