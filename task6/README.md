@@ -111,7 +111,7 @@ bcftools view calls.bcf > calls.vcf
 
 ```
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q1 - How many total variants are present? Hint: `grep` for a pattern found only in your variant lines.
+![question](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/questionbox.png) Q1 - How many total variants are present? Hint: `grep` for a pattern found only in your variant lines.
 
 
 ## Locating a key SNP in Lenski's E. coli evolution experiment
@@ -137,15 +137,15 @@ Now, locate the region containing the <i>mutS</i> gene within `tablet`, and sear
 Here is an [example read-pileup](https://raw.githubusercontent.com/doxeylab/learn-genomics-in-unix/master/task6/example-pileup.png) in tablet that highlights a variant position.
 
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q2 - Paste a screenshot highlighting this mutation (you will need to zoom in) and show the amino acid translation (see [here](https://software.broadinstitute.org/software/igv/sequence_track_options). 
+![question](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/questionbox.png) Q2 - Paste a screenshot highlighting this mutation (you will need to zoom in) and show the amino acid translation (see [here](https://software.broadinstitute.org/software/igv/sequence_track_options). 
 
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q3 - The premature stop codon mutation is from the codon "_ _ _ " to "_ _ _ ".
+![question](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/questionbox.png) Q3 - The premature stop codon mutation is from the codon "_ _ _ " to "_ _ _ ".
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q4 - The amino acid encoded by this codon before this mutation is _____?
+![question](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/questionbox.png) Q4 - The amino acid encoded by this codon before this mutation is _____?
 
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Once you are finished, please delete the files in your task 6 folder like this:
+Once you are finished, please delete the files in your task 6 folder like this:
 
 ```
 cd task6
@@ -158,7 +158,7 @@ rm *
 
 # ASSIGNMENT QUESTIONS
 
-The questions for this task are indicated by the lines starting with ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) above.
+The questions for this task are indicated by the lines starting with ![question](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/questionbox.png) above.
 Submit your answers to questions 1-4 to the QUIZ on LEARN.
 
 
