@@ -32,7 +32,7 @@ ftp://ftp.ncbi.nlm.nih.gov/genomes/archive/old_genbank/Bacteria/Escherichia_coli
 ftp://ftp.ncbi.nlm.nih.gov/genomes/archive/old_genbank/Bacteria/Escherichia_coli_K_12_substr__DH10B_uid20079/CP000948.fna
 ```
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q1 - Look within the ftp directories for these bacterial genome projects. What do the other files contain?
+![question](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/questionbox.png) Q1 - Look within the ftp directories for these bacterial genome projects. What do the other files contain?
 
 
 ## Annotating both genomes
@@ -57,7 +57,7 @@ cat PROKKA*.tbl | awk '{if ($1 == "gene") {print $2}}' | awk -F'_' '{print $1}' 
 ```
 
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q2 - How many genes are present in each genome?
+![question](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/questionbox.png) Q2 - How many genes are present in each genome?
 
 
 ## Comparing gene lists
@@ -77,7 +77,7 @@ comm O157H7/genelist_O157H7.txt K12/genelist_K12.txt >geneListComparison.txt
 
 Examine the output of `geneListComparison.txt` using `less`
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q3 - What do the genes in column 1, column 2, and column 3 represent? 
+![question](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/questionbox.png) Q3 - What do the genes in column 1, column 2, and column 3 represent? 
 
 Now, suppose we want to output the genes in column 1 (ignoring spaces). We can do so like this:
 
@@ -93,7 +93,7 @@ cat geneListComparison.txt | awk -F'\t' '{print $1}' | grep -v -e '^$' | wc -l
 
 * Analyze the core versus variable gene content for these two strains
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q4 - How many genes are only in the O157H7 genome? Only in the K12 genome? In both?
+![question](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/questionbox.png) Q4 - How many genes are only in the O157H7 genome? Only in the K12 genome? In both?
 
 
 ### Comparison without gene duplicates (finding unique genes)
@@ -117,7 +117,7 @@ Now, when we compare these lists using `comm`, we will only be comparing single 
 comm O157H7/unique_genelist_O157H7.txt K12/unique_genelist_K12.txt > uniqueGeneListComparison.txt
 ```
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q5 - How many unique genes are only in the O157H7 genome? Only in the K12 genome? In both?
+![question](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/questionbox.png) Q5 - How many unique genes are only in the O157H7 genome? Only in the K12 genome? In both?
 
 
 ## Going further: inspecting your duplicated and unique genes within each organism
@@ -132,7 +132,7 @@ cat geneListComparison.txt | awk -F'\t' '{print $1}' | sort | uniq -c | sort -n 
 
 Examine your result carefully. Column 1 states the copy number and copy 2 states the gene name.
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q6 - Which gene in O157H7 occurs the most times. In K12?
+![question](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/questionbox.png) Q6 - Which gene in O157H7 occurs the most times. In K12?
 
 
 
@@ -140,4 +140,4 @@ Examine your result carefully. Column 1 states the copy number and copy 2 states
 
 # ASSIGNMENT QUESTIONS
 
-The questions for this task are indicated by the lines starting with ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) above. Please submit your answers using the quiz on LEARN.
+The questions for this task are indicated by the lines starting with ![question](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/questionbox.png) above. Please submit your answers using the quiz on LEARN.
