@@ -61,9 +61,9 @@ Now, download to your local machine the following files:
 
 Open the `act` program that is packaged with `artemis` and input these three files.
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q1) Paste a screenshot of your result.
+![question](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/questionbox.png) Q1) Paste a screenshot of your result.
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q2) Describe the synteny patterns that you are observing. Is there 1:1 synteny involving the entire genome or have there been genomic rearrangements?
+![question](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/questionbox.png) Q2) Describe the synteny patterns that you are observing. Is there 1:1 synteny involving the entire genome or have there been genomic rearrangements?
 
 ---
 
@@ -73,9 +73,9 @@ Next, find two related genomes (i.e., different strains of same species)  from t
 
 * Repeat the analyses above to perform a structural genome comparison.
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q3) Paste a screenshot of your result.
+![question](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/questionbox.png) Q3) Paste a screenshot of your result.
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Q4) Describe the synteny patterns that you are observing.
+![question](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/questionbox.png) Q4) Describe the synteny patterns that you are observing.
 
 
 ## Multiple genome alignment with MAUVE -- Bonus (+1)
@@ -92,7 +92,7 @@ Want to try aligning/comparing more than two genomes?
 
 * Visualize the multiple alignment
 
-![#1589F0](https://placehold.it/15/1589F0/000000?text=+) Bonus) Paste a screenshot of your result.
+![question](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/questionbox.png) Bonus) Paste a screenshot of your result.
 
 
 ---
