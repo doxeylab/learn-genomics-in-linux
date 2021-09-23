@@ -54,7 +54,7 @@ wget ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/007/925/GCA_000007925.1_ASM7
 
 ```
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/questionbox.png) Q1 - Examine the contents of the three files you have just downloaded. What information does each contain?
+![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q1 - Examine the contents of the three files you have just downloaded. What information does each contain?
 
 
 ## Command-line BLAST
@@ -161,13 +161,13 @@ To run a `blastp` search using the protein query (defined by `-query` parameter)
 blastp -query e.coli.l7.faa -db GCA_000007925.1_ASM792v1_protein.faa
 ```
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/questionbox.png) Q2 - How many significant (E < 0.001) hits did you get?
+![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q2 - How many significant (E < 0.001) hits did you get?
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/questionbox.png) Q3 - What is the sequence identity (percentage) of your top BLAST hit?
+![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q3 - What is the sequence identity (percentage) of your top BLAST hit?
 
 * Repeat the same BLAST search you did for Q2 but using the genomic sequence as the search database.
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/questionbox.png) Q4 - Compare your result to the previous search. Which of the following statements is most correct:
+![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q4 - Compare your result to the previous search. Which of the following statements is most correct:
 
 ```
 * There were no significant BLAST matches.
@@ -183,7 +183,7 @@ blastp -query e.coli.l7.faa -db GCA_000007925.1_ASM792v1_protein.faa
 ACTGGCATTGATAGAACAACCATTTATTCGAGATAGTTCAATTACTGTAGAGCAAGTTGTAAAACA
 ```
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/questionbox.png) Q5 - Search for this fragment of DNA in the genome of Prochlorococcus marinus subsp. marinus str. CCMP1375. What did you find?
+![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q5 - Search for this fragment of DNA in the genome of Prochlorococcus marinus subsp. marinus str. CCMP1375. What did you find?
 
 ```
 * I found an exact match to the sequence.
@@ -193,7 +193,7 @@ ACTGGCATTGATAGAACAACCATTTATTCGAGATAGTTCAATTACTGTAGAGCAAGTTGTAAAACA
 
 ```
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/questionbox.png) Q6 - Based on your BLAST result, what is the likely function of this fragment of DNA?
+![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q6 - Based on your BLAST result, what is the likely function of this fragment of DNA?
 
 ```
 * It is impossible to say.
