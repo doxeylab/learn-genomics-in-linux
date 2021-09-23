@@ -115,13 +115,13 @@ cd quants
 grep "ENST00000379727.7" */quant.sf
 ```
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/questionbox.png) Q1 - Has this transcript's abundance increased, decreased, or stayed the same following smoke exposure?
+![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q1 - Has this transcript's abundance increased, decreased, or stayed the same following smoke exposure?
 
 Support your answer using statistics. Perform a t-test comparing the expression level of this transcript between the 4 smoke-treated samples versus 4 control samples. Use any program of your choice to do so (R, excel, Google Sheets, etc.).
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/questionbox.png) Q2 -  Is the difference statistically significant (p < 0.01)?
+![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q2 -  Is the difference statistically significant (p < 0.01)?
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/questionbox.png) Q3 -  Does this result make sense biologically given existing literature? Provide an answer using 2-3 written sentences, and provide a citation to support your answer.
+![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q3 -  Does this result make sense biologically given existing literature? Provide an answer using 2-3 written sentences, and provide a citation to support your answer.
 
 ## Detecting differentially expressed genes (DEGs) in R (Bonus)
 
@@ -133,14 +133,14 @@ Now that you have measured transcript abundance for all samples using `Salmon`, 
 * Download the quant files produced by Salmon to your local machine
 * Following the instructions [here](https://bioconductor.org/packages/release/bioc/vignettes/tximport/inst/doc/tximport.html)
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/questionbox.png) Bonus (+2 marks) - Produce a table of the top 10 differentially expressed genes along with their fold-changes and adjusted p-values. Also include the code you used to do so.
+![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Bonus (+2 marks) - Produce a table of the top 10 differentially expressed genes along with their fold-changes and adjusted p-values. Also include the code you used to do so.
 
 
 ---
 
 # ASSIGNMENT QUESTIONS
 
-The questions for this task are indicated by the lines starting with ![question](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/questionbox.png) above.
+The questions for this task are indicated by the lines starting with ![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) above.
 Please submit your answers under quizzes on LEARN.
 
 
