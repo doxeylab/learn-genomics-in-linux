@@ -55,9 +55,9 @@ You will also need to [<b>download</b>](https://github.com/doxeylab/learn-genomi
 - How do you mark open reading frames (ORFs)?
 
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q1) How many ORFs are there of length >= 100 amino acids? 
+![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q1) How many ORFs are there of length >= 100 nucleotides? 
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q2) How many ORFs are theref of length >= 50 amino acids? 
+![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q2) How many ORFs are theref of length >= 50 nucleotides? 
 
 ## Annotating your genome from Task2 using `prokka`
 
