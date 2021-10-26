@@ -63,7 +63,7 @@ Open the `act` program that is packaged with `artemis` and input these three fil
 
 ![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q1) Paste a screenshot of your result.
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q2) Describe the synteny pattern that you are observing. Do you think genomic rearrangements have taken place or is there a strong pattern of shared synteny between both genomes? See (shared synteny)[https://en.wikipedia.org/wiki/Synteny#Shared_synteny]
+![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q2) Describe the synteny pattern that you are observing. Do you think genomic rearrangements have taken place or is there a strong pattern of shared synteny between both genomes? See [shared synteny](https://en.wikipedia.org/wiki/Synteny#Shared_synteny)
 
 To help you with this question, consider two genome sequences composed of four genes A-D. One genome has gene order A,B,C,D and the second genome has gene order A,C,B,D. There has clearly been a genomic rearrangement here because C and B have switched places.
 
