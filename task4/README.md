@@ -75,7 +75,7 @@ And lastly, now suppose we compare (A,B,C,D) to its reverse complement which wil
 
 ## Working with your own dataset
 
-Next, find two related genomes (i.e., different strains of same species)  from the [NCBI FTP directory](ftp://ftp.ncbi.nlm.nih.gov/genomes/archive/old_genbank/Bacteria/)
+Next, find two related genomes (e.g., different strains of same species)  from the [NCBI FTP directory](ftp://ftp.ncbi.nlm.nih.gov/genomes/archive/old_genbank/Bacteria/)
 
 * Repeat the analyses above to perform a structural genome comparison.
 
