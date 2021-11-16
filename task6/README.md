@@ -79,7 +79,7 @@ samtools faidx ecoli-rel606.fa
 Convert .SAM file to .BAM file
 
 ```
-samtools import ecoli-rel606.fa.fai SRR098038.sam SRR098038.bam
+samtools view -S -b SRR098038.sam > SRR098038.bam
 rm SRR098038.sam  # remove this large file
 ```
 
