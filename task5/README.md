@@ -32,7 +32,9 @@ ftp://ftp.ncbi.nlm.nih.gov/genomes/archive/old_genbank/Bacteria/Escherichia_coli
 ftp://ftp.ncbi.nlm.nih.gov/genomes/archive/old_genbank/Bacteria/Escherichia_coli_K_12_substr__DH10B_uid20079/CP000948.fna
 ```
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q1 - Look within the ftp directories for these bacterial genome projects. What do the other files contain?
+![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q1 - Look within the ftp directories for these bacterial genome projects. i.e., go to: https://ftp.ncbi.nlm.nih.gov/genomes/archive/old_genbank/Bacteria/Escherichia_coli_O157H7_EDL933_uid259
+
+What do the other files contain?
 
 
 ## Annotating both genomes
