@@ -33,17 +33,17 @@ cd task2 #enters into folder
 
 ## Retrieving the raw data
 
-Download the raw sequencing data from *https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task2/mt_reads.fastq.gz* into your folder and then uncompress it.
+Download the raw sequencing data from *https://github.com/doxeylab/learn-genomics-in-linux/raw/master/task2/mt_reads.fastq.gz* into your folder and then uncompress it.
 
 Explore the file using `less`.
 
 Next, consider how would you return the sequence of the nth read using only head and tail or grep? Note that each read consists of a fixed number of lines and the first line of a read starts with a specific character.
 
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q1) What is the sequence of the third read in the file? Make sure to remove all spaces.
+![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q1) What is the sequence of the third read in the file? Make sure to remove all spaces.
 
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q2) How many reads are in the file?  Hint: the command `grep "^X"` reports all lines starting with the character `X`.
+![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q2) How many reads are in the file?  Hint: the command `grep "^X"` reports all lines starting with the character `X`.
 
 
 
@@ -64,24 +64,24 @@ The command below will analyze the mt_reads.fastq file and produce an .html resu
 fastqc mt_reads.fastq
 ```
 
-[<b>Download</b>](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task1/gcloud-download.png) the 'fastqc_report.html' file to your local machine and open it in a web browser. Tip: find the path to your file with `realpath yourFile.txt`
+[<b>Download</b>](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/task1/gcloud-download.png) the 'fastqc_report.html' file to your local machine and open it in a web browser. Tip: find the path to your file with `realpath yourFile.txt`
 
 Explore and inspect the FastQC report for mt_reads.fastq.
 
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q3) Which of the following statements is correct?
+![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q3) Which of the following statements is correct?
 * The reads passed all of the quality control measures
 * The reads failed all of the quality control measures
 * The reads passed some of the quality control measures but failed others
 
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q4) The per-base sequence quality is lowest at the \_\_\_\_\_ of the reads.
+![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q4) The per-base sequence quality is lowest at the \_\_\_\_\_ of the reads.
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q5) Most of the reads were assigned a quality (Phred) score of \_\_\_\_\_ .
+![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q5) Most of the reads were assigned a quality (Phred) score of \_\_\_\_\_ .
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q6) Examine the per-base sequence content. The base composition is unusual/unexpected for position \_\_\_\_\_ to position \_\_\_\_\_ of the reads.
+![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q6) Examine the per-base sequence content. The base composition is unusual/unexpected for position \_\_\_\_\_ to position \_\_\_\_\_ of the reads.
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q7) This unexpected composition may be due to the inclusion of \_\_\_\_\_ .
+![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q7) This unexpected composition may be due to the inclusion of \_\_\_\_\_ .
 
 
 
@@ -95,7 +95,7 @@ We will use a standard script from the `fastx toolkit` to split the data by its 
 
 ```
 #first download the barcodes file
-wget https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task2/mt_barcodes.txt
+wget https://github.com/doxeylab/learn-genomics-in-linux/raw/master/task2/mt_barcodes.txt
 
 #now split
 fastx_barcode_splitter.pl <mt_reads.fastq --bcfile mt_barcodes.txt --bol --suffix .fastq --prefix splitData_
@@ -122,10 +122,10 @@ Next, we need to remove low quality sequences. This will increase the accuracy o
 fastq_quality_filter -i trimmed_mt1.fastq -q 25 -p 80 -o qual_trim_mt1.fastq -Q33 -v
 ```
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q8) What percentage of reads were removed?
+![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q8) What percentage of reads were removed?
 
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q9) Compare FastQC reports from before and after trimming and quality filtering. Which of the measures improved from a warning/fail to a pass?
+![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q9) Compare FastQC reports from before and after trimming and quality filtering. Which of the measures improved from a warning/fail to a pass?
 
 
 
@@ -154,14 +154,14 @@ Next, to compute the actual contig sequences from the graph, run the following:
 velvetg out_21/ -scaffolding no -read_trkg yes -amos_file yes
 ```
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q10) How many nodes are there in the graph that was produced?
+![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q10) How many nodes are there in the graph that was produced?
 
 Inspect the contigs.fa file that has been produced (will be in out_21 folder).
 
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q11) How many contigs do you get using k=21?
+![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q11) How many contigs do you get using k=21?
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q12) How many contigs do you get using k=31?
+![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q12) How many contigs do you get using k=31?
 
 
 ## Assembly visualization
@@ -170,15 +170,15 @@ Inspect the contigs.fa file that has been produced (will be in out_21 folder).
 
 Velvet has the option of keeping track of where the reads map to the assembly using the `-read_trkg` flag. This will produce a `velvet_asm.afg` file.
 
-[<b>Download</b>](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task1/gcloud-download.png) this file (from your k=31 assembly) to your local machine. 
+[<b>Download</b>](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/task1/gcloud-download.png) this file (from your k=31 assembly) to your local machine. 
 Then open it in `tablet`. Tablet is a great program to explore how reads map to assemblies and genomes.
 
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q13) What is the average contig length?
+![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q13) What is the average contig length?
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q14) What is the N50 value?
+![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q14) What is the N50 value?
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q15) Examine the read coverage across the longest contig. Does the coverage distribution match that shown  [<b>here</b>](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task2/tablet-coverage-plot.png)?
+![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q15) Examine the read coverage across the longest contig. Does the coverage distribution match that shown  [<b>here</b>](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/task2/tablet-coverage-plot.png)?
 
 
 Explore `tablet` more on your own. We will be using it later in the course.
@@ -187,7 +187,7 @@ Explore `tablet` more on your own. We will be using it later in the course.
 
 Velvet and other de bruijn assemblers produce a graph that can be visualized. `bandage` is an excellent tool for this purpose.
 
-If you are interested, locate the 'lastgraph' file produced by `velvet` and [<b>download</b>](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task1/gcloud-download.png) it to your local machine.
+If you are interested, locate the 'lastgraph' file produced by `velvet` and [<b>download</b>](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/task1/gcloud-download.png) it to your local machine.
 
 Open this file in the `Bandage` application, and explore further. 
 
@@ -203,11 +203,11 @@ Often in genomics it is useful to try numerous parameters and different assemble
 abyss-pe k=21 in='qual_trim_mt1.fastq' name=abyss-assembly
 ```
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q16) How long (# bases) is your assembly?
+![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q16) How long (# bases) is your assembly?
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q17) What is the N50 value (# bases)?
+![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q17) What is the N50 value (# bases)?
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q18) How many contigs did abyss generate?
+![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q18) How many contigs did abyss generate?
 
 
 
@@ -218,7 +218,7 @@ You still do not know the source of this genome. Is it eukaryotic? bacterial? Is
 To investigate this question, do a BLAST search using the <b>online</b> [BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi) tool. Use the Abyss assembly as your query.
 
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q19) Based on the BLAST result, describe the most likely source of this DNA sequence?
+![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q19) Based on the BLAST result, describe the most likely source of this DNA sequence?
 
 
 
