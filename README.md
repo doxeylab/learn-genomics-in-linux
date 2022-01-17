@@ -1,4 +1,4 @@
-# learn-genomics-in-unix
+# learn-genomics-in-linux
 
 This repository contains a tutorial on how to use command-line genomics/bioinformatics tools in Linux.
 It has been designed for BIOL 469 (Genomics) and BIOL 614 (Bioinformatics Tools and Techniques) @ the University of Waterloo.
