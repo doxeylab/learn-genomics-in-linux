@@ -37,7 +37,7 @@ When you are done, you can leave your session by typing...
 exit
 ```
 
-## Once you are logged on | Learning Unix
+## Once you are logged on | Learning the command-line
 
 If you have logged in correctly, you should see a welcome screen.
 
@@ -47,7 +47,7 @@ You are now in a unix command-line environment. For more information and instruc
 * [TeachingUnix](http://www.ee.surrey.ac.uk/Teaching/Unix/) - Another Unix Tutorial
 * [BasicCommands](http://mally.stanford.edu/~sr/computing/basic-unix.html) - List of common commands
 
-## A unix primer
+## A Linux Shell primer
 
 ### Navigating files/folders
 
@@ -283,7 +283,7 @@ scp username@remoteserver.com:/path/to/file.txt /path/to/location/.
 #### Uploading/downloading files via Google cloud's ssh browser
 
 If you are using ssh in a browser window, you can easily upload and download files via the browser.
-Look in the rop right corner for the options window, click `Download file` ([see here](https://raw.githubusercontent.com/doxeylab/learn-genomics-in-unix/master/task1/gcloud-download.png)) and then enter in the path to your file.
+Look in the rop right corner for the options window, click `Download file` ([see here](https://raw.githubusercontent.com/doxeylab/learn-genomics-in-linux/master/task1/gcloud-download.png)) and then enter in the path to your file.
 Remember, your current path can be found using `pwd`. A useful command for printing out the path to your file is:
 
 ```
@@ -334,21 +334,21 @@ You will be asked to answer the following questions.
 
 Hint: remember to use `man` if you want to explore added functionality of commands.
 
-Download and uncompress this file containing the genome sequence of E. coli K12 https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task1/e-coli-k12-genome.fasta.gz
+Download and uncompress this file containing the genome sequence of E. coli K12 https://github.com/doxeylab/learn-genomics-in-linux/raw/master/task1/e-coli-k12-genome.fasta.gz
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q1 - What is the size of the uncompressed file in megabytes (round to one decimal place)?
+![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q1 - What is the size of the uncompressed file in megabytes (round to one decimal place)?
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q2 - How many characters are in this file?
+![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q2 - How many characters are in this file?
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q3 - How many lines in the file contain the word "ATATATAT"?
+![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q3 - How many lines in the file contain the word "ATATATAT"?
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q4 - What character (A, C, G, or T) is most common in the file?
+![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q4 - What character (A, C, G, or T) is most common in the file?
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q5 - What is the most common trinucleotide in the file? Hint: for an easy way to answer this, try the program `compseq`.
+![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q5 - What is the most common trinucleotide in the file? Hint: for an easy way to answer this, try the program `compseq`.
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q6 - How many times does the word "CCGGAG" occur in the genome sequence?
+![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q6 - How many times does the word "CCGGAG" occur in the genome sequence?
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q7 - What is the answer to the above question if you also include matches on the reverse complement of the genome sequence?
+![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q7 - What is the answer to the above question if you also include matches on the reverse complement of the genome sequence?
 
 
 #### Congratulations. You are now finished Task 1.
