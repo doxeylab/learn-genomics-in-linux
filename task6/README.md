@@ -38,7 +38,7 @@ cd task6 #enters into folder
 First, download the E. coli reference genome:
 
 ```
-wget https://raw.githubusercontent.com/doxeylab/learn-genomics-in-unix/master/task6/ecoli-rel606.fa.gz
+wget https://raw.githubusercontent.com/doxeylab/learn-genomics-in-linux/master/task6/ecoli-rel606.fa.gz
 gunzip ecoli-rel606.fa.gz
 ```
 
@@ -111,7 +111,7 @@ bcftools view calls.bcf > calls.vcf
 
 ```
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q1 - How many total variants are present? Hint: `grep` for a pattern found only in your variant lines.
+![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q1 - How many total variants are present? Hint: `grep` for a pattern found only in your variant lines.
 
 
 ## Locating a key SNP in Lenski's E. coli evolution experiment
@@ -130,19 +130,19 @@ samtools view SRR098038.sorted.bam "ecoli:START-END" > region.sam   # where STAR
 Download the following three files and open these files in `tablet` on your home machine.
 
 - the region.sam file you created above
-- the reference genome ([ecoli-rel606.fa](https://raw.githubusercontent.com/doxeylab/learn-genomics-in-unix/master/task6/ecoli-rel606.fa.gz))
+- the reference genome ([ecoli-rel606.fa](https://raw.githubusercontent.com/doxeylab/learn-genomics-in-linux/master/task6/ecoli-rel606.fa.gz))
 
 Now, locate the region containing the <i>mutS</i> gene within `tablet`, and search for the premature stop codon variant.
 
-Here is an [example read-pileup](https://raw.githubusercontent.com/doxeylab/learn-genomics-in-unix/master/task6/example-pileup.png) in tablet that highlights a variant position.
+Here is an [example read-pileup](https://raw.githubusercontent.com/doxeylab/learn-genomics-in-linux/master/task6/example-pileup.png) in tablet that highlights a variant position.
 
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q2 - Paste a screenshot highlighting this mutation (you will need to zoom in) and show the amino acid translation (see [here](https://software.broadinstitute.org/software/igv/sequence_track_options). 
+![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q2 - Paste a screenshot highlighting this mutation (you will need to zoom in) and show the amino acid translation (see [here](https://software.broadinstitute.org/software/igv/sequence_track_options). 
 
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q3 - The premature stop codon mutation is from the codon "_ _ _ " to "_ _ _ ".
+![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q3 - The premature stop codon mutation is from the codon "_ _ _ " to "_ _ _ ".
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q4 - The amino acid encoded by this codon before this mutation is _____?
+![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q4 - The amino acid encoded by this codon before this mutation is _____?
 
 
 Once you are finished, please delete the files in your task 6 folder like this:
@@ -158,7 +158,7 @@ rm *
 
 # ASSIGNMENT QUESTIONS
 
-The questions for this task are indicated by the lines starting with ![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) above.
+The questions for this task are indicated by the lines starting with ![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) above.
 Submit your answers to questions 1-4 to the QUIZ on LEARN.
 
 
