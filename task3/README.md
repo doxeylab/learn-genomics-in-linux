@@ -13,7 +13,7 @@ Graphical software indicated by (*)
 * [Prokka](https://github.com/tseemann/prokka)
 * [Artemis](http://sanger-pathogens.github.io/Artemis/Artemis/) *
 Note: for Artemis, you may need to first install the JRE (Java Runtime Environment) and/or JDK (Java Development Kit) on your system. Also, if you have difficulties installing the latest version on Windows, try installing version 17.0.1 here: ftp://ftp.sanger.ac.uk/pub/resources/software/artemis/v17.0.1/.
-* uniprot2go.py script located [here](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/task3/uniprot2go.py)
+* uniprot2go.py script located [here](https://github.com/doxeylab/learn-genomics-in-linux/blob/master/task3/uniprot2go.py)
 -- must be installed in /usr/bin
 
 ## Installation
@@ -47,7 +47,7 @@ cp ../task2/abyss-assembly-contigs.fa .
 Now that we have generated a good quality assembly, let's explore the genome sequence itself and do some very basic annotation using `artemis`. 
 
 Visualize the genome you have produced (using `abyss`) with the `Artemis` application. Note: you will need to have `artemis` installed on your local machine.
-You will also need to [<b>download</b>](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task1/gcloud-download.png) your contigs to your local machine. Open your contigs.fa file in `artemis`.
+You will also need to [<b>download</b>](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/task1/gcloud-download.png) your contigs to your local machine. Open your contigs.fa file in `artemis`.
 
 - What are the black vertical lines that appear in the sequence window?
 - How do you product a gc plot of the genome?
@@ -55,9 +55,9 @@ You will also need to [<b>download</b>](https://github.com/doxeylab/learn-genomi
 - How do you mark open reading frames (ORFs)?
 
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q1) How many ORFs are there of length >= 100 nucleotides? 
+![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q1) How many ORFs are there of length >= 100 nucleotides? 
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q2) How many ORFs are theref of length >= 50 nucleotides? 
+![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q2) How many ORFs are theref of length >= 50 nucleotides? 
 
 ## Annotating your genome from Task2 using `prokka`
 
@@ -75,9 +75,9 @@ prokka abyss-assembly-contigs.fa
 
 * Now, locate and download the .gbk file that was produced and view it in `artemis`
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q3) You will notice that there are vertical black lines in the middle of predicted ORFs. What do these lines represent?
+![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q3) You will notice that there are vertical black lines in the middle of predicted ORFs. What do these lines represent?
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q4) Re-start artemis and change your artemis 'Options' to better reflect the source of this genome. Which source did you choose (e.g., "Standard", "Vertebrate Mitochondrial", etc.)?
+![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q4) Re-start artemis and change your artemis 'Options' to better reflect the source of this genome. Which source did you choose (e.g., "Standard", "Vertebrate Mitochondrial", etc.)?
 
 When `prokka` is run without any parameters, it selects 'bacteria' as the default taxonomy.
 
@@ -85,7 +85,7 @@ Look at the `--kingdom` options in `prokka -h` and re-run prokka to use the corr
 
 * Again, open your .gbk file in artemis
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q5) Has anything changed in this genome annotation? Examine the CDSs, tRNAs, and rRNAs, and their annotations.
+![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q5) Has anything changed in this genome annotation? Examine the CDSs, tRNAs, and rRNAs, and their annotations.
 
 
 ## Annotation of an <i>E. coli</i> genome using `prokka`
@@ -95,12 +95,12 @@ Next, let's perform genome annotation on a larger scale.
 * Download (or copy from your task1 folder) the E. coli K12 genome below from task1 and annotate it using `prokka`
 
 ```
-https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task1/e-coli-k12-genome.fasta.gz
+https://github.com/doxeylab/learn-genomics-in-linux/raw/master/task1/e-coli-k12-genome.fasta.gz
 ```
 
 Next, explore the files produced by `prokka`. Start with the .txt file.
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q6) How many genes, rRNAs, tRNAs, and CRISPR loci were predicted? What is the size of the genome in Mb?
+![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q6) How many genes, rRNAs, tRNAs, and CRISPR loci were predicted? What is the size of the genome in Mb?
 
 Prokka also annotates genes based on [COGs](https://www.ncbi.nlm.nih.gov/COG/) and also [E.C.](https://enzyme.expasy.org/) (enzyme commission) numbers. This information can be found in the .tbl file. 
 
@@ -119,10 +119,10 @@ cut -f3 file.txt | sort | uniq | wc -l
 ```
 
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q7) How many genes were annotated with COGs?
+![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q7) How many genes were annotated with COGs?
 
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q8) How many unique enzymatic activities (E.C. numbers) were assigned to the E. coli genome? Note: `1.-.-.-` and `1.1.1.17` would count as two separate E.C. numbers.
+![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q8) How many unique enzymatic activities (E.C. numbers) were assigned to the E. coli genome? Note: `1.-.-.-` and `1.1.1.17` would count as two separate E.C. numbers.
 
 
 
@@ -151,7 +151,7 @@ cat go.annotations | awk '{print $3}' | tr "," "\n" | sort | uniq -c | sort -n -
 Now, there is a lot you can explore using your predicted GO terms for your genome.
 e.g., Suppose you want to find all the predicted DNA binding proteins. Look [here](http://amigo.geneontology.org/amigo) to find the GO ID for "DNA binding".
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q9) How many proteins were annotated with the GO TERM for "DNA binding"? 
+![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q9) How many proteins were annotated with the GO TERM for "DNA binding"? 
 
 ## After annotation: Extracting genes and regions of interest
 
@@ -218,7 +218,7 @@ This should produce a FASTA sequence output of the gene identical to that in the
 
 But you are not interested in the gene sequence; you actually want the upstream regulatory region. Suppose you want to identify the 30-nucleotide long region upstream (before but not including the start codon) of the trpE coding sequence. By modifying the code above, answer the following question.
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q10) What is the 30-nucleotide long sequence immediately upstream of the TrpE coding sequence?
+![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q10) What is the 30-nucleotide long sequence immediately upstream of the TrpE coding sequence?
 
 
 ### Extracting the rRNAs predicted by barrnap
@@ -234,7 +234,7 @@ blastdbcmd -db yourPROKKAoutput.fna -entry_batch rRNAs.txt > rRNAs.fa
 
 Now, to predict taxonomy, we can BLAST these rRNA sequences against the NCBI 16S database for example using [web-BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn). Note, that there may be multiple rRNAs and some of them may be partial sequences.
 
-![](https://github.com/doxeylab/learn-genomics-in-unix/blob/master/task3/16Ssearch.png)
+![](https://github.com/doxeylab/learn-genomics-in-linux/blob/master/task3/16Ssearch.png)
 
 
 ## Analyzing a mystery genome of unknown source
@@ -243,9 +243,9 @@ And now for something a little more difficult.
 
 * Download this "mystery" genome of unknown source
 
-https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task3/mysteryGenome.fna.gz
+https://github.com/doxeylab/learn-genomics-in-linux/raw/master/task3/mysteryGenome.fna.gz
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q11) Based on 16S rRNA sequences, what is the taxonomic origin of this genome (genus and species)? 
+![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q11) Based on 16S rRNA sequences, what is the taxonomic origin of this genome (genus and species)? 
 e.g., "Escherichia coli"
 
 
