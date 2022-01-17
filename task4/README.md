@@ -37,7 +37,7 @@ cp ../task2/abyss-assembly-contigs.fa .
 You will be comparing this genome to another related genome from L. terrestris. Download this genome.
 
 ```
-wget https://github.com/doxeylab/learn-genomics-in-unix/raw/master/task4/l-terrestris.genome.fa
+wget https://github.com/doxeylab/learn-genomics-in-linux/raw/master/task4/l-terrestris.genome.fa
 ```
 
 Make BLAST databases for both.
@@ -61,9 +61,9 @@ Now, download to your local machine the following files:
 
 Open the `act` program that is packaged with `artemis` and input these three files.
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q1) Paste a screenshot of your result.  (3 marks)
+![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q1) Paste a screenshot of your result.  (3 marks)
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q2) Describe the synteny pattern that you are observing. Do you think genomic rearrangements have taken place or is there a strong pattern of shared synteny between both genomes? (2 marks) See [shared synteny](https://en.wikipedia.org/wiki/Synteny#Shared_synteny)
+![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q2) Describe the synteny pattern that you are observing. Do you think genomic rearrangements have taken place or is there a strong pattern of shared synteny between both genomes? (2 marks) See [shared synteny](https://en.wikipedia.org/wiki/Synteny#Shared_synteny)
 
 To help you with this question, consider two genome sequences composed of four genes A-D. One genome has gene order A,B,C,D and the second genome has gene order A,C,B,D. There has clearly been a genomic rearrangement here because C and B have switched places.
 
@@ -79,9 +79,9 @@ Next, find two related genomes (e.g., different strains of same species)  from t
 
 * Repeat the analyses above to perform a structural genome comparison.
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q3) Paste a screenshot of your result. (3 marks)
+![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q3) Paste a screenshot of your result. (3 marks)
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Q4) Describe the synteny patterns that you are observing. (2 marks)
+![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q4) Describe the synteny patterns that you are observing. (2 marks)
 
 
 ## Multiple genome alignment with MAUVE -- Bonus (+1)
@@ -98,7 +98,7 @@ Want to try aligning/comparing more than two genomes?
 
 * Visualize the multiple alignment
 
-![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) Bonus) Paste a screenshot of your result.
+![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Bonus) Paste a screenshot of your result.
 
 
 ---
@@ -106,6 +106,6 @@ Want to try aligning/comparing more than two genomes?
 
 # ASSIGNMENT QUESTIONS
 
-The questions for this task are indicated by the lines starting with ![question](https://github.com/doxeylab/learn-genomics-in-unix/raw/master/questionbox.png) above.
+The questions for this task are indicated by the lines starting with ![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) above.
 Please submit the code you used (when required) as well as the answers to the questions. Submit your assignment to a dropbox on LEARN as a .docx, .txt, or .pdf file.
 
