@@ -299,6 +299,33 @@ This should produce:
 How does this result compare to the result from Lobb et al. (2020) [here](https://pubmed.ncbi.nlm.nih.gov/32345738/) ?
 
 
+Lastly, let's create a heatmap and add in an annotation category
+
+```
+library(pheatmap)
+
+# convert the tbm table back to a 2D matrix
+tb = acast(tbm, Var1 ~ Var2,value.var='value',fill=0)
+tb = t(tb)  #transpose
+
+# let's split the names (EE, WW, etc.) into a matrix that we can use as annotations
+annot = data.frame(do.call("rbind", strsplit(as.character(metadata[,2]), "", fixed = TRUE)))[,c(1,2)]
+rownames(annot) = metadata[,2]
+colnames(annot) = c("Fish_Origin","Water_Origin")
+
+# specify the colors
+ann_colors = list(
+    Fish_Origin = c(E = "gray", W = "dark green"),
+    Water_Origin = c(E = "gray", W = "dark green")
+)
+
+# plot
+pheatmap(tb,annotation_col=annot,cluster_cols=F,annotation_colors=ann_colors)
+```
+
+This should produce:
+
+![](https://github.com/doxeylab/learn-genomics-in-linux/blob/master/task8/pheatmap.png)
 
 
 
