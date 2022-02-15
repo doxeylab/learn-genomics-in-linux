@@ -3,7 +3,7 @@
 In this lab, you will be analyzing 16S and metagenomic data from a study by Lobb et al. (2020) [here](https://pubmed.ncbi.nlm.nih.gov/32345738/).
 This study examined the microbial communities of decomposing fish in local rivers near Waterloo, ON, Canada.
 
-There are 52 samples with the following metadata. 
+There are 48 16S rRNA samples with the following metadata. 
 
 | Sample ID | Name |
 | --------------- | --------------- |
@@ -230,7 +230,73 @@ Now, we can plot using `ggplot2`. Note: the following ggplot command is very par
 ggplot(tbm, aes(Var1,Var2,size = value,fill=value), colsep=c(1:100), rowsep=(1:100), sepwidth=c(5,1)) + geom_point(shape = 21, alpha=0.4) + ggtitle("") + xlab("") + ylab("") + theme_bw() + theme(axis.text = element_text(colour= "black", size = 12), text = element_text(size=15), axis.text.x=element_text(angle=90, vjust = 0.5, hjust = 1))+ geom_text(data=subset(tbm, value > 5),aes(label = round(value, digits = 1)), colour= "black", size= 2.0)+ scale_size_area(max_size = 15,guide="none") + theme(plot.title = element_text(hjust = 0.5))+labs(fill="Proportion\nof reduced\ncommunity (%)")+scale_fill_viridis_c()
 
 ```
-This will produce the following plot:
+This should produce the following plot:
 
 ![](https://github.com/doxeylab/learn-genomics-in-linux/blob/master/task8/bubbleplot1.png)
+
+We can also create a barplot by doing the following:
+
+```
+ggplot(tbm, aes(fill=Var2, y=value, x=Var1)) + 
+    geom_bar(position="fill", stat="identity", col="grey50") +
+	scale_y_continuous(labels=scales::percent) +
+	xlab("") + ylab("Relative frequency") + labs(fill="Family") +
+	theme(axis.text.x= element_text(angle = 90, hjust = 1))
+
+```
+
+... which should produce:
+
+![](https://github.com/doxeylab/learn-genomics-in-linux/blob/master/task8/barplot1.png)
+
+
+## Adding in metadata annotations
+
+The last plot contains sample names, but let's replace these names with annotations from the metadata that are more informative.
+
+First, make sure you have a `metadata.txt` text file that contains the 48 samples (column 1) and names (column 2) listed at the top of the page.
+It should look like this:
+
+```
+SRS6112281 WW1.1
+SRS6112282 WW1.2
+SRS6112283 WW1.3
+SRS6112267 EE1.1
+SRS6112268 EE1.2
+SRS6112279 EE1.3
+...
+```
+
+Now, load in your metadata
+```
+metadata = read.table("metadata.txt")
+```
+
+Now, let's subset our data matrix to include only the metadata samples, and let's also re-order the variables so that they plot in the desired order
+
+```
+#subset tbm to only include those samples in metadata
+tbm = tbm[which(tbm[,1] %in% metadata[,1]),]
+tbm[,1] = metadata[match(tbm[,1],metadata[,1]),2]
+tbm$Var1 = factor(tbm$Var1,levels= metadata[,2])
+
+ggplot(tbm, aes(fill=Var2, y=value, x=Var1)) + 
+    geom_bar(position="fill", stat="identity", col="grey50") +
+	scale_y_continuous(labels=scales::percent) +
+	xlab("") + ylab("Relative frequency") + labs(fill="Family") +
+	theme(axis.text.x= element_text(angle = 90, hjust = 1))
+```
+
+This should produce:
+
+![](https://github.com/doxeylab/learn-genomics-in-linux/blob/master/task8/barplot2.png)
+
+
+How does this result compare to the result from Lobb et al. (2020) [here](https://pubmed.ncbi.nlm.nih.gov/32345738/) ?
+
+
+
+
+
+
 
