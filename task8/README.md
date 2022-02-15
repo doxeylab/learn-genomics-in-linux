@@ -61,7 +61,7 @@ Our goal will be to perform taxonomic profiling of these 16S rRNA datasets using
 
 #### Graphical tools
 
-You will also need to download and install R on your own machine with the following packages
+You will also need to download and install [R](https://www.r-project.org) on your own machine with the following packages
 
 * ggplot2
 * pheatmap
@@ -184,7 +184,7 @@ python2.7 /usr/local/bin/Bracken-2.5/analysis_scripts/combine_bracken_outputs.py
 
 ## Plotting results in R
 
-Now, download your `combined.order.out` file to your local computer and load `R` for further analysis and plotting.
+Now, download your `combined.order.out` file to your local computer and load [R](https://www.r-project.org/) for further analysis and plotting.
 
 First load these libraries. Install these first if they are not already installed.
 
