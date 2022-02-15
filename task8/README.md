@@ -236,7 +236,7 @@ ggplot(tbm, aes(Var1,Var2,size = value,fill=value), colsep=c(1:100), rowsep=(1:1
 ```
 This should produce the following plot:
 
-![](https://github.com/doxeylab/learn-genomics-in-linux/blob/master/task8/bubbleplot1.png)
+![](https://github.com/doxeylab/learn-genomics-in-linux/blob/master/task8/bubbleplot.png)
 
 We can also create a barplot by doing the following:
 
