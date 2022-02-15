@@ -102,5 +102,25 @@ fastq2=/fsys1/data/lobb-et-al/SRS6112303_2.fastq
 
 kraken2 --db $krakenDB --paired --report report.txt --output kraken.out $fastq1 $fastq2
 
-bracken -d $krakenDB -l $CLASSIFICATION_LVL -i kraken.out -o bracken.out
+bracken -d $krakenDB -l $CLASSIFICATION_LVL -i report.txt -o bracken.out
+```
+
+`bracken.out` will look like this:
+
+```
+name	taxonomy_id	taxonomy_lvl	kraken_assigned_reads	added_reads	new_est_reads	fraction_total_reads
+Parabacteroides distasonis	2601	S	8	53	61	0.00554
+Parabacteroides gordonii	2602	S	1	37	38	0.00347
+Bacteroides fragilis	2596	S	11	2044	2055	0.18386
+Bacteroides uniformis	2599	S	1	9	10	0.00094
+Clostridium pasteurianum	2769	S	278	346	624	0.05586
+Clostridium perfringens	2770	S	146	986	1132	0.10128
+Clostridium subterminale	2772	S	78	2011	2089	0.18691
+Clostridium bowmanii	2764	S	13	64	77	0.00692
+Clostridium butyricum	2765	S	10	102	112	0.01009
+Clostridium neonatale	2768	S	3	33	36	0.00328
+Alkaliphilus transvaalensis	2762	S	3	1	4	0.00037
+Sporomusa polytropa	2800	S	4	98	102	0.00913
+Veillonella dispar	2801	S	22	255	277	0.02478
+
 ```
