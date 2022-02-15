@@ -122,5 +122,7 @@ Clostridium neonatale	2768	S	3	33	36	0.00328
 Alkaliphilus transvaalensis	2762	S	3	1	4	0.00037
 Sporomusa polytropa	2800	S	4	98	102	0.00913
 Veillonella dispar	2801	S	22	255	277	0.02478
+...
+...
 
 ```
