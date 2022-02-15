@@ -232,8 +232,7 @@ tbm$Var2 <- factor(tbm$Var2, levels = row.names(as.table(sort(colMeans(tb_sub)))
 Now, we can plot using `ggplot2`. Note: the following ggplot command is very parameter-rich, and it can be a lot simpler than this.
 
 ```
-ggplot(tbm, aes(Var1,Var2,size = value,fill=value), colsep=c(1:100), rowsep=(1:100), sepwidth=c(5,1)) + geom_point(shape = 21, alpha=0.4) + ggtitle("") + xlab("") + ylab("") + theme(axis.text = element_text(colour= "black", size = 12), text = element_text(size=15), axis.text.x=element_text(angle=90, vjust = 0.5, hjust = 1))+ geom_text(data=subset(tbm, value > 5),aes(label = round(value, digits = 1)), colour= "black", size= 2.0)+ scale_size_area(max_size = 15,guide="none") + theme(plot.title = element_text(hjust = 0.5)) + labs(fill="Relative\nfrequency (%)") + scale_fill_viridis_c()
-
+ggplot(tbm, aes(Var1,Var2,size = value,fill=value), colsep=c(1:100), rowsep=(1:100), sepwidth=c(5,1)) + geom_point(shape = 21, alpha=0.4) + ggtitle("") + xlab("") + ylab("") + theme(axis.text = element_text(colour= "black", size = 12), text = element_text(size=15), axis.text.x=element_text(angle=90, vjust = 0.5, hjust = 1))+ scale_size_area(max_size = 15,guide="none") + labs(fill="Relative\nfrequency (%)") + scale_fill_viridis_c()
 ```
 This should produce the following plot:
 
