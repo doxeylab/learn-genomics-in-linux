@@ -92,4 +92,15 @@ fastq-dump --split-files SRS6112303 SRS6112301 SRS6112300 SRS6112299 SRS6112298 
 
 Tools such as `QIIME2` and `Mothur` are common for analyzing 16S rRNA sequences. For this tutorial, we will be using a different tool called `Kraken2`.
 
+Suppose we wanted to analyze a single sample (e.g., SRS6112303). We can do so with the following Kraken2 command:
 
+```
+CLASSIFICATION_LVL=G  # this will set an environmental variable for the taxonomic level of classification desired (G = "Genus", S = "Species", etc.)
+krakenDB=/data/krakendb/16S_Greengenes_k2db/  #this is the location of the kraken2 database you want to use for classification
+fastq1=/fsys1/data/lobb-et-al/SRS6112303_1.fastq
+fastq2=/fsys1/data/lobb-et-al/SRS6112303_2.fastq
+
+kraken2 --db $krakenDB --paired --report report.txt --output kraken.out $fastq1 $fastq2
+
+bracken -d $krakenDB -l $CLASSIFICATION_LVL -i kraken.out -o bracken.out
+```
