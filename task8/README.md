@@ -1,4 +1,4 @@
-# Task8 - Computational metagenomics tutorial (16S amplicon and shotgun metagenomics)
+# Task8 - Analysis of 16S amplicon sequencing data using Kraken2/Bracken
 
 In this lab, you will be analyzing 16S and metagenomic data from a study by Lobb et al. (2020) [here](https://pubmed.ncbi.nlm.nih.gov/32345738/).
 This study examined the microbial communities of decomposing fish in local rivers near Waterloo, ON, Canada.
