@@ -321,7 +321,7 @@ ann_colors = list(
 )
 
 # plot
-pheatmap(tb,annotation_col=annot,cluster_cols=F,annotation_colors=ann_colors)
+pheatmap(tb,annotation_col=annot,cluster_cols=F,annotation_colors=ann_colors,color = viridis(1000))
 ```
 
 This should produce:
