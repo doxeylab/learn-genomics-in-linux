@@ -155,3 +155,23 @@ do
 
 done < $1
 ```
+
+Let's now run `runAll.bash` to apply Kraken2 and Bracken to all of our 16S samples.
+
+```
+#first let's create a new folder
+mkdir order_classification
+
+cd order_classification
+
+bash runAll.bash  # now wait a while....
+
+```
+
+Once completed, you will see that your folder is full of .bracken output files.
+To merge these together into a single file containing bracken output for all your samples, do the following:
+
+
+```
+python2.7 /usr/local/bin/Bracken-2.5/analysis_scripts/combine_bracken_outputs.py --files $(ls *.bracken.out) -o combined.order.out
+```
