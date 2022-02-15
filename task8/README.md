@@ -179,5 +179,58 @@ python2.7 /usr/local/bin/Bracken-2.5/analysis_scripts/combine_bracken_outputs.py
 
 ## Plotting results in R
 
+Now, download your `combined.order.out` file to your local computer and load `R` for further analysis and plotting.
+
+First load these libraries. Install these first if they are not already installed.
+
+```
+library(ggplot2)
+library(reshape2)
+library(viridisLite)
+```
+
+Next, load your data
+
+```
+tb = read.delim("combined.order.out",header=T,row.names=1)
+
+#Bracken output has _frac and _num columns. We will just analyze the _num columns.
+tbp = tb[,grep("_num",colnames(tb))]
+
+#Transpose the table
+tbp <- t(tbp)
+
+#Convert to proportions
+tb_prop<-as.data.frame(round(prop.table(as.matrix(tbp), 1) * 100,1))
+
+#Choose a selection of taxa with a % > 3 (Note: might have to play around with this until you get a reasonable number of taxa to display)
+tb_sub <- tb_prop[,apply(tb_prop, 2, function(x) max(x, na.rm = TRUE))>3]
+
+```
+
+For plotting, we have to do a few more modifications to the data matrix
+```
+#Melt the dataframe for plotting
+tbm <- as.data.frame(melt(as.matrix(tb_sub)))
+
+#fix labels
+tbm[,1] = within(tbm, Var1<-data.frame(do.call('rbind', strsplit(as.character(Var1), '.', fixed=TRUE))))[,1][,1]
+
+#Turn 0s into NAs
+tbm[tbm == 0] <- NA
+
+#Set the order of the taxa on the plot (Note: optional)
+tbm$Var2 <- factor(tbm$Var2, levels = row.names(as.table(sort(colMeans(tb_sub)))))
+
+```
+
+Now, we can plot using `ggplot2`. Note: the following ggplot command is very parameter-rich, and it can be a lot simpler than this.
+
+```
+ggplot(tbm, aes(Var1,Var2,size = value,fill=value), colsep=c(1:100), rowsep=(1:100), sepwidth=c(5,1)) + geom_point(shape = 21, alpha=0.4) + ggtitle("") + xlab("") + ylab("") + theme_bw() + theme(axis.text = element_text(colour= "black", size = 12), text = element_text(size=15), axis.text.x=element_text(angle=90, vjust = 0.5, hjust = 1))+ geom_text(data=subset(tbm, value > 5),aes(label = round(value, digits = 1)), colour= "black", size= 2.0)+ scale_size_area(max_size = 15,guide="none") + theme(plot.title = element_text(hjust = 0.5))+labs(fill="Proportion\nof reduced\ncommunity (%)")+scale_fill_viridis_c()
+
+```
+This will produce the following plot:
+
 ![](https://github.com/doxeylab/learn-genomics-in-linux/blob/master/task8/bubbleplot1.png)
 
