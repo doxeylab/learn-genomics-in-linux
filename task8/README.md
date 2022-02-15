@@ -90,6 +90,8 @@ fastq-dump --split-files SRS6112303 SRS6112301 SRS6112300 SRS6112299 SRS6112298 
 
 ## Taxonomic classification of 16S reads using Kraken2
 
+### Analyzing single samples
+
 Tools such as `QIIME2` and `Mothur` are common for analyzing 16S rRNA sequences. For this tutorial, we will be using a different tool called `Kraken2`.
 
 Suppose we wanted to analyze a single sample (e.g., SRS6112303). We can do so with the following Kraken2 command:
@@ -125,4 +127,31 @@ Veillonella dispar	2801	S	22	255	277	0.02478
 ...
 ...
 
+```
+
+### Analyzing many samples
+
+But these commands run Kraken2/Bracken on only a single sample. What do we do if we want to run them on all samples?
+
+First, you need to have a list of the samples you want to analyze. This has been done for you with the file at `/fsys1/data/lobb-et-al/files.txt`.
+
+Then, we will create a bash script called `runAll.bash` with the following contents.
+
+```
+#!/bin/bash
+
+# $1 is the file containing the list of samples
+# $2 is the classification level
+
+CLASSIFICATION_LVL=$2
+
+while IFS=$'\t' read sample
+do 
+    echo "processing sample $sample"
+
+    kraken2 --db /data/krakendb/16S_Greengenes_k2db/ --paired --report $sample.$CLASSIFICATION_LVL.kraken --output $sample.$CLASSIFICATION_LVL.kraken.out /fsys1/data/lobb-et-al/${sample}_1.fastq /fsys1/data/lobb-et-al/${sample}_2.fastq
+
+    bracken -d /data/krakendb/16S_Greengenes_k2db -l $CLASSIFICATION_LVL -i $sample.$CLASSIFICATION_LVL.kraken -o $sample.$CLASSIFICATION_LVL.bracken.out
+
+done < $1
 ```
