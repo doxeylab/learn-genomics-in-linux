@@ -168,7 +168,8 @@ mkdir order_classification
 
 cd order_classification
 
-bash runAll.bash  # now wait a while....
+# this will perform taxonomic classification at the Order level
+bash runAll.bash /fsys1/data/lobb-et-al/files.txt O  # now wait a while....
 
 ```
 
