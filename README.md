@@ -13,6 +13,7 @@ It is divided into a series of tasks
   * [Task 5](task5/) - Comparative genomics: gene set comparison between two genomes
   * [Task 6](task6/) - Resequencing: variant calling from NGS data
   * [Task 7](task7/) - Transcriptomics and detection of differentially expressed genes
+  * [Task 8](task8/) - 16S rRNA amplicon sequencing analysis using Kraken2+Bracken
   * TBD - ChIP-seq data analysis
   * TBD - GWAS
   * TBD - Metagenomics: taxonomic and functional profiling
