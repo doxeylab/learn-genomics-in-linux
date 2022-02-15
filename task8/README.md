@@ -175,3 +175,9 @@ To merge these together into a single file containing bracken output for all you
 ```
 python2.7 /usr/local/bin/Bracken-2.5/analysis_scripts/combine_bracken_outputs.py --files $(ls *.bracken.out) -o combined.order.out
 ```
+
+
+## Plotting results in R
+
+![](https://github.com/doxeylab/learn-genomics-in-linux/blob/master/task8/bubbleplot1.png)
+
