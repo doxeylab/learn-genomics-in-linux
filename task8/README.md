@@ -3,18 +3,52 @@
 In this lab, you will be analyzing 16S and metagenomic data from a study by Lobb et al. (2020) [here](https://pubmed.ncbi.nlm.nih.gov/32345738/).
 This study examined the microbial communities of decomposing fish in local rivers near Waterloo, ON, Canada.
 
-There are 52 samples with the following metadata.
+There are 52 samples with the following metadata. 
 
-| Sample ID | Status |
+| Sample ID | Name |
 | --------------- | --------------- |
-| SRR8451881 | Control |
-| SRR8451882 | Control |
-| SRR8451883 | Control |
-| SRR8451884 | Control |
-| SRR8451885 | TSE |
-| SRR8451886 | TSE |
-| SRR8451887 | TSE |
-| SRR8451888 | TSE |
+| SRS6112281 | WW1.1 |
+| SRS6112282 | WW1.2 |
+| SRS6112283 | WW1.3 |
+| SRS6112267 | EE1.1 |
+| SRS6112268 | EE1.2 |
+| SRS6112279 | EE1.3 |
+| SRS6112285 | WW4.1 |
+| SRS6112284 | WW4.2 |
+| SRS6112286 | WW4.3 |
+| SRS6112293 | WE4.1 |
+| SRS6112295 | WE4.2 |
+| SRS6112296 | WE4.3 |
+| SRS6112290 | EE4.1 |
+| SRS6112302 | EE4.2 |
+| SRS6112304 | EE4.3 |
+| SRS6112271 | EW4.1 |
+| SRS6112272 | EW4.2 |
+| SRS6112273 | EW4.3 |
+| SRS6112287 | WW8.1 |
+| SRS6112288 | WW8.2 |
+| SRS6112289 | WW8.3 |
+| SRS6112297 | WE8.1 |
+| SRS6112298 | WE8.2 |
+| SRS6112299 | WE8.3 |
+| SRS6112305 | EE8.1 |
+| SRS6112306 | EE8.2 |
+| SRS6112307 | EE8.3 |
+| SRS6112274 | EW8.1 |
+| SRS6112275 | EW8.2 |
+| SRS6112276 | EW8.3 |
+| SRS6112291 | WW10.1 |
+| SRS6112292 | WW10.2 |
+| SRS6112294 | WW10.3 |
+| SRS6112300 | WE10.1 |
+| SRS6112301 | WE10.2 |
+| SRS6112303 | WE10.3 |
+| SRS6112308 | EE10.1 |
+| SRS6112269 | EE10.2 |
+| SRS6112270 | EE10.3 |
+| SRS6112277 | EW10.1 |
+| SRS6112278 | EW10.2 |
+| SRS6112280 | EW10.3 |
 
 Our goal will be to perform taxonomic profiling by analyzing the 16S dataset. We will then perform targeted metagenome assembly to investigate a sample of interest.
 
