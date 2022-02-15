@@ -315,8 +315,8 @@ colnames(annot) = c("Fish_Origin","Water_Origin")
 
 # specify the colors
 ann_colors = list(
-    Fish_Origin = c(E = "gray", W = "dark green"),
-    Water_Origin = c(E = "gray", W = "dark green")
+    Fish_Origin = c(W = "#EBEBEB", E = "#424242"),
+    Water_Origin = c(W = "#EBEBEB", E = "#424242")
 )
 
 # plot
