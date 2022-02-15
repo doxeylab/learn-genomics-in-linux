@@ -1,1 +1,61 @@
+# Task8 - Computational metagenomics tutorial (16S amplicon and shotgun metagenomics)
+
+In this lab, you will be analyzing 16S and metagenomic data from a study by Lobb et al. (2020) [here](https://pubmed.ncbi.nlm.nih.gov/32345738/).
+This study examined the microbial communities of decomposing fish in local rivers near Waterloo, ON, Canada.
+
+There are 52 samples with the following metadata.
+
+| Sample ID | Status |
+| --------------- | --------------- |
+| SRR8451881 | Control |
+| SRR8451882 | Control |
+| SRR8451883 | Control |
+| SRR8451884 | Control |
+| SRR8451885 | TSE |
+| SRR8451886 | TSE |
+| SRR8451887 | TSE |
+| SRR8451888 | TSE |
+
+Our goal will be to perform taxonomic profiling by analyzing the 16S dataset. We will then perform targeted metagenome assembly to investigate a sample of interest.
+
+### Requirements
+
+#### Command-line tools
+* Access to a linux-based OS running BASH
+* kraken2 and Bracken
+* metaspades
+
+#### Graphical tools
+
+You will also need to download and install R on your own machine with the following packages
+
+* ggplot2
+* pheatmap
+* reshape2
+* viridisLite
+
+
+## Getting Started
+
+* Login to your linux environment and create a new folder for your task7
+
+```
+mkdir task8  #creates folder
+cd task8 #enters into folder
+```
+
+## Retrieving the raw data
+
+The data has already been downloaded for you, and is located in the `/fsys/data/lobb-et-al/` folder
+
+If you're curious, the original data was downloaded from the NCBI SRA using this command:
+```
+fastq-dump --split-files SRS6112303 SRS6112301 SRS6112300 SRS6112299 SRS6112298 SRS6112297 SRS6112296 SRS6112295 SRS6112293 SRS6112294 SRS6112292 SRS6112291 SRS6112289 SRS6112288 SRS6112287 SRS6112286 SRS6112284 SRS6112285 SRS6112283 SRS6112282 SRS6112281 SRS6112280 SRS6112278 SRS6112277 SRS6112276 SRS6112275 SRS6112274 SRS6112273 SRS6112272 SRS6112271 SRS6112270 SRS6112269 SRS6112308 SRS6112307 SRS6112306 SRS6112305 SRS6112304 SRS6112302 SRS6112290 SRS6112279 SRS6112268 SRS6112267 SRS6098991 SRS6098990 SRS6098989 SRS6098988 SRS6098999 SRS6098998 SRS6098997 SRS6098996 SRS6098995 SRS6098994 SRS6098993 SRS6098992 SRS6098987 SRS6098986
+```
+
+
+## Taxonomic classification of 16S reads using Kraken2
+
+Tools such as `QIIME2` and `Mothur` are common for analyzing 16S rRNA sequences. For this tutorial, we will be using a different tool called `Kraken2`.
+
 
