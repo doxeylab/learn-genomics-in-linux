@@ -244,7 +244,7 @@ We can also create a barplot by doing the following:
 ggplot(tbm, aes(fill=Var2, y=value, x=Var1)) + 
     geom_bar(position="fill", stat="identity", col="grey50") +
 	scale_y_continuous(labels=scales::percent) +
-	xlab("") + ylab("Relative frequency") + labs(fill="Family") +
+	xlab("") + ylab("Relative frequency") + labs(fill="Order") +
 	theme(axis.text.x= element_text(angle = 90, hjust = 1))
 
 ```
@@ -287,7 +287,7 @@ tbm$Var1 = factor(tbm$Var1,levels= metadata[,2])
 ggplot(tbm, aes(fill=Var2, y=value, x=Var1)) + 
     geom_bar(position="fill", stat="identity", col="grey50") +
 	scale_y_continuous(labels=scales::percent) +
-	xlab("") + ylab("Relative frequency") + labs(fill="Family") +
+	xlab("") + ylab("Relative frequency") + labs(fill="Order") +
 	theme(axis.text.x= element_text(angle = 90, hjust = 1))
 ```
 
