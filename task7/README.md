@@ -146,6 +146,24 @@ setwd("/path/to/quants")
 
 ```
 
+Download the gencode reference transcriptome
+
+```
+system("wget https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_39/gencode.v39.metadata.HGNC.gz")
+system("gunzip gencode.v39.metadata.HGNC.gz")
+genesymbols = read.delim("gencode.v39.metadata.HGNC")
+```
+
+Read the quant files into R
+
+```
+files = paste(list.dirs('.', recursive=FALSE),"/","quant.sf",sep='')
+#make sure to check your list of files to ensure that this step worked
+
+txi.salmon <- tximport(files, type = "salmon", tx2gene = genesymbols)
+```
+
+
 ![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) (2 marks) - Produce a table of the top 10 differentially expressed genes along with their fold-changes and adjusted p-values. Also include the code you used to do so.
 
 
