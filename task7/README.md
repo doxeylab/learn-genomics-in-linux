@@ -139,7 +139,7 @@ Now, open R and load packages and set working directory:
 ```
 #load required packages
 library(tximport)
-library(deseq2)
+library(DESeq2)
 
 #go to your folder containing your quant files you just downloaded
 setwd("/path/to/quants")
