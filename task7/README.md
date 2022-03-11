@@ -149,9 +149,9 @@ setwd("/path/to/quants")
 Download the gencode reference transcriptome
 
 ```
-system("wget https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_39/gencode.v39.metadata.HGNC.gz")
-system("gunzip gencode.v39.metadata.HGNC.gz")
-genesymbols = read.delim("gencode.v39.metadata.HGNC")
+system("wget https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_29/gencode.v29.metadata.HGNC.gz")
+system("gunzip gencode.v29.metadata.HGNC.gz")
+genesymbols = read.delim("gencode.v29.metadata.HGNC")
 ```
 
 Read the quant files into R
