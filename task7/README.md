@@ -44,41 +44,36 @@ cd task7 #enters into folder
 
 ## Retrieving the raw data and reference transcriptome
 
-First, download a human reference transcriptome:
+First, we need a human reference transcriptome and Salmon index.
+
+This has been done for you already and the files are located at : `/fsys1/data/task4`
+
+These files were produced as follows:
 
 ```
 #download a pre-made reference transcriptome from Gencode
 wget ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_29/gencode.v29.transcripts.fa.gz
 gunzip gencode.v29.transcripts.fa.gz
+
+#index your reference transcriptome so that it can be analyzed with `Salmon`
+salmon index -t gencode.v29.transcripts.fa -i gencode_v29_idx
+
+
 ```
 
-Next, download the RNA-seq data from the public EBI FTP site. We will be downloading 8 samples (each has forward and reverse .fastq reads) - so 16 files total. To download all of these automatically, you can download a list of urls with `wget` as follows:
+Next, we need the the RNA-seq data (8 samples -- fw and rv reads, so 16 total files) from the public EBI FTP site. This has also been downloaded for you. These files were downloaded using the following code:
 
 ```
 #download the list of urls first - NOTE: THIS STEP CAN TAKE A LONG TIME (~1 hr)
 wget https://raw.githubusercontent.com/doxeylab/learn-genomics-in-linux/master/task7/ftp-list.txt
 
-#now create a folder for your data
-mkdir data
-cd data
-
 #download all of the .fastq files into your data folder
 wget -i ../ftp-list.txt
 
-#go back to your task7 folder
-cd ..
 ```
 
 
 ## Transcript quantification with Salmon
-
-
-Now, before you can measure transcript abundance, you must index your reference transcriptome so that it can be analyzed with `Salmon`
-
-```
-salmon index -t gencode.v29.transcripts.fa -i gencode_v29_idx
-```
-
 
 Now, let's measure transcript abundance using `Salmon`. For a single sample with paired-end reads (e.g., `forward_reads.fastq.gz` and `reverse_reads.fastq.gz`, this can be done using the following line:
 
@@ -93,7 +88,7 @@ But the above line is just an example for a single sample. Here is a .bash scrip
 #download bash script
 wget https://raw.githubusercontent.com/doxeylab/learn-genomics-in-linux/master/task7/runSalmon.bash
 
-#run bash script. This may take a while...
+#run bash script. This may take a few hours...
 bash runSalmon.bash
 
 ```
