@@ -163,6 +163,25 @@ files = paste(list.dirs('.', recursive=FALSE),"/","quant.sf",sep='')
 txi.salmon <- tximport(files, type = "salmon", tx2gene = genesymbols, ignoreAfterBar =T)
 ```
 
+Run DESeq2 to detect differentially expressed genes between the two categories
+
+```
+meta = data.matrix(cbind(files,as.numeric(c(0,0,0,0,1,1,1,1))))
+colnames(meta) = c("filenames","category")
+
+dds <- DESeqDataSetFromTximport(txi.salmon, meta, ~as.factor(category))   # no differential design
+dds <- DESeq(dds)
+
+res <- results(dds, lfcThreshold=0.5,alpha=0.01)
+```
+
+Examine the results
+
+```
+summary(res)
+
+```
+
 
 ![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) (2 marks) - Produce a table of the top 10 differentially expressed genes along with their fold-changes and adjusted p-values. Also include the code you used to do so.
 
