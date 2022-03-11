@@ -134,11 +134,15 @@ Now, on your local machine, open your terminal and download the following quant 
 scp -r userid@genomics1.private.uwaterloo.ca:~/task4/quants/ .
 ```
 
-Now, open R and load your packages:
+Now, open R and load packages and set working directory:
 
 ```
+#load required packages
 library(tximport)
 library(deseq2)
+
+#go to your folder containing your quant files you just downloaded
+setwd("/path/to/quants")
 
 ```
 
