@@ -38,8 +38,8 @@ You will also need to download and install R on your own machine with the follow
 * Login to your linux environment and create a new folder for your task7
 
 ```
-mkdir task7  #creates folder
-cd task7 #enters into folder
+mkdir transcriptomics-task  #creates folder
+cd transcriptomics-task #enters into folder
 ```
 
 ## Retrieving the raw data and reference transcriptome
@@ -48,7 +48,7 @@ First, we need a human reference transcriptome and Salmon index.
 
 This has been done for you already and the files are located at : `/fsys1/data/task4`
 
-These files were produced as follows:
+If you are curious and would like to know how this was done, see below, but again this is not needed.
 
 ```
 #download a pre-made reference transcriptome from Gencode
@@ -75,7 +75,7 @@ wget -i ../ftp-list.txt
 
 ## Transcript quantification with Salmon
 
-Now, let's measure transcript abundance using `Salmon`. For a single sample with paired-end reads (e.g., `forward_reads.fastq.gz` and `reverse_reads.fastq.gz`, this can be done using the following line:
+Now, you are going to measure transcript abundance using `Salmon`. For a single sample with paired-end reads (e.g., `forward_reads.fastq.gz` and `reverse_reads.fastq.gz`, this could be done using the following line:
 
 ```
 #result will be output to "quants" folder
@@ -83,7 +83,7 @@ Now, let's measure transcript abundance using `Salmon`. For a single sample with
 salmon quant -i gencode_v29_idx -l A -1 forward_reads.fastq.gz -2 reverse_reads.fastq.gz -p 6 -o quants
 ```
 
-But the above line is just an example for a single sample. Here is a .bash script that will run `Salmon` on all of the 8 samples we have just downloaded.
+But the above line is just an example for a single sample. Here is a .bash script that will run `Salmon` on all of the 8 samples we have just downloaded. Run this bash script in your `/transcriptomics-task` folder
 ```
 #download bash script
 wget https://raw.githubusercontent.com/doxeylab/learn-genomics-in-linux/master/task7/runSalmon.bash
