@@ -160,7 +160,7 @@ Read the quant files into R
 files = paste(list.dirs('.', recursive=FALSE),"/","quant.sf",sep='')
 #make sure to check your list of files to ensure that this step worked
 
-txi.salmon <- tximport(files, type = "salmon", tx2gene = genesymbols)
+txi.salmon <- tximport(files, type = "salmon", tx2gene = genesymbols, ignoreAfterBar =T)
 ```
 
 
