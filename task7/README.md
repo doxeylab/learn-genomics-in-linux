@@ -125,7 +125,8 @@ On your local machine, install the following R packages:
 
 ```
 tximport
-deseq2
+DEseq2
+EnhancedVolcano
 ```
 
 Now, on your local machine, open your terminal and download the following quant files produced by Salmon to your local machine
@@ -140,6 +141,7 @@ Now, open R and load packages and set working directory:
 #load required packages
 library(tximport)
 library(DESeq2)
+library(EnhancedVolcano)
 
 #go to your folder containing your quant files you just downloaded
 setwd("/path/to/quants")
