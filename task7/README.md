@@ -184,6 +184,18 @@ summary(res)
 
 ```
 
+![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) - How many significant up- and down-expressed genes were detected?
+
+
+Generate a volcano plot.
+
+```
+EnhancedVolcano(res,
+    lab = rownames(res),
+    x = 'log2FoldChange',
+    y = 'pvalue')
+```
+
 
 ![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) (2 marks) - Produce a table of the top 10 differentially expressed genes along with their fold-changes and adjusted p-values. Also include the code you used to do so.
 
