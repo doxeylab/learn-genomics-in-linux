@@ -45,7 +45,7 @@ cd transcriptomics-task #enters into folder
 ## Retrieving the raw data and reference transcriptome
 
 **NOTE: This has been done for you already and the files are located at : `/fsys1/data/task4`**
-If you are curious and would like to know how this was done, see below, but again this is not needed, so you can skip ahead to the next section.
+If you are curious and would like to know how this was done, see below, but again this is not needed, so you can skip ahead to the next section called "Transcript quantification with Salmon".
 
 ### Download human reference transcriptome and create a Salmon index
 
