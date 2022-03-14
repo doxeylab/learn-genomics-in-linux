@@ -188,7 +188,7 @@ summary(res)
 
 ```
 
-![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) - How many significant up- and down-expressed genes were detected?
+![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q3 - How many significant up- and down-expressed genes were detected?
 
 
 Generate a volcano plot.
@@ -201,7 +201,10 @@ EnhancedVolcano(res,
 ```
 
 
-![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) (2 marks) - Produce a table of the top 10 differentially expressed genes along with their fold-changes and adjusted p-values. Also include the code you used to do so.
+![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q4 - Produce a table of the top 10 differentially expressed genes along with their fold-changes and adjusted p-values. Also include the code you used to do so.
+
+![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q5 - Paste an image of a volcano plot.
+
 
 
 ---
@@ -209,7 +212,7 @@ EnhancedVolcano(res,
 # ASSIGNMENT QUESTIONS
 
 The questions for this task are indicated by the lines starting with ![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) above.
-Please submit your answers under quizzes on LEARN.
+Please submit your answers in the dropbox on LEARN.
 
 
 
