@@ -169,9 +169,13 @@ Run DESeq2 to detect differentially expressed genes between the two categories
 
 ```
 meta = data.matrix(cbind(files,as.numeric(c(0,0,0,0,1,1,1,1))))
+
+#check that the first four samples are control samples (0) and the last four are TSE (1)
+meta
+
 colnames(meta) = c("filenames","category")
 
-dds <- DESeqDataSetFromTximport(txi.salmon, meta, ~as.factor(category))   # no differential design
+dds <- DESeqDataSetFromTximport(txi.salmon, meta, ~as.factor(category))   # this is detecting DEGs between the "0" and "1" samples
 dds <- DESeq(dds)
 
 res <- results(dds, lfcThreshold=0.5,alpha=0.01)
