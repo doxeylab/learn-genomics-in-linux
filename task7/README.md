@@ -44,11 +44,10 @@ cd transcriptomics-task #enters into folder
 
 ## Retrieving the raw data and reference transcriptome
 
-First, we need a human reference transcriptome and Salmon index.
+**NOTE: This has been done for you already and the files are located at : `/fsys1/data/task4`**
+If you are curious and would like to know how this was done, see below, but again this is not needed, so you can skip ahead to the next section.
 
-This has been done for you already and the files are located at : `/fsys1/data/task4`
-
-If you are curious and would like to know how this was done, see below, but again this is not needed.
+### Download human reference transcriptome and create a Salmon index
 
 ```
 #download a pre-made reference transcriptome from Gencode
@@ -58,8 +57,9 @@ gunzip gencode.v29.transcripts.fa.gz
 #index your reference transcriptome so that it can be analyzed with `Salmon`
 salmon index -t gencode.v29.transcripts.fa -i gencode_v29_idx
 
-
 ```
+
+### Download the RNA-seq dataset
 
 Next, we need the the RNA-seq data (8 samples -- fw and rv reads, so 16 total files) from the public EBI FTP site. This has also been downloaded for you. These files were downloaded using the following code:
 
