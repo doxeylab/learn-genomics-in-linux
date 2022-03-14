@@ -1,4 +1,4 @@
-# Task7 - Transcriptomics and detection of differentially expressed genes (DEGs)
+# Transcriptomics and detection of differentially expressed genes (DEGs)
 
 In this lab, you will be analyzing RNA-seq data from a study by Aguiar et al. (2020) [here](https://pubmed.ncbi.nlm.nih.gov/31646766/).
 This study exposed a human lung cell line (Calu-3 cells) to tobacco smoke, cannabis smoke, and a common drug intervention (LABA/GCS).
