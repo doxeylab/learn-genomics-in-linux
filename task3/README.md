@@ -137,7 +137,7 @@ Prokka identifies homologs of your proteins within the UniProtKB database. Since
 cat yourPROKKAoutput.gff | grep -o "UniProtKB.*;" | awk -F'[:;=]' '{print $4" "$2}' >uniProts.txt
 
 #assign GO annotations from a uniprot-GO database table
-uniprot2go.py -i uniProts.txt -d /data/uniprot2go/uniprot-vs-go-db.sl3 >go.annotations
+python2.7 /usr/bin/uniprot2go.py -i uniProts.txt -d /fsys1/data/uniprot2go/uniprot-vs-go-db.sl3 >go.annotations
 ```
 
 This will generate an `go.annotations` file, which contains your predicted functional annotations.
