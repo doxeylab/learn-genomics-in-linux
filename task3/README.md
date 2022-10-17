@@ -228,7 +228,7 @@ Sometimes you may be interested in extracting multiple genes or regions at once.
 Here is a two-liner to extract the 16S rRNAs predicted by `barrnap`.
 
 ```
-cat *.gff | grep "barrnap" | awk '{ if ($7 == "-") {print $1" "$4"-"$5" minus"} else {print $1" "$4"-"$5" plus"} }' >rRNAs.txt
+cat yourPROKKAoutput.gff | grep "barrnap" | awk '{ if ($7 == "-") {print $1" "$4"-"$5" minus"} else {print $1" "$4"-"$5" plus"} }' >rRNAs.txt
 blastdbcmd -db yourPROKKAoutput.fna -entry_batch rRNAs.txt > rRNAs.fa
 ```
 
