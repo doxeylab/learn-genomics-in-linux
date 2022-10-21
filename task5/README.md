@@ -23,7 +23,7 @@ You are going to download, annotate and compare the genomes of a enterohemorrhag
 
 You will be comparing two genomes of E. coli - strain K12 (non-pathogenic lab strain) and O157H7 (pathogenic E. coli associated with disease outbreaks).
 
-* Download both of these genomes using `curl` or `wget`. Check the man pages for `curl` and `wget` or use the --help flag to determine how to save the files with the following file names. 
+* Download both of these genomes using `wget`. Check the man pages for `wget` or use the --help flag to determine how to save the files with the following file names. 
   * Name the O157H7 genome O157H7.fna
   * Name the K12 genome K12.fna
 
