@@ -21,11 +21,32 @@ mkdir task9  #creates folder
 cd task9 #enters into folder
 ```
 
-## Retrieving the raw data
+## Download the VCF file for your chromosome of interest
+```
+ftp://ftp.1000genomes.ebi.ac.uk//vol1/ftp/release/20130502/ALL.chr12.phase3_shapeit2_mvncall_integrated_v5b.20130502.genotypes.vcf.gz
 
-The `tabix` utility can be used to retrieve 1000 genomes data from the public FTP directory in the following way:
+wget ftp://ftp.1000genomes.ebi.ac.uk//vol1/ftp/release/20130502/ALL.chr12.phase3_shapeit2_mvncall_integrated_v5b.20130502.genotypes.vcf.gz.tbi
+```
+
+## Download the reference genome (optional, if needed)
+```
+wget http://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/human_g1k_v37.fasta.gz
+
+gunzip human_g1k_v37.fasta.gz
+
+wget http://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/human_g1k_v37.fasta.fai
+```
+
+
+## Use `tabix` to extract the region of interest from the chromosome 
 
 ```
-tabix -fh ftp://ftp.1000genomes.ebi.ac.uk//vol1/ftp/release/20130502/ALL.chr12.phase3_shapeit2_mvncall_integrated_v5b.20130502.genotypes.vcf.gz 12:49687909-49689000
+tabix -fh ALL.chr12.phase3_shapeit2_mvncall_integrated_v5b.20130502.genotypes.vcf.gz 12:49687909-49687910 >region.vcf
 ```
+
+## convert VCF file to tab-separated file
+```
+cat region.vcf | vcf-to-tab
+```
+
 
