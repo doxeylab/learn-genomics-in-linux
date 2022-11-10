@@ -46,7 +46,7 @@ wget http://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/human_g1k_v37
 e.g., suppose we are interested in the variants found across the 1000-bp region 49687909-49688909 of chromosome 12
 
 ```
-tabix -fh ALL.chr12.phase3_shapeit2_mvncall_integrated_v5b.20130502.genotypes.vcf.gz 12:49687909-49687919 >region.vcf
+tabix -fh ALL.chr12.phase3_shapeit2_mvncall_integrated_v5b.20130502.genotypes.vcf.gz 12:49687909-49688909 > region.vcf
 ```
 
 ## convert VCF file to tab-separated file
