@@ -26,9 +26,9 @@ There are several ways to download data. Two common tools are `curl` and `wget`.
 You can also simply copy and paste sequence data into a file using `nano` or `pico` or other command-line text-editors. More advanced ones are `vim` and `emacs`.
 
 The following exercise will download a genome (DNA sequence data) and proteome (translated AA sequence data) from the NCBI.
-The NCBI houses its genomic data within an FTP directory - [here](ftp://ftp.ncbi.nlm.nih.gov/genomes/)
+The NCBI houses its genomic data within an FTP directory - [here](https://tinyurl.com/cvh8n5ce) <!--(ftp://ftp.ncbi.nlm.nih.gov/genomes/)-->
 
-We will be working with the genome of [<i>Prochlorococcus marinus</i>](https://en.wikipedia.org/wiki/Prochlorococcus), which is an abundant marine microbe and possibly the most abundant bacterial genus on earth. First, explore its FTP directory [here](ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/007/925/GCA_000007925.1_ASM792v1/)
+We will be working with the genome of [<i>Prochlorococcus marinus</i>](https://en.wikipedia.org/wiki/Prochlorococcus), which is an abundant marine microbe and possibly the most abundant bacterial genus on earth. First, explore its FTP directory [here](https://tinyurl.com/yc6xv4mh) <!--(ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/007/925/GCA_000007925.1_ASM792v1/)-->
 
 Within this folder, there are a number of files. It is important that you familiarize yourself with these files and their contents.
 Files within a genbank genomic ftp directory include:
