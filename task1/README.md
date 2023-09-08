@@ -280,10 +280,10 @@ From
 scp username@remoteserver.com:/path/to/file.txt /path/to/location/.
 ```
 
-#### Uploading/downloading files via Google cloud's ssh browser
+<!-- #### Uploading/downloading files via Google cloud's ssh browser
 
 If you are using ssh in a browser window, you can easily upload and download files via the browser.
-Look in the rop right corner for the options window, click `Download file` ([see here](https://raw.githubusercontent.com/doxeylab/learn-genomics-in-linux/master/task1/gcloud-download.png)) and then enter in the path to your file.
+Look in the rop right corner for the options window, click `Download file` ([see here](https://raw.githubusercontent.com/doxeylab/learn-genomics-in-linux/master/task1/gcloud-download.png)) and then enter in the path to your file. -->
 Remember, your current path can be found using `pwd`. A useful command for printing out the path to your file is:
 
 ```
