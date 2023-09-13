@@ -338,7 +338,7 @@ You will be asked to answer the following questions.
 
 Hint: remember to use `man` if you want to explore added functionality of commands.
 
-Download and uncompress this file containing the genome sequence of E. coli H20 <!--K12--> https://github.com/doxeylab/learn-genomics-in-linux/raw/master/task1/e-coli-h20-genome.fasta.gz
+Download and uncompress this file containing the genome sequence of E. coli H20 <!--K12--> https://github.com/doxeylab/learn-genomics-in-linux/blob/master/task1/e-coli-h20-genome.fasta.gz 
 
 ![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q1 - What is the size of the uncompressed file in megabytes (round to one decimal place)?
 
