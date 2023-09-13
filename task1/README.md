@@ -280,7 +280,7 @@ scp /path/to/file.txt yourUserName@genomics1.private.uwaterloo.ca
 
 From
 ```
-scp yourUserName@genomics1.private.uwaterloo.ca /path/to/location/ .
+scp yourUserName@genomics1.private.uwaterloo.ca:/path/to/file.txt /path/to/location/
 ```
 <!--scp username@remoteserver.com:/path/to/file.txt /path/to/location/.-->
 
