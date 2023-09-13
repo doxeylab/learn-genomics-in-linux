@@ -21,15 +21,17 @@ We will be learning basic commands, but BASH is actually a language that can per
 ## Getting Started
 
 Before you can begin with the coding exercises, you must have access to a linux machine.
-You can either use your own local system or a remote VM that has been set up for you.
+You can either use your own local system or a remote server <!--VM--> that has been set up for you.
 
-### Accessing the remote VM
+### Accessing the remote server <!--VM-->
 
-If you have been given access to a remote VM, you can access it either through the url that has been given to you, or directly through the Terminal like this:
+<!--If you have been given access to a remote server VM, you can access it either through the url that has been given to you, or directly through the Terminal like this:-->
+You can access the remote server through a terminal (full instructions on LEARN) like this:
 
 ```
-ssh -i /path/to/your/.ssh/publickey yourUserName@remoteIP
+ssh yourUserName@genomics1.private.uwaterloo.ca
 ```
+<!--ssh -i /path/to/your/.ssh/publickey yourUserName@remoteIP-->
 
 When you are done, you can leave your session by typing...
 
@@ -272,13 +274,15 @@ grep -o "word" file.txt | wc -l
 
 To
 ```
-scp /path/to/file.txt username@remoteserver.com:/path/to/location/.
+scp /path/to/file.txt yourUserName@genomics1.private.uwaterloo.ca
 ```
+<!--scp /path/to/file.txt username@remoteserver.com:/path/to/location/.-->
 
 From
 ```
-scp username@remoteserver.com:/path/to/file.txt /path/to/location/.
+scp yourUserName@genomics1.private.uwaterloo.ca /path/to/location/ .
 ```
+<!--scp username@remoteserver.com:/path/to/file.txt /path/to/location/.-->
 
 <!-- #### Uploading/downloading files via Google cloud's ssh browser
 
@@ -334,7 +338,7 @@ You will be asked to answer the following questions.
 
 Hint: remember to use `man` if you want to explore added functionality of commands.
 
-Download and uncompress this file containing the genome sequence of E. coli K12 https://github.com/doxeylab/learn-genomics-in-linux/raw/master/task1/e-coli-k12-genome.fasta.gz
+Download and uncompress this file containing the genome sequence of E. coli H20 <!--K12--> https://github.com/doxeylab/learn-genomics-in-linux/raw/master/task1/e-coli-h20-genome.fasta.gz
 
 ![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q1 - What is the size of the uncompressed file in megabytes (round to one decimal place)?
 
