@@ -4,19 +4,18 @@ In this lab, you will download raw sequencing data, perform genome assembly, vis
 
 ### Requirements
 
-* Access to a linux-based OS running BASH 
-* <b>This task also requires graphical software indicated below </b> (*)
+* Access to a linux-based OS running BASH <!--* <b>This task also requires graphical software indicated below </b> (*)-->
 * [fastqc](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
 * [fastx toolkit](http://hannonlab.cshl.edu/fastx_toolkit/)
 * [velvet](https://www.ebi.ac.uk/~zerbino/velvet/)
 * [abyss](https://github.com/bcgsc/abyss)
-* [tablet](https://ics.hutton.ac.uk/tablet/) *
-* [bandage](http://rrwick.github.io/Bandage/) *
+* [tablet](https://ics.hutton.ac.uk/tablet/) * download this graphical software onto your own machine
+* [bandage](http://rrwick.github.io/Bandage/) * (optional) * download this graphical software onto your own machine
 
 
 ## Installation
 
-If you do not already have access to a GUI running the graphical software listed above, please install the software on your local machine. Once locally installed, you can download results off the linux server and locally visualize them on your own system.
+<!--If you do not already have access to a GUI running the graphical software listed above, p-->Please install the software on your local machine. Once locally installed, you can download results off the linux server and locally visualize them on your own system.
 
 All software used are available for Mac/Windows/Linux.
 
@@ -24,7 +23,7 @@ All software used are available for Mac/Windows/Linux.
 
 ## Getting Started
 
-Login to your Linux environment as you did in task1, and create a new folder for your task2 work
+Login to your Linux environment as you did in task1, and create a new folder for your task2 work.
 
 ```
 mkdir task2  #creates folder
@@ -54,7 +53,7 @@ Before we can assemble a genome, we need to:
 1) Assess the quality of the sequencing data
 2) Demultiplex the data
 3) Trim barcodes
-4) Filter out low-quality reads (this is called quality filtering)
+4) Filter out low-quality reads (this is called quality filtering).
 
 ### Quality assessment
 For a quick quality report, you can use the program `fastqc`.
@@ -89,9 +88,9 @@ Explore and inspect the FastQC report for mt_reads.fastq.
 ### Splitting the barcodes (demultiplexing)
 
 Sequencing data may be barcoded. In this case, the data contains two different samples, each with a unique barcode.
-This allows us to split the data by sample. Sometimes, sequencing data can have tens or hundreds of barcodes. See [multiplexing](https://www.illumina.com/science/technology/next-generation-sequencing/multiplex-sequencing.html)
+This allows us to split the data by sample. Sometimes, sequencing data can have tens or hundreds of barcodes. See [multiplexing](https://www.illumina.com/science/technology/next-generation-sequencing/multiplex-sequencing.html).
 
-We will use a standard script from the `fastx toolkit` to split the data by its known barcodes (defined already for you in the file downloaded below)
+We will use a standard script from the `fastx toolkit` to split the data by its known barcodes (defined already for you in the file downloaded below).
 
 ```
 #first download the barcodes file
@@ -107,7 +106,7 @@ There are now two .fastq files; one for each barcode.  There is also an unmatche
 
 ### Barcode trimming
 
-Barcode trimming is needed to remove the barcode sequences from the beginning of each read. The Q33 is required due to differences in sanger and illumina encoding.
+Barcode trimming is needed to remove the barcode sequences from the beginning of each read. The Q33 is required due to differences in Sanger and Illumina encoding.
 
 ```
 fastx_trimmer -i splitData_mt1.fastq -f 9 -o trimmed_mt1.fastq -Q33
