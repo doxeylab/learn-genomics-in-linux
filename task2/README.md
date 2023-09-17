@@ -63,7 +63,7 @@ The command below will analyze the mt_reads.fastq file and produce an .html resu
 fastqc mt_reads.fastq
 ```
 
-[<b>Download</b>](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/task1/gcloud-download.png) the 'fastqc_report.html' file to your local machine and open it in a web browser. Tip: find the path to your file with `realpath yourFile.txt`
+Transfer the 'fastqc_report.html' file to your local machine and open it in a web browser. Tip: find the path to your file with `realpath yourFile.txt`
 
 Explore and inspect the FastQC report for mt_reads.fastq.
 
@@ -136,9 +136,9 @@ Now we are ready to assemble a genome.
 To start we are going to try using the popular `velvet` assembler. Like many assemblers, `velvet` performs genome assembly using de bruijn graphs. This means that we must choose a value of <b>k</b> to define the k-mers (sequence fragments of length k) to be used in constructing the graph.
 
 Read more:
-[velvet](https://en.wikipedia.org/wiki/Velvet_assembler).
-[de bruijn graphs](https://en.wikipedia.org/wiki/De_Bruijn_graph)
-[de novo assemblers](https://en.wikipedia.org/wiki/De_novo_sequence_assemblers)
+[velvet](https://en.wikipedia.org/wiki/Velvet_assembler),
+[de bruijn graphs](https://en.wikipedia.org/wiki/De_Bruijn_graph),
+[de novo assemblers](https://en.wikipedia.org/wiki/De_novo_sequence_assemblers).
 
 
 The commands below will compute the graph. The first parameter is the folder name (you choose) and the second parameter is the value of k. So below, we are assembling the genome from the trimmed and quality-filtered reads using a k-mer value of 21.
@@ -169,7 +169,7 @@ Inspect the contigs.fa file that has been produced (will be in out_21 folder).
 
 Velvet has the option of keeping track of where the reads map to the assembly using the `-read_trkg` flag. This will produce a `velvet_asm.afg` file.
 
-[<b>Download</b>](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/task1/gcloud-download.png) this file (from your k=31 assembly) to your local machine. 
+Transfer this file (from your k=31 assembly) to your local machine. 
 Then open it in `tablet`. Tablet is a great program to explore how reads map to assemblies and genomes.
 
 
@@ -186,7 +186,7 @@ Explore `tablet` more on your own. We will be using it later in the course.
 
 Velvet and other de bruijn assemblers produce a graph that can be visualized. `bandage` is an excellent tool for this purpose.
 
-If you are interested, locate the 'lastgraph' file produced by `velvet` and [<b>download</b>](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/task1/gcloud-download.png) it to your local machine.
+If you are interested, locate the 'lastgraph' file produced by `velvet` and transfer it to your local machine.
 
 Open this file in the `Bandage` application, and explore further. 
 
