@@ -7,7 +7,7 @@ In this lab, you will download raw sequencing data, perform genome assembly, vis
 * Access to a linux-based OS running BASH <!--* <b>This task also requires graphical software indicated below </b> (*)-->
 * [fastqc](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
 * [fastx toolkit](http://hannonlab.cshl.edu/fastx_toolkit/)
-* [velvet](https://www.ebi.ac.uk/~zerbino/velvet/)
+* [velvet](https://github.com/dzerbino/velvet/blob/master/Manual.pdf) <!--(https://www.ebi.ac.uk/~zerbino/velvet/)-->
 * [abyss](https://github.com/bcgsc/abyss)
 * [tablet](https://ics.hutton.ac.uk/tablet/) * download this graphical software onto your own machine
 * [bandage](http://rrwick.github.io/Bandage/) * (optional) * download this graphical software onto your own machine
