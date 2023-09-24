@@ -14,7 +14,7 @@ Graphical software indicated by (*)
 * [Artemis](http://sanger-pathogens.github.io/Artemis/Artemis/) *
 Note: for Artemis, you may need to first install the JRE (Java Runtime Environment) and/or JDK (Java Development Kit) on your system. Also, if you have difficulties installing the latest version on Windows, try installing version 17.0.1 here: ftp://ftp.sanger.ac.uk/pub/resources/software/artemis/v17.0.1/.
 * uniprot2go.py script located [here](https://github.com/doxeylab/learn-genomics-in-linux/blob/master/task3/uniprot2go.py)
--- must be installed in /usr/bin
+-- already installed in /usr/bin on the remote server.
 
 ## Installation
 
@@ -234,7 +234,7 @@ blastdbcmd -db yourPROKKAoutput.fna -entry_batch rRNAs.txt > rRNAs.fa
 
 Now, to predict taxonomy, we can BLAST these rRNA sequences against the NCBI 16S database for example using [web-BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn). Note, that there may be multiple rRNAs and some of them may be partial sequences.
 
-![](https://github.com/doxeylab/learn-genomics-in-linux/blob/master/task3/16Ssearch.png)
+![](https://github.com/doxeylab/learn-genomics-in-linux/blob/master/task3/new16Ssearch.png)
 
 
 ## Analyzing a mystery genome of unknown source
