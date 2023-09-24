@@ -92,17 +92,17 @@ Look at the `--kingdom` options in `prokka -h` and re-run `prokka` to use the co
 
 Next, let's perform genome annotation on a larger scale.
 
-* Download (or copy from your task1 folder) the <i>E. coli</i> K12 genome below from task1 and annotate it using `prokka`
+* Download (or copy from your task1 folder) the <i>E. coli</i> H20 genome below from task1 and annotate it using `prokka`
 
 ```
-https://github.com/doxeylab/learn-genomics-in-linux/raw/master/task1/e-coli-k12-genome.fasta.gz
+https://github.com/doxeylab/learn-genomics-in-linux/raw/master/task1/e-coli-h20-genome.fasta.gz
 ```
 
 Next, explore the files produced by `prokka`. Start with the .txt file.
 
-![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q6) How many genes, rRNAs, tRNAs, and CRISPR loci were predicted? What is the size of the genome in Mb?
+![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q6) How many genes, rRNAs, and tRNAs were predicted? What is the size of the genome in Mb?
 
-`prokka` also annotates genes based on [COGs](https://www.ncbi.nlm.nih.gov/COG/) and also [E.C.](https://enzyme.expasy.org/) (enzyme commission) numbers. This information can be found in the .tbl file. 
+`prokka` also annotates genes based on [COGs](https://www.ncbi.nlm.nih.gov/COG/) and also [E.C.](https://enzyme.expasy.org/) (enzyme commission) numbers. This information can be found in the .tbl and .tsv files. 
 
 Column 6 of this .tsv file lists the COGs. To print out only column 6, you can use the `cut` command as follows (replace "yourPROKKAoutput"):
 
@@ -128,7 +128,7 @@ cut -f3 file.txt | sort | uniq | wc -l
 
 ## Assigning GO terms
 
-Next, we will be assigning Gene Ontology ([GO](http://geneontology.org/)) terms to your predicted genes/proteins.
+Next, we will be assigning Gene Ontology ([GO](http://geneontology.org/)) terms to your predicted genes/proteins from the <i>E. coli</i> H20 genome..
 
 `prokka` identifies homologs of your proteins within the UniProtKB database. Since there are already pre-computed GO terms for all proteins in UniProtKB, we can map these GO terms over using the following commands:
 
@@ -149,7 +149,7 @@ cat go.annotations | awk '{print $3}' | tr "," "\n" | sort | uniq -c | sort -n -
 ```
 
 Now, there is a lot you can explore using your predicted GO terms for your genome.
-e.g., Suppose you want to find all the predicted DNA binding proteins. Look [here](http://amigo.geneontology.org/amigo) to find the GO ID for "DNA binding".
+e.g., Suppose you want to find all the predicted DNA binding proteins. Look [here](http://amigo.geneontology.org/amigo) to find the GO accession ID for "DNA binding".
 
 ![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q9) How many proteins were annotated with the GO term for "DNA binding"? 
 
@@ -165,9 +165,9 @@ grep "trpE" yourPROKKAoutput.tsv
 ```
 
 This will output
->JKMANJED_01263  CDS     1563    trpE    4.1.3.27        COG0147 Anthranilate synthase component 1
+>CGLDHGDC_02664	CDS	1563	trpE	4.1.3.27	COG0147	Anthranilate synthase component 1
 
-... which tells you that "trpE" has been assigned to the gene labeled "JKMANJED_01263".
+... which tells you that "trpE" has been assigned to the gene labeled "CGLDHGDC_02664".
 
 You can then extract this gene sequence from the gene predictions file (.ffn) like this:
 
@@ -175,16 +175,16 @@ You can then extract this gene sequence from the gene predictions file (.ffn) li
 # index the .ffn file so we can extract from it
 makeblastdb -in yourPROKKAoutput.ffn -dbtype 'nucl' -parse_seqids
 
-blastdbcmd -entry JKMANJED_01263 -db yourPROKKAoutput.ffn
+blastdbcmd -entry CGLDHGDC_02664 -db yourPROKKAoutput.ffn
 ```
 
 This will output:
 
->\>>JKMANJED_01263 Anthranilate synthase component 1
+>\>>>CGLDHGDC_02664 Anthranilate synthase component 1
 ATGCAAACACAAAAACCGACTCTCGAACTGCTAACCTGCGAAGGCGCTTATCGCGACAATCCCACCGCGCTTTTTCACCA
 GTTGTGTGGGGATCGTCCGGCAACGCTGCTGCTGGAATCCGCAGATATCGACAGCAAAGATGATTTAAAAAGCCTGCTGC
-TGGTAGACAGTGCGCTGCGCATTACAGCTTTAGGTGACACTGTCACAATCCAGGCACTTTCCGGCAACGGCGAAGCCCTC
-CTGGCACTACTGGATAACGCCCTGCCTGCGGGTGTGGAAAGTGAACAATCACCAAACTGCCGTGTGCTGCGCTTCCCCCC
+TGGTAGACAGTGCGCTGCGCATTACAGCTTTAGGTGACACTGTCACAATCCAGGCACTTTCCGGCAACGGCGAAGCCCTG
+CTGACACTACTGGATAACGCCCTGCCTGCGGGTGTGGAAAATGAACAATTACCAAACTGCCGTGTGCTGCGCTTCCCCCC
 ...
 
 <b>Note: in this example we searched the annotations with a text query "trpE". However, the best way of finding your gene of interest is to do a BLAST search since it may not be labeled correctly in your annotations</b>
@@ -201,9 +201,9 @@ grep "trpE" yourPROKKAoutput.gff
 
 This will output:
 
->U00096.3        Prodigal:2.6    CDS     1321384 1322946 .       -       0       ID=JKMANJED_01263;eC_number=4.1.3.27;Name=trpE;db_xref=COG:COG0147;gene=trpE;inference=ab initio prediction:Prodigal:2.6,similar to AA sequence:UniProtKB:P00895;locus_tag=JKMANJED_01263;product=Anthranilate synthase component 1
+>CP069692.1        Prodigal:002006    CDS     2777877 2779439 .       +       0       ID=CGLDHGDC_02664;eC_number=4.1.3.27;Name=trpE;db_xref=COG:COG0147;gene=trpE;inference=ab initio prediction:Prodigal:002006,similar to AA sequence:UniProtKB:P00895;locus_tag=CGLDHGDC_02664;product=Anthranilate synthase component 1
 
-This tells us that trpE is located in entry "U00096.3" at chromosome position "1321384 to 1322946" and encoded on the minus (-) strand.
+This tells us that trpE is located in entry "CP069692.1" at chromosome position "2777877 to 2779439" and encoded on the plus (+) strand.
 
 To extract the sequence for these coordinates, we can use `blastdbcmd` against the genome as follows:
 
@@ -211,7 +211,7 @@ To extract the sequence for these coordinates, we can use `blastdbcmd` against t
 # index the genome so we can extract regions from it
 makeblastdb -in yourPROKKAoutput.fna -dbtype 'nucl' -parse_seqids
 
-blastdbcmd -entry U00096.3 -db yourPROKKAoutput.fna -range 1321384-1322946 -strand minus
+blastdbcmd -entry CP069692.1 -db yourPROKKAoutput.fna -range 2777877-2779439 -strand plus
 ```
 
 This should produce a FASTA sequence output of the gene identical to that in the above example.
@@ -228,11 +228,11 @@ Sometimes you may be interested in extracting multiple genes or regions at once.
 Here is a two-liner to extract the 16S rRNAs predicted by `barrnap`.
 
 ```
-cat yourPROKKAoutput.gff | grep "barrnap" | awk '{ if ($7 == "-") {print $1" "$4"-"$5" minus"} else {print $1" "$4"-"$5" plus"} }' >rRNAs.txt
+cat yourPROKKAoutput.gff | grep "barrnap" | awk '{ if ($7 == "-") {print $1" "$4"-"$5" minus"} else {print $1" "$4"-"$5" plus"} }' > rRNAs.txt
 blastdbcmd -db yourPROKKAoutput.fna -entry_batch rRNAs.txt > rRNAs.fa
 ```
 
-Now, to predict taxonomy, we can BLAST these rRNA sequences against the NCBI 16S database for example using [web-BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn). Note, that there may be multiple rRNAs and some of them may be partial sequences.
+Now, to predict taxonomy, we can BLAST these rRNA sequences against the NCBI nucleotide database for example using [web-BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn). Note, that there may be multiple rRNAs and some of them may be partial sequences.
 
 ![](https://github.com/doxeylab/learn-genomics-in-linux/blob/master/task3/new16Ssearch.png)
 
