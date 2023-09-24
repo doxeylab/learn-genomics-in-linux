@@ -191,7 +191,7 @@ CTGGCACTACTGGATAACGCCCTGCCTGCGGGTGTGGAAAGTGAACAATCACCAAACTGCCGTGTGCTGCGCTTCCCCCC
 
 ### Extracting regions of interest
 
-Next, suppose are interested in extracting the promoter of the "trp operon". See [here](https://en.wikipedia.org/wiki/Trp_operon) for some background information. The trp operon regulatory sequences (operator and promoter) can be found upstream of the <b>trpE</b> gene. These regions are not in the annotations files so you will need to locate them yourself.
+Next, suppose you are interested in extracting the promoter of the "trp operon". See [here](https://en.wikipedia.org/wiki/Trp_operon) for some background information. The trp operon regulatory sequences (operator and promoter) can be found upstream of the <b>trpE</b> gene. These regions are not in the annotations files so you will need to locate them yourself.
 
 First, let's see where the trpE gene is located in the genome:
 
