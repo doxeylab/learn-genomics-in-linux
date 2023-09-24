@@ -234,7 +234,7 @@ blastdbcmd -db yourPROKKAoutput.fna -entry_batch rRNAs.txt > rRNAs.fa
 
 Now, to predict taxonomy, we can BLAST these rRNA sequences against the NCBI nucleotide database for example using [web-BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn). Note, that there may be multiple rRNAs and some of them may be partial sequences.
 
-![](https://github.com/doxeylab/learn-genomics-in-linux/blob/master/task3/new16Ssearch.png)
+![](https://github.com/doxeylab/learn-genomics-in-linux/blob/master/task3/ntsearch.png)
 
 
 ## Analyzing a mystery genome of unknown source
