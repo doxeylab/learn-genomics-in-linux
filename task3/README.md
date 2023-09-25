@@ -128,7 +128,7 @@ cut -f3 file.txt | sort | uniq | wc -l
 
 ## Assigning GO terms
 
-Next, we will be assigning Gene Ontology ([GO](http://geneontology.org/)) terms to your predicted genes/proteins from the <i>E. coli</i> H20 genome..
+Next, we will be assigning Gene Ontology ([GO](http://geneontology.org/)) terms to your predicted genes/proteins from the <i>E. coli</i> H20 genome.
 
 `prokka` identifies homologs of your proteins within the UniProtKB database. Since there are already pre-computed GO terms for all proteins in UniProtKB, we can map these GO terms over using the following commands:
 
@@ -232,7 +232,7 @@ cat yourPROKKAoutput.gff | grep "barrnap" | awk '{ if ($7 == "-") {print $1" "$4
 blastdbcmd -db yourPROKKAoutput.fna -entry_batch rRNAs.txt > rRNAs.fa
 ```
 
-Now, to predict taxonomy, we can BLAST these rRNA sequences against the NCBI nucleotide database for example using [web-BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn). Note, that there may be multiple rRNAs and some of them may be partial sequences.
+Now, to predict taxonomy, we can BLAST these rRNA sequences against the NCBI nucleotide database, for example using [web-BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn). Note, that there may be multiple rRNAs and some of them may be partial sequences.
 
 ![](https://github.com/doxeylab/learn-genomics-in-linux/blob/master/task3/ntsearch.png)
 
