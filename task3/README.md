@@ -6,7 +6,7 @@ You will learn how to perform basic genome annotation, and also how to extract s
 
 ### Requirements
 
-Graphical software indicated by (*)
+Graphical software you need to download onto your own machine indicated by (*)
 
 * Access to a linux-based OS running BASH
 * [BLAST](http://blast.ncbi.nlm.nih.gov/)
@@ -18,7 +18,7 @@ Note: for Artemis, you may need to first install the JRE (Java Runtime Environme
 
 ## Installation
 
-If you do not already have access to a GUI running the graphical software listed above, please install the software on your local machine. Once locally installed, you can download results off the linux server and locally visualize them on your own system.
+<!--If you do not already have access to a GUI running the graphical software listed above, please install the software on your local machine. Once locally installed, you can download results off the linux server and locally visualize them on your own system.--> Please install the graphical software on your local machine.
 
 ---
 
