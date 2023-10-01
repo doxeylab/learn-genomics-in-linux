@@ -6,12 +6,12 @@ This task is a tutorial on structural comparison of genomes using synteny mappin
 
 * Access to a linux-based OS running BASH
 * [BLAST](http://blast.ncbi.nlm.nih.gov/)
-* [Artemis](http://sanger-pathogens.github.io/Artemis/Artemis/) *
-* [Mauve](http://darlinglab.org/mauve/download.html) (optional) *
+* [Artemis](http://sanger-pathogens.github.io/Artemis/Artemis/) * download this graphical software onto your own machine
+* [Mauve](http://darlinglab.org/mauve/download.html) (optional) * download this graphical software onto your own machine
 
 ## Installation
 
-If you do not already have access to a GUI running the graphical software listed above (*), please install the software on your local machine. Once locally installed, you can download results off the linux server and locally visualize them on your own system.
+<!--If you do not already have access to a GUI running the graphical software listed above (*), please install the software on your local machine. Once locally installed, you can download results off the linux server and locally visualize them on your own system.-->Please install the graphical software on your local machine.
 
 All software used are available for Mac/Windows/Linux.
 
@@ -19,7 +19,7 @@ All software used are available for Mac/Windows/Linux.
 
 ## Getting Started
 
-* Login to your linux environment and create a new folder for task4
+* Login to your linux environment and create a new folder for task4.
 
 ```
 mkdir task4  #creates folder
@@ -28,19 +28,19 @@ cd task4 #enters into folder
 
 ## Retrieving the raw data
 
-Copy the genome from task 2 you assembled with `abyss`
+* Copy the genome from task2 you assembled with `abyss`
 
 ```
 cp ../task2/abyss-assembly-contigs.fa . 
 ```
 
-You will be comparing this genome to another related genome from L. terrestris. Download this genome.
+* You will be comparing this genome to another related genome from <i>L. terrestris</i>. Download this genome.
 
 ```
 wget https://github.com/doxeylab/learn-genomics-in-linux/raw/master/task4/l-terrestris.genome.fa
 ```
 
-Make BLAST databases for both.
+* Make BLAST databases for both.
 
 ```
 makeblastdb -in abyss-assembly-contigs.fa -dbtype nucl
@@ -63,7 +63,7 @@ Open the `act` program that is packaged with `artemis` and input these three fil
 
 ![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q1) Paste a screenshot of your result.  (3 marks)
 
-![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q2) Describe the synteny pattern that you are observing. Do you think genomic rearrangements have taken place or is there a strong pattern of shared synteny between both genomes? (2 marks) See [shared synteny](https://en.wikipedia.org/wiki/Synteny#Shared_synteny)
+![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q2) Describe the synteny pattern that you are observing. Do you think genomic rearrangements have taken place or is there a strong pattern of shared synteny between both genomes? (2 marks) See [shared synteny](https://en.wikipedia.org/wiki/Synteny#Shared_synteny).
 
 To help you with this question, consider two genome sequences composed of four genes A-D. One genome has gene order A,B,C,D and the second genome has gene order A,C,B,D. There has clearly been a genomic rearrangement here because C and B have switched places.
 
@@ -75,7 +75,7 @@ And lastly, now suppose we compare (A,B,C,D) to its reverse complement which wil
 
 ## Working with your own dataset
 
-Next, find two related genomes (e.g., different strains of same species)  from the [NCBI FTP directory](ftp://ftp.ncbi.nlm.nih.gov/genomes/archive/old_genbank/Bacteria/)
+Next, find two related genomes (e.g., different strains of same species)  from the [NCBI Genome Database](https://www.ncbi.nlm.nih.gov/datasets/genome/). <!--[NCBI FTP directory](ftp://ftp.ncbi.nlm.nih.gov/genomes/archive/old_genbank/Bacteria/)-->
 
 * Repeat the analyses above to perform a structural genome comparison.
 
@@ -84,19 +84,19 @@ Next, find two related genomes (e.g., different strains of same species)  from t
 ![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q4) Describe the synteny patterns that you are observing. (2 marks)
 
 
-## Multiple genome alignment with MAUVE -- Bonus (+1)
+## Multiple genome alignment with Mauve -- Bonus (+1)
 
 This is for bonus marks.
 
 Want to try aligning/comparing more than two genomes? 
 
-* Download/install [mauve](http://darlinglab.org/mauve/download.html) to your local machine
+* Download/install [Mauve](http://darlinglab.org/mauve/download.html) to your local machine.
 
-* Select three or more genomes of interest
+* Select three or more genomes of interest.
 
-* Open the sequences in `Mauve` and align them
+* Open the sequences in `Mauve` and align them.
 
-* Visualize the multiple alignment
+* Visualize the multiple alignment.
 
 ![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Bonus) Paste a screenshot of your result.
 
