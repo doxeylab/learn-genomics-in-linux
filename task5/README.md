@@ -131,7 +131,7 @@ cat geneListComparison.txt | awk -F '\t' '{print $1}' | sort | uniq -c | sort -n
 
 Examine your result carefully. Column 1 states the copy number and column 2 states the gene name.
 
-![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q6 - Which gene in O157H7 occurs most frequently? Which gene in K12 occurs most frequently?
+![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q6 - Which gene in O157H7 occurs most frequently? Which genes in K12 occur most frequently?
 
 
 
