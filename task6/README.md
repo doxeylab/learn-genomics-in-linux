@@ -1,9 +1,7 @@
 # Task6 - Resequencing: variant calling from NGS data
 
 In this lab (based on this [tutorial](https://angus.readthedocs.io/en/2014/variant.html)) you will be exploring some resequencing data from Richard Lenski's famous <i>E. coli</i> long term evolution experiment.
-More on Lenski's long term evolution experiment can be found in this [article](http://www.nature.com/nature/journal/v489/n7417/full/nature11514.html)
-
-...experiment can be found in this article, with a summary here: https://en.wikipedia.org/wiki/Richard_Lenski.
+More on Lenski's long term evolution experiment can be found in this [article](http://www.nature.com/nature/journal/v489/n7417/full/nature11514.html), with a summary here: https://en.wikipedia.org/wiki/Richard_Lenski.
 
 You will be mapping the reads from a single population of <i>E. coli</i> at 38,000 generations that has evolved citrate-utilization capacity (Cit+). You will map the reads to the reference genome in order to identify SNPs that have occurred in this lineage (or its ancestors). You will focus on one SNP in particular that has created a "mutator" strain by disrupting the <i>mutS</i> DNA-repair gene.
 
