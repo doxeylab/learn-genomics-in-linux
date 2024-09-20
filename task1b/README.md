@@ -165,7 +165,7 @@ blastp -query e.coli.l7.faa -db GCA_000007925.1_ASM792v1_protein.faa
 
 ![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q3 - What is the sequence identity (percentage) of your top BLAST hit?
 
-* Repeat the same BLAST search you did for Q2 but using the genomic sequence as the search database.
+* Repeat the same BLAST search you did for Q2 but using the genomic sequence as the database.
 
 ![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q4 - Compare your result to the previous search. Which of the following statements is most correct:
 
