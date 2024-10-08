@@ -6,7 +6,7 @@ This task is a tutorial on structural comparison of genomes using synteny mappin
 
 * Access to a linux-based OS running BASH
 * [BLAST](http://blast.ncbi.nlm.nih.gov/)
-* [Artemis](http://sanger-pathogens.github.io/Artemis/Artemis/) * download this graphical software onto your own machine
+* [Artemis](http://sanger-pathogens.github.io/Artemis/Artemis/) * download this graphical software onto your own machine. Again, see [here](installingArtemis.md) for further instructions
 * [Mauve](http://darlinglab.org/mauve/download.html) (optional) * download this graphical software onto your own machine
 
 ## Installation
