@@ -1,23 +1,37 @@
 # Installing Artemis/Java
 
-If you're having difficulty installing  Java & Artemis, please see the instructions below (via Science Computing) for installing the Java Development Kit. This has now been tested on multiple systems. If you still have difficulties after trying this, let us know, and we will put you in contact with Science Computing to help you individually.
+Artemis Installation Instructions
 
-Also, for mac users - if you get a security warning when opening the Artemis or ACT for the first time, try: Ctrl-click on the application and then Open. This will override the security error.
+## Part 1 - Install the Java Development Kit (JDK):
+1.	Go to the [Temurin by Adoptium website](https://adoptium.net/en-GB/temurin/releases/?version=11&os=windows&arch=x64&package=jdk) and select your operating system version (most systems run x64 bit).
+2.	Select the "**JDK 11-LTS**" version from the dropdown menu. 
+-	For Windows: Download the **.msi** file and run it once downloaded.
+-	For MacOS: Download the **.pkg** file and run it once downloaded.
 
-Go here: https://adoptium.net/en-GB/temurin/releases/?version=11&os=windows&arch=x64&package=jdk
+## Part 2 - Install Artemis Tools:
+1.	Go to the [Sanger Pathogens website](https://sanger-pathogens.github.io/Artemis/) and scroll down the page until you reach the **"Software Availability"** section.
+2.	Under the **"Download"** heading, select your operating system version from the list and download the file. 
+-	For Windows: Download the **.zip** file.
+-	For MacOS: Download the **.dmg** file.
+3.	Unzip the file to an appropriate local directory and an Artemis folder will be created containing the tools. 
+-	For Windows: Recommended to unzip the file to the **"C:\"** drive.
+-	For MacOS: Recommended to unzip the file to the "**Applications**" folder.
+The first time you run one of the tools, it will ask to "Set Working Directory". Ask your prof what to set this to as they probably have some files to get data from – the working directory should be the one that contains those.
 
-Select your OS information (almost everything is x64 now) and then “JDK 11 – LTS”
-For Windows, download the .msi and run it
-For Mac, download the .pkg and run it
-Then, go to this page and scroll down a little to “Software Availability” and under “Download,” choose your OS
+#### Helpful resource:
+[The Artemis Manual](https://sanger-pathogens.github.io/Artemis/Artemis/artemis-manual.html)
 
-https://sanger-pathogens.github.io/Artemis/
-
-You will get a .zip folder. Unpack it to someplace that makes sense to you (I recommend someplace local to the machine, even Downloads – not sure if this will work with a cloud service, the .zip simply contains a series of binaries that leverage Java) – consider something like C:\Artemis
-
-The first time you run one of the programs, it will ask to Set Working Directory. The working directory should be the one that contains the files you will be analyzing.
-
-This resource may be helpful:
-
-https://sanger-pathogens.github.io/Artemis/Artemis/artemis-manual.html
+## Additional Steps For MacOS:
+You may run into the error message "This application requires that Java 9 or later be installed on your computer. Please download and install the latest version of Java from www.java.com and try again." when opening any of the tools. If so, please follow the instructions below to open Artemis.
+1.	Open the "**Artemis**" folder.
+2.	Right click on the "**Artemis**" icon and select "Show Package Content".
+3.	Double-click on the "**Contents**" folder.
+4.	Double-click on the "art" executable file (it has the black terminal icon).
+5.	A new window will open and you will be prompted to set the working directory.
+6.	Once confirmed it is working, you can follow the additional steps below to create a shortcut for each of the Artemis tools. 
+-	Go through steps 1-3 again until the "**Contents**" folder is open.
+-	Right-click on the "art" executable file and from the dropdown menu, click "**Make Alias**".
+-	A new shortcut called "**art alias**" will be made in the folder. You can drag this file to your Desktop for example for easy access.
+-	From the Desktop (or wherever you put the file), double-click on "**art alias**" and the program should open without errors.
+-	You can repeat these steps for ACT, BamView, and Circular-Plot.
 
