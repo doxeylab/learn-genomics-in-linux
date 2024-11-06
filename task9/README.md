@@ -175,3 +175,6 @@ ggplot(allele_counts_long, aes(x = Population, y = Count, fill = Allele)) +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 ```
+
+
+![image](alleleFreq.png)
