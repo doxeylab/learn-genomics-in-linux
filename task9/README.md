@@ -131,6 +131,8 @@ pheatmap(
 
 
 ```
+![image](SNP-heatmap.png)
+
 
 
 ## Plotting the frequencies of specific SNPs per population
