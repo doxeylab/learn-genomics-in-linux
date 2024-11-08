@@ -54,7 +54,7 @@ tabix -fh ALL.chr12.phase3_shapeit2_mvncall_integrated_v5b.20130502.genotypes.vc
 
 ## convert VCF file to tab-separated file
 ```
-cat region.vcf | vcf-to-tab
+cat region.vcf | vcf-to-tab > region.tab
 ```
 
 * How many SNPs were detected?
