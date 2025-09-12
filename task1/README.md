@@ -346,17 +346,19 @@ Download and uncompress this file containing the genome sequence of E. coli H20 
 
 ![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q3 - How many characters are in this file (header plus genome)?
 
-![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q4 - What is the length of the genome (# bases)?
+![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q4 - What are the last five bases in the genome?
 
-![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q5 - What base (A, C, G, or T) is most common in the file?
+![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q5 - What is the length of the genome (# bases)?
 
-![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q6 - What is the GC content of the genome?
+![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q6 - What base (A, C, G, or T) is most common in the file?
 
-![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q7 - What is the most common trinucleotide in the file?
+![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q7 - What is the GC content of the genome?
 
-![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q8 - How many times does the word "AATGAGAGG" occur in the genome sequence? Do not use compseq to answer this one.
+![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q8 - What is the most common trinucleotide in the file?
 
-![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q9 - What is the answer to the above question if you also include matches on the reverse complement of the genome sequence? Again, do not use compseq to answer this one.
+![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q9 - How many times does the word "AATGAGAGG" occur in the genome sequence? Do not use compseq to answer this one.
+
+![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q10 - What is the answer to the above question if you also include matches on the reverse complement of the genome sequence? Again, do not use compseq to answer this one.
 
 
 #### Congratulations. You are now finished Task 1.
