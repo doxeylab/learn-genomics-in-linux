@@ -46,7 +46,7 @@ If you have logged in correctly, you should see a welcome screen.
 You are now in a unix command-line environment. For more information and instructions:
 
 * [CodeAcademy](https://www.codecademy.com/learn/learn-the-command-line) - Learn the command line
-* [TeachingUnix](http://www.ee.surrey.ac.uk/Teaching/Unix/) - Another Unix Tutorial
+* [TeachingUnix](https://info-ee.surrey.ac.uk/Teaching/Unix/) - Another Unix Tutorial
 * [BasicCommands](http://mally.stanford.edu/~sr/computing/basic-unix.html) - List of common commands
 
 ## A Linux Shell primer
