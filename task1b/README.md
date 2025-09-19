@@ -193,7 +193,7 @@ ACTGGCATTGATAGAACAACCATTTATTCGAGATAGTTCAATTACTGTAGAGCAAGTTGTAAAACA
 
 ```
 
-![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q6 - Based on your BLAST result, what is the likely function of this fragment of DNA?
+![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q6 - What is the likely function of this fragment of DNA? (use any method that you like to answer this question).
 
 ```
 * It is impossible to say.
