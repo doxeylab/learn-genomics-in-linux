@@ -51,11 +51,11 @@ If you are curious and would like to know how this was done, see below, but agai
 
 ```
 #download a pre-made reference transcriptome from Gencode
-wget ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_29/gencode.v29.transcripts.fa.gz
-gunzip gencode.v29.transcripts.fa.gz
+wget ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_49/gencode.v49.pc_transcripts.fa.gz
+gunzip gencode.v49.transcripts.fa.gz
 
 #index your reference transcriptome so that it can be analyzed with `Salmon`
-salmon index -t gencode.v29.transcripts.fa -i gencode_v29_idx
+salmon index -t gencode.v49.transcripts.fa -i gencode_v29_idx
 
 ```
 
