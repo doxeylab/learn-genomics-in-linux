@@ -52,10 +52,10 @@ If you are curious and would like to know how this was done, see below, but agai
 ```
 #download a pre-made reference transcriptome from Gencode
 wget ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_49/gencode.v49.pc_transcripts.fa.gz
-gunzip gencode.v49.transcripts.fa.gz
+gunzip gencode.v49.pc_transcripts.fa.gz
 
 #index your reference transcriptome so that it can be analyzed with `Salmon`
-salmon index -t gencode.v49.transcripts.fa -i gencode_v29_idx
+salmon index -t gencode.v49.pc_transcripts.fa -i gencode_v49_idx
 
 ```
 
@@ -80,7 +80,7 @@ Now, you are going to measure transcript abundance using `Salmon`. For a single 
 ```
 #result will be output to "quants" folder
 # -p 6 means that six CPU threads will be used
-salmon quant -i gencode_v29_idx -l A -1 forward_reads.fastq.gz -2 reverse_reads.fastq.gz -p 6 -o quants
+salmon quant -i gencode_v49_idx -l A -1 forward_reads.fastq.gz -2 reverse_reads.fastq.gz -p 6 -o quants
 ```
 
 But the above line is just an example for a single sample. Here is a .bash script that will run `Salmon` on all of the 8 samples we have just downloaded. Run this bash script in your `/transcriptomics-task` folder
