@@ -100,14 +100,14 @@ Now, the transcript expression levels have been quantified for each of your 8 sa
 * Take note of which column contains the transcript id. You can do this by using `head -1` to look at the header of the `quant.sf` file.
 * Also take note of which column contains the TPM (transcripts per million) expression level.
 
-Suppose you are interested in the transcript "ENST00000379727.7".
+Suppose you are interested in the transcript "ENST00000379727.8".
 
 ```
 #go to your quants/data folder
 cd quants
 
 #inspect the expression levels for this transcript
-grep "ENST00000379727.7" */quant.sf
+grep "ENST00000379727.8" */quant.sf
 ```
 
 ![question](https://github.com/doxeylab/learn-genomics-in-linux/raw/master/questionbox.png) Q1 - Has this transcript's abundance increased, decreased, or stayed the same following smoke exposure?
