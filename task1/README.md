@@ -274,13 +274,13 @@ grep -o "word" file.txt | wc -l
 
 To
 ```
-scp /path/to/file.txt yourUserName@genomics1.private.uwaterloo.ca
+scp /path/to/file.txt yourUserName@genomics1.private.uwaterloo.ca:/path/to/location/.
 ```
 <!--scp /path/to/file.txt username@remoteserver.com:/path/to/location/.-->
 
 From
 ```
-scp yourUserName@genomics1.private.uwaterloo.ca:/path/to/file.txt /path/to/location/
+scp yourUserName@genomics1.private.uwaterloo.ca:/path/to/file.txt /path/to/location/.
 ```
 <!--scp username@remoteserver.com:/path/to/file.txt /path/to/location/.-->
 
